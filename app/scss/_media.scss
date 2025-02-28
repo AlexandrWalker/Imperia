@@ -1,0 +1,20 @@
+@media (min-width: 1921px) {
+  html {
+    $ratio: 0;
+    font-size: calc(10px + ($ratio * 10) * ((100vw - var(--refRes) * 1px) / var(--refRes)));
+  }
+}
+
+@media (max-width: 1440px) {}
+
+@media (max-width: 991px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 680px) {}
+
+@media (max-width: 600px) {}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 360px) {}

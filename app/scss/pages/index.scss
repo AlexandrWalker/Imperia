@@ -1,0 +1,100 @@
+.about {
+  position: relative;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    width: 85rem;
+    padding-right: 3rem;
+
+    &-text {
+      font-family: 'Winter Sans Trial';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 3.4rem;
+      line-height: 105%;
+      letter-spacing: -0.02em;
+
+      span {
+        font-weight: 800;
+        color: var(--primary-accent);
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-weight: 400;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+      color: inherit;
+      transition: all 0.3s ease;
+
+      i::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        transform: rotate(-90deg);
+        background-color: var(--primary-accent);
+        overflow: hidden;
+        font-size: 0.7rem;
+        line-height: 1;
+        color: var(--white);
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        color: var(--primary-accent);
+
+        i::before {
+          background-color: var(--primary-black);
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 83rem;
+    height: 66.6rem;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: -0.8rem;
+    right: 40.4rem;
+    z-index: 1;
+    font-family: 'Winter Sans Trial';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 6.4rem;
+    line-height: 105%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--white);
+
+    &::before {
+      content: "";
+      display: block;
+      width: 139.6rem;
+      height: 28.4rem;
+      background-color: var(--primary-accent);
+      position: absolute;
+      bottom: -8.5rem;
+      right: -3.4rem;
+      z-index: -1;
+    }
+  }
+}

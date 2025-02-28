@@ -1,0 +1,22 @@
+/* libs styles */
+.swiper-pagination-bullet-active::after {
+  animation-name: timeline;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes timeline {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+// #smooth-content {
+//   border-top: 1px solid transparent;
+//   border-bottom: 1px solid transparent;
+// }
