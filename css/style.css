@@ -487,6 +487,7 @@ a {
   transition: all 0.3s ease;
   position: absolute;
   top: calc(100% + 3.2rem);
+  z-index: 10;
 }
 .nav__list::before {
   content: "";
