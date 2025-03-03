@@ -173,6 +173,11 @@
       font-size: 1.2rem;
       line-height: 167%;
       color: var(--primary-white);
+      white-space: nowrap;
+
+      &:last-child {
+        text-align: right;
+      }
 
       a {
         color: inherit;

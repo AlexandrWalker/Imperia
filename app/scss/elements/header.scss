@@ -23,6 +23,10 @@
     }
   }
 
+  &__btn {
+    display: none;
+  }
+
   &__wrap {
     display: flex;
     align-items: center;
@@ -30,6 +34,7 @@
   }
 
   &__phone {
+    display: none;
     font-family: 'Winter Sans Trial';
     font-weight: 800;
     font-size: 4rem;
@@ -43,6 +48,7 @@
   }
 
   &__contact {
+    display: none;
     position: relative;
     width: 25rem;
     height: 5rem;
@@ -58,8 +64,12 @@
         transform: scale(-1, -1);
       }
 
+      .header__contact-body {
+        grid-template-rows: 1fr;
+      }
+
       .header__contact-list {
-        height: auto;
+        // height: auto;
         padding-bottom: 2.6rem;
       }
     }
@@ -102,8 +112,14 @@
       }
     }
 
+    &-body {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: all 0.3s ease;
+    }
+
     &-list {
-      height: 0;
+      // height: 0;
       overflow: hidden;
     }
 
@@ -151,6 +167,52 @@
       }
     }
   }
+
+  &__info {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2rem;
+
+    &-phone {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: 'Winter Sans Trial';
+      font-weight: 800;
+      font-size: 2.4rem;
+      line-height: 1.416;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: inherit;
+
+      i {
+
+        &::before {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 2.4rem;
+          height: 2.4rem;
+          border-radius: 50%;
+          transform: rotate(-90deg);
+          background-color: var(--primary-accent);
+          overflow: hidden;
+          font-size: 0.7rem;
+          line-height: 1;
+          color: var(--white);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.16;
+      color: var(--primary-accent);
+    }
+  }
 }
 
 .nav {
@@ -180,7 +242,6 @@
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 98%;
-      letter-spacing: -0.02em;
       white-space: nowrap;
       cursor: pointer;
 
@@ -223,11 +284,14 @@
       content: "";
       display: block;
       height: 3.3rem;
-      position: absolute; /* Абсолютное позиционирование */
+      position: absolute;
+      /* Абсолютное позиционирование */
       top: -3.3rem;
       left: 8.8rem;
-      border: 1.65rem solid transparent; /* Прозрачные границы */
-      border-bottom: 1.65rem solid var(--white); /* Добавляем треугольник */
+      border: 1.65rem solid transparent;
+      /* Прозрачные границы */
+      border-bottom: 1.65rem solid var(--white);
+      /* Добавляем треугольник */
     }
 
     &::after {
@@ -241,6 +305,8 @@
     }
 
     &-link {
+      display: block;
+      padding: 2rem 3rem;
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 1.9rem;
@@ -248,7 +314,6 @@
     }
 
     li {
-      padding: 2rem 3rem;
       transition: background-color 0.3s ease;
 
       &:hover {
@@ -271,5 +336,36 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--primary-accent);
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 1.4rem;
+    height: 0.2rem;
+    background-color: var(--white);
+    position: relative;
+    top: -0.2rem;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 1.4rem;
+    height: 0.2rem;
+    background-color: var(--white);
+    position: relative;
+    bottom: -0.2rem;
   }
 }

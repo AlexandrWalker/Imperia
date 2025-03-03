@@ -5,6 +5,12 @@ html {
 
   --refRes: 1920;
   font-size: calc(100vw / var(--refRes) * 10);
+
+  @media (max-width: 768px) {
+    // --refRes: 903.53
+    // --refRes: 768
+    font-size: 62.5%;
+  }
 }
 
 body {
@@ -14,12 +20,14 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 1.4rem;
+  letter-spacing: -0.02em;
   color: var(--primary-black);
   background: var(--primary-bg);
 }
 
 section {
   margin-bottom: 6rem;
+  position: relative;
 }
 
 .wrapper {
@@ -38,8 +46,8 @@ section {
 }
 
 .container {
-  max-width: 172rem;
-  padding: 0 2rem;
+  max-width: 176rem;
+  padding: 0 4rem;
   margin: 0 auto;
 }
 
@@ -53,16 +61,28 @@ section {
   font-weight: 800;
   font-size: 6.4rem;
   line-height: 105%;
-  letter-spacing: -0.02em;
   text-transform: uppercase;
+
+  span {
+    color: var(--primary-accent);
+  }
 }
 
-h1 {
-  font-weight: 700;
-  font-size: 8rem;
-  line-height: 100%;
-  letter-spacing: 0.03em;
+.block-title {
+  font-family: 'Winter Sans Trial';
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 105%;
+  text-transform: uppercase;
+  color: var(--primary-black);
+  width: min-content;
+
+  span {
+    color: var(--primary-accent);
+  }
 }
+
+h1 {}
 
 h2 {}
 
@@ -78,7 +98,6 @@ p {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 120%;
-  letter-spacing: -0.02em;
 }
 
 a {
@@ -103,7 +122,6 @@ a {
   font-weight: 600;
   line-height: 143%;
   text-align: center;
-  letter-spacing: -0.02em;
   transition: all 0.3s ease;
   padding: var(--button-padding-y) var(--button-padding-x);
   background-color: var(--button-bgcolor);
@@ -122,9 +140,111 @@ a {
 }
 
 .btn-outline {
+  --button-padding-y: 1.5rem;
   --button-bgcolor: transparent;
   --button-border-color: var(--primary-black);
-
-  width: 21.2rem;
+  max-width: 21.2rem;
+  width: 100%;
   height: 5rem;
+}
+
+.btn-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 26.3rem;
+  height: 26.3rem;
+  padding: 3rem;
+  background-color: var(--primary-yellow);
+  color: inherit;
+  transition: all 0.3s ease;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: var(--primary-black);
+  }
+
+  i {
+    font-size: 1.1rem;
+    line-height: 100%;
+    color: var(--white);
+  }
+
+  p {
+    width: 100%;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 110%;
+    word-break: break-word;
+  }
+
+  &:hover {
+    background-color: var(--primary-accent);
+    color: var(--white);
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: inherit;
+  transition: all 0.3s ease;
+
+  i::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+    background-color: var(--primary-accent);
+    overflow: hidden;
+    font-size: 0.7rem;
+    line-height: 1;
+    color: var(--white);
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    color: var(--primary-accent);
+
+    i::before {
+      background-color: var(--primary-black);
+    }
+  }
+}
+
+.component {
+  display: block;
+  width: 72.708%;
+  height: 28.4rem;
+  background-color: var(--primary-accent);
+  position: absolute;
+  bottom: -8.5rem;
+  left: 0;
+  z-index: -1;
+
+  &::before {
+    content: "";
+    display: block;
+    aspect-ratio: 1/1;
+    background-image: url(./../images/component/c-2.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
