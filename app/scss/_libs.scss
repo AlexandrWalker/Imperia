@@ -16,6 +16,16 @@
   &:hover {
     background-color: var(--primary-black);
   }
+
+  &::after {
+    display: none;
+  }
+}
+
+.swiper-button-prev {
+  &::before {
+    transform: scale(-1, -1);
+  }
 }
 
 .swiper-button-next:after,
@@ -74,6 +84,11 @@
   animation-duration: 5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 1;
 }
 
 @keyframes timeline {
