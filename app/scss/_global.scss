@@ -71,7 +71,7 @@ section {
 .block-title {
   font-family: 'Winter Sans Trial';
   font-weight: 800;
-  font-size: 44px;
+  font-size: 4.4rem;
   line-height: 105%;
   text-transform: uppercase;
   color: var(--primary-black);
@@ -317,19 +317,27 @@ a {
 
 input {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 143%;
-  color: var(--white-80);
+  color: var(--white);
   width: 100%;
   padding: 0.2rem 5.6rem 2rem 2rem;
   border: 0;
   background: transparent;
   border-bottom: 0.1rem solid var(--white-30);
+
+  &::placeholder,
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-moz-placeholder,
+  &:-ms-input-placeholder {
+    color: var(--white-80);
+  }
 }
 
 textarea {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 143%;
   color: var(--white-80);
   width: 100%;
@@ -339,6 +347,14 @@ textarea {
   background: transparent;
   border: 0.1rem solid var(--white-30);
   resize: none;
+
+  &::placeholder,
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-moz-placeholder,
+  &:-ms-input-placeholder {
+    color: var(--white-80);
+  }
 }
 
 .checkbox {
@@ -454,11 +470,13 @@ input[type=checkbox]:checked {
     font-size: 1.4rem;
     line-height: 143%;
     text-align: center;
+    white-space: nowrap;
     padding: 1.5rem 2rem;
     min-width: 21.2rem;
     width: fit-content;
     height: fit-content;
     border: 0.1rem solid var(--primary-black-30);
+    cursor: pointer;
 
     &.tabs-active {
       background-color: var(--primary-accent);
@@ -467,10 +485,21 @@ input[type=checkbox]:checked {
   }
 
   &__item {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    z-index: -1000;
 
     &.tabs-active {
-      display: block;
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+      height: auto;
+      position: static;
+      transition: opacity 0.3s ease;
     }
   }
 }

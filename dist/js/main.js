@@ -56,7 +56,6 @@
     var tenants__slider = new Swiper(".tenants__slider-init", {
       spaceBetween: 10,
       slidesPerView: "auto",
-      loop: true,
       speed: 600,
       mousewheel: {
         forceToAxis: true,
