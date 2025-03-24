@@ -319,20 +319,53 @@ input {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 143%;
-  color: var(--white);
+  color: var(--white-50);
   width: 100%;
   padding: 0.2rem 5.6rem 2rem 2rem;
   border: 0;
   background: transparent;
   border-bottom: 0.1rem solid var(--white-30);
+  transition: all 0.3s ease;
 
   &::placeholder,
   &::-webkit-input-placeholder,
   &::-moz-placeholder,
   &:-moz-placeholder,
   &:-ms-input-placeholder {
-    color: var(--white-80);
+    color: var(--white-50);
   }
+
+  &::placeholder {
+    transition: all 0.3s ease;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--white);
+    border-color: var(--white);
+
+    &::placeholder {
+      color: var(--white);
+    }
+  }
+
+  &:invalid {
+    color: var(--primary-accent);
+    border-color: var(--primary-accent);
+
+    &~.error {
+      display: block;
+    }
+  }
+}
+
+.error {
+  display: none;
+  font-size: 1rem;
+  line-height: 200%;
+  padding-left: 2rem;
+  color: var(--primary-accent);
 }
 
 textarea {

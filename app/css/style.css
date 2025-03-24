@@ -564,15 +564,41 @@ input {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 143%;
-  color: var(--white);
+  color: var(--white-50);
   width: 100%;
   padding: 0.2rem 5.6rem 2rem 2rem;
   border: 0;
   background: transparent;
   border-bottom: 0.1rem solid var(--white-30);
+  transition: all 0.3s ease;
 }
 input::placeholder, input::-webkit-input-placeholder, input::-moz-placeholder, input:-moz-placeholder, input:-ms-input-placeholder {
-  color: var(--white-80);
+  color: var(--white-50);
+}
+input::placeholder {
+  transition: all 0.3s ease;
+}
+input:hover, input:focus, input:active {
+  color: var(--white);
+  border-color: var(--white);
+}
+input:hover::placeholder, input:focus::placeholder, input:active::placeholder {
+  color: var(--white);
+}
+input:invalid {
+  color: var(--primary-accent);
+  border-color: var(--primary-accent);
+}
+input:invalid ~ .error {
+  display: block;
+}
+
+.error {
+  display: none;
+  font-size: 1rem;
+  line-height: 200%;
+  padding-left: 2rem;
+  color: var(--primary-accent);
 }
 
 textarea {
@@ -1465,6 +1491,24 @@ input[type=checkbox]:checked {
 }
 .case__slider .swiper-slide {
   position: static;
+  opacity: 0;
+  visibility: hidden;
+}
+.case__slider .swiper-slide .case__body-video {
+  transform: translateX(-100%);
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+.case__slider .swiper-slide-active {
+  opacity: 1;
+  visibility: visible;
+}
+.case__slider .swiper-slide-active .case__body-video {
+  transform: translateX(0);
+  opacity: 1;
+}
+.case__slider .swiper-slide-active + .swiper-slide .case__body-video {
+  transform: translateX(100%);
 }
 .case__slider .swiper-slide .case__body-img {
   transition: all 0.6s ease;
@@ -1852,6 +1896,7 @@ input[type=checkbox]:checked {
   background-color: var(--white);
   padding: 3rem 3rem 4rem;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 .stage__item:hover {
   background-color: var(--primary-accent);
@@ -2317,6 +2362,9 @@ input[type=checkbox]:checked {
   input {
     padding: 0.2rem 3.6rem 2rem 1rem;
   }
+  .error {
+    padding-left: 1rem;
+  }
   .request__inner::after {
     display: none;
   }
@@ -2529,16 +2577,25 @@ input[type=checkbox]:checked {
   }
   .case__item {
     flex-direction: column;
+    gap: 3rem;
   }
   .case__head {
+    padding: 3rem 0 0;
     width: 100%;
     gap: 2rem;
+  }
+  .case__head-title {
+    font-size: 1.6rem;
+  }
+  .case__head-img {
+    width: 100%;
+    height: auto;
   }
   .case__body {
     width: calc(100% + 8rem);
     margin-right: -4rem;
     margin-left: -4rem;
-    padding: 0 4rem;
+    padding: 0 0 12.8rem;
   }
   .case__body::before {
     display: none;
@@ -2554,7 +2611,7 @@ input[type=checkbox]:checked {
     gap: 2rem;
   }
   .case__foot {
-    margin-top: -11.8rem;
+    margin-top: -13.8rem;
   }
   .case__foot-item {
     padding: 2rem;
@@ -2569,6 +2626,41 @@ input[type=checkbox]:checked {
   }
   .case__foot-text {
     font-size: 1.2rem;
+  }
+  .case__body-content {
+    padding: 0 4rem;
+  }
+  .case__body-items {
+    top: 3rem;
+    left: 9rem;
+    gap: 5rem;
+  }
+  .case__body-item {
+    gap: 1rem;
+  }
+  .case__body-icon {
+    width: 5rem;
+    height: 5rem;
+  }
+  .case__body-wrap {
+    gap: 0.5rem;
+  }
+  .case__body-wrap p {
+    font-size: 1.2rem;
+  }
+  .case__body-wrap span {
+    font-size: 2.4rem;
+  }
+  .case__body-video {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    top: 3rem;
+    right: 9rem;
+    left: unset;
+  }
+  .case .hero__btns {
+    right: 4rem;
   }
   .adv__content {
     flex-direction: column;
@@ -2916,6 +3008,46 @@ input[type=checkbox]:checked {
     max-width: 100%;
     width: 100%;
     margin: 0;
+  }
+  .case__head-items {
+    gap: 1rem;
+  }
+  .case__head-item {
+    width: calc(50% - 0.5rem);
+  }
+  .case__head-img {
+    width: auto;
+    height: 100%;
+  }
+  .case__item {
+    gap: 2rem;
+  }
+  .case__body-video {
+    display: none;
+  }
+  .case__body {
+    width: calc(100% + 2rem);
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+  .case__body-content {
+    padding: 0 1rem;
+  }
+  .case__body-items {
+    top: 2rem;
+    left: 3rem;
+    gap: 1rem;
+  }
+  .case__foot-items {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .case__foot-item {
+    width: 100%;
+  }
+  .case .hero__btns {
+    display: flex;
+    right: 1rem;
   }
   .feat .swiper-wrapper {
     gap: unset;
