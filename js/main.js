@@ -65,8 +65,8 @@
         disableOnInteraction: false
       },
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".tenants__slider-next",
+        prevEl: ".tenants__slider-prev",
       },
       pagination: {
         el: ".swiper-pagination",
@@ -100,8 +100,8 @@
         forceToAxis: true,
       },
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".path__slider-next",
+        prevEl: ".path__slider-prev",
       },
       breakpoints: {
         601: {
@@ -126,6 +126,7 @@
       noSwiping: true,
       freeMode: true,
       watchSlidesProgress: true,
+      loop: true,
       speed: 600,
       effect: "creative",
       creativeEffect: {
@@ -145,12 +146,13 @@
       speed: 600,
       effect: "creative",
       // effect: "fade",
+      loop: true,
       thumbs: {
         swiper: case__thumbs,
       },
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".case__slider-next",
+        prevEl: ".case__slider-prev",
       },
     });
 
@@ -179,6 +181,8 @@
       },
     });
 
+
+    
     /**
      * Управляет переключением вкладок на странице.
      * Добавляет и удаляет классы активности для кнопок и панелей вкладок.
