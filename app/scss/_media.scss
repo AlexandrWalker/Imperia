@@ -371,7 +371,10 @@
   .case__body-items {
     top: 3rem;
     left: 9rem;
-    gap: 5rem;
+    // gap: 5rem;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 46%;
   }
 
   .case__body-item {
@@ -797,6 +800,18 @@
   }
 }
 
+@media (max-width: 660px) {
+  .case__body-items  {
+    justify-content: unset;
+    gap: 5rem;
+    width: auto;
+  }
+
+  .case__body-video {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
 
   .swiper-horizontal>.swiper-pagination-bullets,
@@ -872,10 +887,6 @@
 
   .case__item {
     gap: 2rem;
-  }
-
-  .case__body-video {
-    display: none;
   }
 
   .case__body {
