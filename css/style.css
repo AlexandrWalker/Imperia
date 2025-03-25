@@ -327,6 +327,12 @@ section {
   margin: 0 auto;
 }
 
+.container-fluid {
+  max-width: 192rem;
+  padding: 0;
+  margin: 0 auto;
+}
+
 .no-scroll {
   overflow: hidden;
   height: 100vh;
@@ -613,9 +619,17 @@ textarea {
   background: transparent;
   border: 0.1rem solid var(--white-30);
   resize: none;
+  transition: all 0.3s ease;
 }
 textarea::placeholder, textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-placeholder, textarea:-ms-input-placeholder {
   color: var(--white-80);
+}
+textarea:hover, textarea:focus, textarea:active {
+  color: var(--white);
+  border-color: var(--white);
+}
+textarea:hover::placeholder, textarea:focus::placeholder, textarea:active::placeholder {
+  color: var(--white);
 }
 
 .checkbox {
@@ -761,6 +775,42 @@ input[type=checkbox]:checked {
 .icon-whatsapp:before {
   margin-right: -0.1rem;
   margin-bottom: 0rem;
+}
+
+.breadcrumbs {
+  background-color: var(--primary-black);
+  color: var(--white);
+  margin: 0;
+}
+.breadcrumbs__inner {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+}
+.breadcrumbs ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.breadcrumbs li {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.breadcrumbs a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: inherit;
+}
+.breadcrumbs img {
+  width: auto;
+  height: 1.4rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.breadcrumbs .slash {
+  color: var(--primary-accent);
 }
 
 .head {
@@ -2372,6 +2422,144 @@ input[type=checkbox]:checked {
   padding: 2rem 0 0 14rem;
 }
 
+.service {
+  height: 82rem;
+}
+.service__container {
+  height: 100%;
+}
+.service__inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.service__head {
+  background-color: var(--primary-accent);
+  width: calc(100% - 80.8rem);
+  height: 100%;
+  padding: 3rem 0 0 12rem;
+  background-image: url(./../images/component/logo-outline.svg);
+  background-repeat: no-repeat;
+  background-position-x: -1.1rem;
+  background-position-y: bottom;
+  background-size: 96.7rem 21.3rem;
+}
+.service__title {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.service__title a {
+  font-family: "Winter Sans Trial";
+  font-weight: 800;
+  font-size: 8rem;
+  line-height: 105%;
+  text-decoration-line: none;
+  text-transform: uppercase;
+  color: var(--white);
+  position: relative;
+  width: fit-content;
+  overflow: hidden;
+}
+.service__title a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.4rem;
+  background-color: var(--white);
+  position: absolute;
+  bottom: 0.4rem;
+  left: 0;
+}
+.service__body {
+  display: flex;
+  align-items: flex-end;
+  background-image: url(./../images/main/about.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80.8rem;
+  height: 100%;
+}
+
+.service__blocks {
+  display: flex;
+  flex-direction: column;
+}
+.service__block {
+  display: flex;
+}
+.service__block.red .btn-box {
+  background-color: var(--primary-accent);
+  color: var(--white);
+}
+.service__block.red .btn-box:hover {
+  background-color: var(--primary-yellow);
+  color: var(--primary-black);
+}
+.service__block.yellow .service__item::before {
+  background-image: url(./../images/component/c-1-yellow.svg);
+  right: -8.5rem;
+  left: unset;
+}
+.service__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: fit-content;
+  background-color: var(--primary-black);
+  padding: 10rem 12rem 10rem 14rem;
+  margin-top: 6rem;
+  position: relative;
+}
+.service__item::before {
+  content: "";
+  display: block;
+  width: 17rem;
+  height: 17.2rem;
+  position: absolute;
+  bottom: 0;
+  left: -8.5rem;
+  background-image: url(./../images/component/c-1.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.service__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  color: var(--white);
+}
+.service__content-title {
+  font-family: "Winter Sans Trial";
+  font-weight: 800;
+  font-size: 4.4rem;
+  line-height: 105%;
+}
+.service__content-text {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 120%;
+}
+.service__pic {
+  display: flex;
+  align-items: flex-end;
+  width: 50%;
+  height: 61.5rem;
+  position: relative;
+}
+.service__pic-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.service__pic-btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
 @media (min-width: 1921px) {
   html {
     font-size: calc(10px + 0 * (100vw - var(--refRes) * 1px) / var(--refRes));
@@ -2990,6 +3178,66 @@ input[type=checkbox]:checked {
     height: 5rem;
     gap: unset;
   }
+  /* service */
+  .service {
+    height: auto;
+  }
+  .service__inner {
+    flex-direction: column;
+  }
+  .service__head {
+    width: 100%;
+    padding: 4rem 5rem 15.6rem 4rem;
+    background-size: 53.6rem 11.8rem;
+  }
+  .service__title a {
+    font-size: 6rem;
+  }
+  .service__body {
+    width: 100%;
+    height: 46.6rem;
+  }
+  .service__blocks {
+    gap: 2rem;
+  }
+  .service__item {
+    margin-top: 5rem;
+    padding: 2rem 3rem 8rem 2rem;
+    width: calc(50% + 21rem);
+    margin-right: -21rem;
+    justify-content: flex-start;
+  }
+  .service__content {
+    gap: 1.5rem;
+    width: calc(100% - 21rem);
+  }
+  .service__content-title {
+    font-size: 2.4rem;
+  }
+  .service__content-text {
+    font-size: 1.2rem;
+  }
+  .service__item::before {
+    width: 5rem;
+    height: 5rem;
+    left: -2rem;
+  }
+  .service__block.yellow .service__item::before {
+    right: -2rem;
+  }
+  .service__block.yellow .service__item {
+    justify-content: flex-end;
+    margin-right: unset;
+    margin-left: -21rem;
+    z-index: -1;
+  }
+  .service__pic {
+    height: auto;
+  }
+  .service__pic-img {
+    height: 24.7rem;
+    margin-bottom: auto;
+  }
 }
 @media (max-width: 660px) {
   .case__body-items {
@@ -2999,6 +3247,9 @@ input[type=checkbox]:checked {
   }
   .case__body-video {
     display: none;
+  }
+  .service__head {
+    padding: 3rem 2rem 12.6rem 2rem;
   }
 }
 @media (max-width: 600px) {
@@ -3166,6 +3417,50 @@ input[type=checkbox]:checked {
   }
   .footer__menu-inner::after {
     right: -3.1rem;
+  }
+  .service__head {
+    padding: 4rem 1rem 5rem;
+    background-image: none;
+  }
+  .service__title a::after {
+    height: 0.2rem;
+    bottom: 0.2rem;
+  }
+  .service__title {
+    gap: 2rem;
+  }
+  .service__title a {
+    font-size: 4rem;
+  }
+  .service__blocks {
+    gap: 1rem;
+  }
+  .service__block {
+    flex-direction: column-reverse;
+  }
+  .service__block.yellow {
+    flex-direction: column;
+  }
+  .service__pic {
+    width: 100%;
+  }
+  .service__pic-img {
+    height: auto;
+  }
+  .service__block.yellow .service__item,
+  .service__item {
+    margin: 0;
+    width: 100%;
+    padding: 3rem 4rem 6rem 10rem;
+  }
+  .service__content {
+    width: 100%;
+  }
+  .service__item::before {
+    left: 0;
+  }
+  .service__block.yellow .service__item::before {
+    right: 0;
   }
 }
 @media (max-width: 520px) {
