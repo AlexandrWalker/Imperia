@@ -182,7 +182,7 @@
     });
 
 
-    
+
     /**
      * Управляет переключением вкладок на странице.
      * Добавляет и удаляет классы активности для кнопок и панелей вкладок.
@@ -230,9 +230,44 @@
       });
     };
 
-
-
     tabsFunc();
 
+    /**
+     * Инициализация Lenis и ScrollTrigger
+     */
+    // Initialize a new Lenis instance for smooth scrolling
+    const lenis = new Lenis({
+      anchors: {
+        offset: 100,
+        onComplete: () => {
+          console.log('scrolled to anchor')
+        }
+      }
+    });
+
+    // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+    lenis.on('scroll', ScrollTrigger.update);
+
+    // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+    // This ensures Lenis's smooth scroll animation updates on each GSAP tick
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+    });
+
+    // Disable lag smoothing in GSAP to prevent any delay in scroll animations
+    gsap.ticker.lagSmoothing(0);
+
+
+
+    gsap.registerPlugin(SplitText);
+
+    var split = new SplitText("#ID", {type: "chars"});
+    //now animate each character into place from 100px above, fading in:
+    gsap.from(split.chars, {
+      duration: 1, 
+      y: 100, 
+      autoAlpha: 0, 
+      stagger: 0.05
+    });
   });
 })();

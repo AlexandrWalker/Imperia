@@ -798,10 +798,85 @@
     height: 5rem;
     gap: unset;
   }
+
+  /* service */
+  .service {
+    height: auto;
+  }
+
+  .service__inner {
+    flex-direction: column;
+  }
+
+  .service__head {
+    width: 100%;
+    padding: 4rem 5rem 15.6rem 4rem;
+    background-size: 53.6rem 11.8rem;
+  }
+
+  .service__title a {
+    font-size: 6rem;
+  }
+
+  .service__body {
+    width: 100%;
+    height: 46.6rem;
+  }
+
+  .service__blocks {
+    gap: 2rem;
+  }
+
+  .service__item {
+    margin-top: 5rem;
+    padding: 2rem 3rem 8rem 2rem;
+    width: calc(50% + 21rem);
+    margin-right: -21rem;
+    justify-content: flex-start;
+  }
+
+  .service__content {
+    gap: 1.5rem;
+    width: calc(100% - 21rem);
+  }
+
+  .service__content-title {
+    font-size: 2.4rem;
+  }
+
+  .service__content-text {
+    font-size: 1.2rem;
+  }
+
+  .service__item::before {
+    width: 5rem;
+    height: 5rem;
+    left: -2rem;
+  }
+
+  .service__block.yellow .service__item::before {
+    right: -2rem;
+  }
+
+  .service__block.yellow .service__item {
+    justify-content: flex-end;
+    margin-right: unset;
+    margin-left: -21rem;
+    z-index: -1;
+  }
+
+  .service__pic {
+    height: auto;
+  }
+
+  .service__pic-img {
+    height: 24.7rem;
+    margin-bottom: auto;
+  }
 }
 
 @media (max-width: 660px) {
-  .case__body-items  {
+  .case__body-items {
     justify-content: unset;
     gap: 5rem;
     width: auto;
@@ -809,6 +884,10 @@
 
   .case__body-video {
     display: none;
+  }
+
+  .service__head {
+    padding: 3rem 2rem 12.6rem 2rem;
   }
 }
 
@@ -1020,6 +1099,63 @@
 
   .footer__menu-inner::after {
     right: -3.1rem;
+  }
+
+  .service__head {
+    padding: 4rem 1rem 5rem;
+    background-image: none;
+  }
+
+  .service__title a::after {
+    height: 0.2rem;
+    bottom: 0.2rem;
+  }
+
+  .service__title {
+    gap: 2rem;
+  }
+
+  .service__title a {
+    font-size: 4rem;
+  }
+
+  .service__blocks {
+    gap: 1rem;
+  }
+
+  .service__block {
+    flex-direction: column-reverse;
+  }
+
+  .service__block.yellow {
+    flex-direction: column;
+  }
+
+  .service__pic {
+    width: 100%;
+  }
+
+  .service__pic-img {
+    height: auto;
+  }
+
+  .service__block.yellow .service__item,
+  .service__item {
+    margin: 0;
+    width: 100%;
+    padding: 3rem 4rem 6rem 10rem;
+  }
+
+  .service__content {
+    width: 100%;
+  }
+
+  .service__item::before {
+    left: 0;
+  }
+
+  .service__block.yellow .service__item::before {
+    right: 0;
   }
 }
 

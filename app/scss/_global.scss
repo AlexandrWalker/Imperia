@@ -51,6 +51,12 @@ section {
   margin: 0 auto;
 }
 
+.container-fluid {
+  max-width: 192rem;
+  padding: 0;
+  margin: 0 auto;
+}
+
 .no-scroll {
   overflow: hidden;
   height: 100vh;
@@ -380,6 +386,7 @@ textarea {
   background: transparent;
   border: 0.1rem solid var(--white-30);
   resize: none;
+  transition: all 0.3s ease;
 
   &::placeholder,
   &::-webkit-input-placeholder,
@@ -387,6 +394,17 @@ textarea {
   &:-moz-placeholder,
   &:-ms-input-placeholder {
     color: var(--white-80);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--white);
+    border-color: var(--white);
+
+    &::placeholder {
+      color: var(--white);
+    }
   }
 }
 
@@ -551,4 +569,46 @@ input[type=checkbox]:checked {
 .icon-whatsapp:before {
   margin-right: -0.1rem;
   margin-bottom: -0rem;
+}
+
+.breadcrumbs {
+  background-color: var(--primary-black);
+  color: var(--white);
+  margin: 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  li {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: inherit;
+  }
+
+  img {
+    width: auto;
+    height: 1.4rem;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .slash {
+    color: var(--primary-accent);
+  }
 }

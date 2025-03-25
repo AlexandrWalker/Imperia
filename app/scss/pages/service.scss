@@ -1,0 +1,166 @@
+.service {
+  height: 82rem;
+
+  &__container {
+    height: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__head {
+    background-color: var(--primary-accent);
+    width: calc(100% - 80.8rem);
+    height: 100%;
+    padding: 3rem 0 0 12rem;
+    background-image: url(./../images/component/logo-outline.svg);
+    background-repeat: no-repeat;
+    background-position-x: -1.1rem;
+    background-position-y: bottom;
+    background-size: 96.7rem 21.3rem;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    a {
+      font-family: 'Winter Sans Trial';
+      font-weight: 800;
+      font-size: 8rem;
+      line-height: 105%;
+      text-decoration-line: none;
+      text-transform: uppercase;
+      color: var(--white);
+      position: relative;
+      width: fit-content;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.4rem;
+        background-color: var(--white);
+        position: absolute;
+        bottom: 0.4rem;
+        left: 0;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: flex-end;
+    background-image: url(./../images/main/about.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80.8rem;
+    height: 100%;
+  }
+}
+
+.service {
+
+  &__blocks {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__block {
+    display: flex;
+
+    &.red {
+
+      .btn-box {
+        background-color: var(--primary-accent);
+        color: var(--white);
+
+        &:hover {
+          background-color: var(--primary-yellow);
+          color: var(--primary-black);
+        }
+      }
+    }
+
+    &.yellow {
+
+      .service__item::before {
+        background-image: url(./../images/component/c-1-yellow.svg);
+        right: -8.5rem;
+        left: unset;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: fit-content;
+    background-color: var(--primary-black);
+    padding: 10rem 12rem 10rem 14rem;
+    margin-top: 6rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 17rem;
+      height: 17.2rem;
+      position: absolute;
+      bottom: 0;
+      left: -8.5rem;
+      background-image: url(./../images/component/c-1.svg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: var(--white);
+
+    &-title {
+      font-family: 'Winter Sans Trial';
+      font-weight: 800;
+      font-size: 4.4rem;
+      line-height: 105%;
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 120%;
+    }
+  }
+
+  &__pic {
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+    height: 61.5rem;
+    position: relative;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-btn {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
