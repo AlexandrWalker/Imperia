@@ -725,9 +725,14 @@ input[type=checkbox]:checked {
   height: fit-content;
   border: 0.1rem solid var(--primary-black-30);
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 .tabs__btn.tabs-active {
   background-color: var(--primary-accent);
+  color: var(--white);
+}
+.tabs__btn:hover {
+  background-color: var(--primary-black);
   color: var(--white);
 }
 .tabs__item {
@@ -746,6 +751,16 @@ input[type=checkbox]:checked {
   height: auto;
   position: static;
   transition: opacity 0.3s ease;
+}
+
+.icon-telegram::before {
+  margin-left: -0.2rem;
+  margin-bottom: -0.3rem;
+}
+
+.icon-whatsapp:before {
+  margin-right: -0.1rem;
+  margin-bottom: 0rem;
 }
 
 .head {
@@ -929,11 +944,30 @@ input[type=checkbox]:checked {
   font-size: 1.6rem;
   line-height: 1;
   color: var(--primary-accent);
+  position: relative;
+}
+.nav__item-link i::after {
+  content: "";
+  display: block;
+  height: 3.3rem;
+  position: absolute;
+  bottom: -3.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1.65rem solid transparent;
+  border-bottom: 1.65rem solid var(--white);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
 .nav__item:hover .nav__list {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+}
+.nav__item:hover .nav__item-link i::after {
+  opacity: 1;
+  visibility: visible;
 }
 .nav__list {
   width: 28.3rem;
@@ -945,16 +979,6 @@ input[type=checkbox]:checked {
   position: absolute;
   top: calc(100% + 3.2rem);
   z-index: 10;
-}
-.nav__list::before {
-  content: "";
-  display: block;
-  height: 3.3rem;
-  position: absolute;
-  top: -3.3rem;
-  left: 8.8rem;
-  border: 1.65rem solid transparent;
-  border-bottom: 1.65rem solid var(--white);
 }
 .nav__list::after {
   content: "";
@@ -1142,6 +1166,9 @@ input[type=checkbox]:checked {
   font-size: 1.6rem;
   font-weight: 700;
   color: inherit;
+}
+.footer__menu-title:hover {
+  color: var(--primary-accent);
 }
 .footer__menu-link {
   font-weight: 400;
@@ -2633,7 +2660,9 @@ input[type=checkbox]:checked {
   .case__body-items {
     top: 3rem;
     left: 9rem;
-    gap: 5rem;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 46%;
   }
   .case__body-item {
     gap: 1rem;
@@ -2962,6 +2991,16 @@ input[type=checkbox]:checked {
     gap: unset;
   }
 }
+@media (max-width: 660px) {
+  .case__body-items {
+    justify-content: unset;
+    gap: 5rem;
+    width: auto;
+  }
+  .case__body-video {
+    display: none;
+  }
+}
 @media (max-width: 600px) {
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -3021,9 +3060,6 @@ input[type=checkbox]:checked {
   }
   .case__item {
     gap: 2rem;
-  }
-  .case__body-video {
-    display: none;
   }
   .case__body {
     width: calc(100% + 2rem);
