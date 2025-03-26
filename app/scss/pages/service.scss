@@ -75,18 +75,7 @@
   &__block {
     display: flex;
 
-    &.red {
-
-      .btn-box {
-        background-color: var(--primary-accent);
-        color: var(--white);
-
-        &:hover {
-          background-color: var(--primary-yellow);
-          color: var(--primary-black);
-        }
-      }
-    }
+    &.red {}
 
     &.yellow {
 

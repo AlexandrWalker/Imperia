@@ -220,6 +220,24 @@ a {
     background-color: var(--primary-accent);
     color: var(--white);
   }
+
+  &--red {
+    background-color: var(--primary-accent);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--primary-white);
+      color: var(--primary-black);
+
+      span {
+        background-color: var(--primary-accent);
+      }
+
+      p {
+        color: var(--primary-black);
+      }
+    }
+  }
 }
 
 .link {

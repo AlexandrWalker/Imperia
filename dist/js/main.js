@@ -1,186 +1,190 @@
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
 
-    var hero__slider = new Swiper(".hero__slider-init", {
-      spaceBetween: 30,
-      slidesPerView: 1,
-      centeredSlides: true,
-      loop: true,
-      speed: 600,
-      mousewheel: {
-        forceToAxis: true,
-      },
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: false
-      },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
+    function initSwiper() {
+      var hero__slider = new Swiper(".hero__slider-init", {
+        spaceBetween: 30,
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        speed: 600,
+        mousewheel: {
+          forceToAxis: true,
+        },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: false
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        navigation: {
+          nextEl: ".hero__slider-next",
+          prevEl: ".hero__slider-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
 
-    var feat__slider = new Swiper(".feat__slider-init", {
-      slidesPerView: "auto",
-      spaceBetween: 10,
-      speed: 600,
-      mousewheel: {
-        forceToAxis: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      grid: false,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
-      breakpoints: {
-        601: {
-          spaceBetween: 20,
-          slidesPerView: 2,
-          grid: {
-            rows: 2,
+      var feat__slider = new Swiper(".feat__slider-init", {
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        speed: 600,
+        mousewheel: {
+          forceToAxis: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        grid: false,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        breakpoints: {
+          601: {
+            spaceBetween: 20,
+            slidesPerView: 2,
+            grid: {
+              rows: 2,
+            },
+          }
+        },
+      });
+
+      var tenants__slider = new Swiper(".tenants__slider-init", {
+        spaceBetween: 10,
+        slidesPerView: "auto",
+        speed: 600,
+        mousewheel: {
+          forceToAxis: true,
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        navigation: {
+          nextEl: ".tenants__slider-next",
+          prevEl: ".tenants__slider-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        breakpoints: {
+          601: {
+            spaceBetween: 10,
+            slidesPerView: 2,
+            pagination: {
+              el: ".swiper-pagination",
+            },
           },
-        }
-      },
-    });
+          769: {
+            spaceBetween: 20,
+            slidesPerView: 3,
+            pagination: false,
+          },
+          1441: {
+            spaceBetween: 20,
+            slidesPerView: 4,
+            pagination: false,
+          }
+        },
+      });
 
-    var tenants__slider = new Swiper(".tenants__slider-init", {
-      spaceBetween: 10,
-      slidesPerView: "auto",
-      speed: 600,
-      mousewheel: {
-        forceToAxis: true,
-      },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
-      navigation: {
-        nextEl: ".tenants__slider-next",
-        prevEl: ".tenants__slider-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      breakpoints: {
-        601: {
-          spaceBetween: 10,
-          slidesPerView: 2,
-          pagination: {
-            el: ".swiper-pagination",
+      var path__slider = new Swiper(".path__slider-init", {
+        slidesPerView: 1.65,
+        spaceBetween: 108,
+        speed: 600,
+        mousewheel: {
+          forceToAxis: true,
+        },
+        navigation: {
+          nextEl: ".path__slider-next",
+          prevEl: ".path__slider-prev",
+        },
+        breakpoints: {
+          601: {
+            slidesPerView: 2,
+            spaceBetween: 108,
+          },
+          769: {
+            slidesPerView: 3,
+            spaceBetween: 108,
+          },
+          1201: {
+            slidesPerView: 3,
+            spaceBetween: 233,
+          }
+        },
+      });
+
+      var case__thumbs = new Swiper(".case__thumbs-init", {
+        mousewheel: false,
+        slidesPerView: 1,
+        allowTouchMove: true,
+        noSwiping: true,
+        freeMode: true,
+        watchSlidesProgress: true,
+        loop: true,
+        speed: 600,
+        effect: "creative",
+        creativeEffect: {
+          prev: {
+            shadow: false,
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ["100%", 0, 0],
           },
         },
-        769: {
-          spaceBetween: 20,
-          slidesPerView: 3,
-          pagination: false,
-        },
-        1441: {
-          spaceBetween: 20,
-          slidesPerView: 4,
-          pagination: false,
-        }
-      },
-    });
+      });
 
-    var path__slider = new Swiper(".path__slider-init", {
-      slidesPerView: 1.65,
-      spaceBetween: 108,
-      speed: 600,
-      mousewheel: {
-        forceToAxis: true,
-      },
-      navigation: {
-        nextEl: ".path__slider-next",
-        prevEl: ".path__slider-prev",
-      },
-      breakpoints: {
-        601: {
-          slidesPerView: 2,
-          spaceBetween: 108,
+      var case__slider = new Swiper(".case__slider-init", {
+        slidesPerView: 1,
+        grabCursor: true,
+        speed: 600,
+        effect: "creative",
+        // effect: "fade",
+        loop: true,
+        navigation: {
+          nextEl: ".case__slider-next",
+          prevEl: ".case__slider-prev",
         },
-        769: {
-          slidesPerView: 3,
-          spaceBetween: 108,
+        thumbs: {
+          swiper: case__thumbs,
         },
-        1201: {
-          slidesPerView: 3,
-          spaceBetween: 233,
-        }
-      },
-    });
+      });
 
-    var case__thumbs = new Swiper(".case__thumbs-init", {
-      mousewheel: false,
-      slidesPerView: 1,
-      allowTouchMove: true,
-      noSwiping: true,
-      freeMode: true,
-      watchSlidesProgress: true,
-      loop: true,
-      speed: 600,
-      effect: "creative",
-      creativeEffect: {
-        prev: {
-          shadow: false,
-          translate: [0, 0, -400],
-        },
-        next: {
-          translate: ["100%", 0, 0],
-        },
-      },
-    });
+      var adv__thumbs = new Swiper(".adv__thumbs-init", {
+        allowPageScroll: "vertical",
+        mousewheel: false,
+        slidesPerView: 1,
+        watchSlidesProgress: true,
+      });
 
-    var case__slider = new Swiper(".case__slider-init", {
-      slidesPerView: 1,
-      grabCursor: true,
-      speed: 600,
-      effect: "creative",
-      // effect: "fade",
-      loop: true,
-      thumbs: {
-        swiper: case__thumbs,
-      },
-      navigation: {
-        nextEl: ".case__slider-next",
-        prevEl: ".case__slider-prev",
-      },
-    });
-
-    var adv__thumbs = new Swiper(".adv__thumbs-init", {
-      allowPageScroll: "vertical",
-      mousewheel: false,
-      slidesPerView: 1,
-      watchSlidesProgress: true,
-    });
-
-    var adv__slider = new Swiper(".adv__slider-init", {
-      grabCursor: true,
-      effect: "creative",
-      speed: 600,
-      creativeEffect: {
-        prev: {
-          shadow: true,
-          translate: [0, 0, -400],
+      var adv__slider = new Swiper(".adv__slider-init", {
+        grabCursor: true,
+        speed: 600,
+        effect: "creative",
+        creativeEffect: {
+          prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ["100%", 0, 0],
+          },
         },
-        next: {
-          translate: ["100%", 0, 0],
+        thumbs: {
+          swiper: adv__thumbs,
         },
-      },
-      thumbs: {
-        swiper: adv__thumbs,
-      },
-    });
+      });
+    }
 
+    // Initialize Swiper on page load
+    window.onload = initSwiper;
 
 
     /**
@@ -257,17 +261,5 @@
     // Disable lag smoothing in GSAP to prevent any delay in scroll animations
     gsap.ticker.lagSmoothing(0);
 
-
-
-    gsap.registerPlugin(SplitText);
-
-    var split = new SplitText("#ID", {type: "chars"});
-    //now animate each character into place from 100px above, fading in:
-    gsap.from(split.chars, {
-      duration: 1, 
-      y: 100, 
-      autoAlpha: 0, 
-      stagger: 0.05
-    });
   });
 })();
