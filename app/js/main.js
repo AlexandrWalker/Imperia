@@ -236,6 +236,22 @@
 
     tabsFunc();
 
+    function accordionFunc() {
+      var accordionHead = document.querySelectorAll('.accordion'),
+        accordionActive = document.getElementsByClassName('active');
+
+      Array.from(accordionHead).forEach(function (accordionItem, i, accordionHead) {
+        accordionItem.addEventListener('click', function (e) {
+          if (accordionActive.length > 0 && accordionActive[0] !== this) {
+            accordionActive[0].classList.remove('active');
+          }
+          this.classList.toggle('active');
+        });
+      });
+    }
+
+    accordionFunc();
+
     /**
      * Инициализация Lenis и ScrollTrigger
      */

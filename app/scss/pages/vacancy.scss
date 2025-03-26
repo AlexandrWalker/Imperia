@@ -1,0 +1,149 @@
+.vacancy {
+  padding-top: 4rem;
+
+  &__title {
+    margin-bottom: 11rem;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__item {
+    padding: 3rem;
+    background-color: var(--primary-grey-10);
+
+    &.active .vacancy__body {
+      grid-template-rows: 1fr;
+    }
+
+    &.active .vacancy__content {
+      padding: 2rem 0 5rem;
+    }
+
+    &.active .vacancy__head-title {
+      color: var(--primary-accent);
+    }
+
+    &.active .adv__thumbs-icon {
+      background-color: var(--primary-accent);
+      transform: rotate(180deg);
+
+      i::before {
+        content: "\e909";
+      }
+    }
+  }
+
+  &__head {
+
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 120%;
+      margin-bottom: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      background-color: var(--primary-black);
+      color: var(--white);
+      flex-shrink: 0;
+      font-size: 1rem;
+      line-height: 100%;
+      transition: all 0.5s ease;
+    }
+
+    &-link {
+      display: block;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      text-decoration-line: underline;
+      color: inherit;
+      margin-bottom: 2rem;
+      width: fit-content;
+
+      span {
+        color: var(--primary-accent);
+        text-decoration-line: underline;
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 120%;
+      color: var(--black);
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 130%;
+    }
+
+    &-list {
+
+      li {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 120%;
+        padding: 0 0 0 2.3rem;
+        position: relative;
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 0.8rem;
+          height: 0.8rem;
+          background-color: var(--primary-accent);
+          position: absolute;
+          top: 0.5rem;
+          left: 0;
+        }
+      }
+    }
+
+    &-btn {
+      margin-top: 1rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+    max-width: 122rem;
+    padding: 0;
+  }
+}
