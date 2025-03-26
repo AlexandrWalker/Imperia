@@ -477,6 +477,20 @@ a {
   background-color: var(--primary-accent);
   color: var(--white);
 }
+.btn-box--red {
+  background-color: var(--primary-accent);
+  color: var(--white);
+}
+.btn-box--red:hover {
+  background-color: var(--primary-white);
+  color: var(--primary-black);
+}
+.btn-box--red:hover span {
+  background-color: var(--primary-accent);
+}
+.btn-box--red:hover p {
+  color: var(--primary-black);
+}
 
 .link {
   display: flex;
@@ -1676,7 +1690,7 @@ input[type=checkbox]:checked {
   top: 5rem;
   left: 0;
 }
-.case__body-video i {
+.case__body-video--play {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1687,6 +1701,10 @@ input[type=checkbox]:checked {
   color: var(--primary-accent);
   font-size: 1.4rem;
   line-height: 100%;
+  transition: all 0.3s ease;
+}
+.case__body-video--play:hover {
+  background-color: var(--white);
 }
 .case__body-video span {
   font-weight: 400;
@@ -2491,14 +2509,6 @@ input[type=checkbox]:checked {
 }
 .service__block {
   display: flex;
-}
-.service__block.red .btn-box {
-  background-color: var(--primary-accent);
-  color: var(--white);
-}
-.service__block.red .btn-box:hover {
-  background-color: var(--primary-yellow);
-  color: var(--primary-black);
 }
 .service__block.yellow .service__item::before {
   background-image: url(./../images/component/c-1-yellow.svg);
