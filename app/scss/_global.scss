@@ -576,6 +576,11 @@ input[type=checkbox]:checked {
   color: var(--white);
   margin: 0;
 
+  &.grey {
+    background-color: var(--primary-grey);
+    color: var(--primary-black);
+  }
+
   &__inner {
     display: flex;
     align-items: center;
