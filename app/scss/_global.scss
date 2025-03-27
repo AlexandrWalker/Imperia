@@ -248,6 +248,10 @@ a {
   }
 }
 
+.mob-block {
+  display: none;
+}
+
 .link {
   display: flex;
   align-items: center;
@@ -289,6 +293,18 @@ a {
     border-radius: 50%;
     fill: var(--white);
     background-color: var(--primary-accent);
+  }
+
+  &-more {
+    color: var(--primary-accent);
+    font-size: 1.6rem;
+    text-decoration: underline;
+
+    &--active {
+      p {
+        -webkit-line-clamp: unset;
+      }
+    }
   }
 }
 
@@ -357,6 +373,7 @@ a {
   }
 }
 
+/* form-input */
 input {
   font-weight: 400;
   font-size: 1.4rem;
@@ -593,6 +610,14 @@ input[type=checkbox]:checked {
       height: auto;
       position: static;
       transition: opacity 0.3s ease;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    &.tabs-active {
+      display: block;
     }
   }
 }

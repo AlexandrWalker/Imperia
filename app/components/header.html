@@ -27,7 +27,11 @@
         <div class="container header__container">
           <div class="header__inner">
             <a class="header__logo" href="/">
-              <img class="header__logo-img" src="./images/logo/logo.svg" alt="">
+              <picture>
+                <source media="(min-width: 601px)" srcset="./images/logo/logo.svg">
+                <source media="(max-width: 600px)" srcset="./images/logo/logo-mob.svg">
+                <img class="header__logo-img" src="./images/logo/logo.svg" alt="ИМПЕРИЯ">
+              </picture>
             </a>
             <div class="header__wrap">
               <a class="header__phone" href="tel:+79133801122">

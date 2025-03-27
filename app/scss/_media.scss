@@ -111,19 +111,24 @@
     font-size: 0.6rem;
   }
 
+  .mob-block {
+    display: block;
+  }
+
   .tabs__btns {
     flex-wrap: nowrap;
-    overflow-x: auto;
-    width: calc(100% + 8rem);
-    margin-left: -4rem;
-    padding: 0 4rem;
     gap: 1rem;
   }
 
   .tabs__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 1.5rem 6.7rem;
-    min-width: fit-content;
+    height: 5rem;
+    padding: 1.5rem;
+    min-width: unset;
+    white-space: unset;
   }
 
   section {
@@ -298,6 +303,10 @@
     margin: 0;
   }
 
+  .case {
+    margin-bottom: 9.6rem;
+  }
+
   .case__item {
     flex-direction: column;
     gap: 3rem;
@@ -316,6 +325,13 @@
   .case__head-img {
     width: 100%;
     height: auto;
+  }
+
+  .case__head-text {
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .case__body {
@@ -344,7 +360,7 @@
   }
 
   .case__foot {
-    margin-top: -13.8rem;
+    bottom: -6.6rem;
   }
 
   .case__foot-item {
@@ -353,6 +369,7 @@
 
   .case__foot-title {
     font-size: 1.6rem;
+    line-height: 100%;
     margin-bottom: 1.5rem;
   }
 
@@ -363,6 +380,7 @@
 
   .case__foot-text {
     font-size: 1.2rem;
+    max-width: 32.4rem;
   }
 
   .case__body-content {
@@ -414,36 +432,40 @@
     right: 4rem;
   }
 
-  .adv__content {
+  .advan__content {
     flex-direction: column;
     gap: 3rem;
   }
 
-  .adv__head {
+  .advan__title {
+    margin-bottom: 2rem;
+  }
+
+  .advan__head {
     width: 100%;
   }
 
-  .adv__head-content {
+  .advan__head-content {
     width: 100%;
     padding: 3rem 2rem 29.6rem;
   }
 
-  .adv__head-title {
+  .advan__head-title {
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
   }
 
-  .adv__head-text {
+  .advan__head-text {
     font-size: 1.2rem;
     margin-bottom: 3rem;
     max-width: 45rem;
   }
 
-  .adv__head-link {
+  .advan__head-link {
     font-size: 1.6rem;
   }
 
-  .adv__slider {
+  .advan__slider {
     margin-top: -26.5rem;
     max-width: 51.1rem;
     width: 100%;
@@ -452,46 +474,55 @@
     min-height: 30.6rem;
   }
 
-  .adv__slider-item {
+  .advan__slider-item {
     width: auto;
   }
 
-  .adv__slider-img {
+  .advan__slider-img {
     width: auto;
   }
 
-  .adv__body {
+  .advan__body {
     width: 100%;
   }
 
-  .adv__thumbs-item {
+  .advan__thumbs-item {
     padding: 2rem 0;
+    min-height: unset;
   }
 
-  .adv__thumbs-head {
+  .advan__thumbs-head {
     padding: 0 0 0 5rem;
   }
 
-  .adv__thumbs-num {
+  .advan__thumbs-num {
     top: 0;
     left: 0;
     font-size: 5rem;
   }
 
-  .adv__thumbs-title {
+  .advan__thumbs-title {
     font-size: 1.6rem;
   }
 
-  .adv__thumbs-text {
+  .advan__thumbs-text {
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     font-size: 1.4rem;
   }
 
-  .adv__thumbs .swiper-slide-thumb-active .adv__thumbs-content {
+  .advan .active .advan__thumbs-content {
     padding: 1rem 0 0 5rem;
   }
 
-  .adv__thumbs-content {
+  .advan__thumbs-content {
     padding: 0 0 0 5rem;
+  }
+
+  .separator {
+    height: 4rem;
   }
 
   .request__inner {
@@ -538,6 +569,14 @@
 
   .path__item-text {
     font-size: 1.2rem;
+  }
+
+  .slider__btns {
+    display: none;
+  }
+
+  .tenants__head {
+    margin-bottom: 2rem;
   }
 
   .tenants__item {
@@ -589,7 +628,11 @@
   }
 
   .stage__item-title {
-    font-size: 2.4rem;
+    font-size: 1.6rem;
+  }
+
+  .stage__item-text {
+    font-size: 1.2rem;
   }
 
   .stage__item-wrap {
@@ -989,14 +1032,41 @@
 }
 
 @media (max-width: 660px) {
+  .case {
+    margin-bottom: 16.8rem;
+  }
+
   .case__body-items {
     justify-content: unset;
     gap: 5rem;
     width: auto;
   }
 
+  .case__body {
+    width: calc(100% + 2rem);
+    margin-right: -1rem;
+    margin-left: -1rem;
+    padding: 0 0 32.2rem;
+  }
+
   .case__body-video {
-    display: none;
+    top: unset;
+    bottom: -8rem;
+    right: unset;
+    left: 1rem;
+  }
+
+  .case__foot {
+    bottom: -13.8rem;
+  }
+
+  .case__foot-items {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .case__foot-item {
+    width: 100%;
   }
 
   .service__head {
@@ -1021,12 +1091,24 @@
     word-break: break-word;
   }
 
+  .block-title {
+    font-size: 2.4rem;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
   .container {
     padding: 0 1rem;
   }
 
   .header__logo {
-    width: 10.3rem;
+    width: 18.6rem;
+  }
+
+  .header__phone {
+    display: none;
   }
 
   .hero__container {
@@ -1064,27 +1146,31 @@
     margin: 0;
   }
 
+  /* case */
+  .case__body {
+    margin-top: 8.6rem;
+  }
+
+  .case__slider {
+    margin-top: -8.6rem;
+  }
+
   .case__head-items {
     gap: 1rem;
   }
 
   .case__head-item {
     width: calc(50% - 0.5rem);
+    height: auto;
   }
 
   .case__head-img {
-    width: auto;
+    width: 100%;
     height: 100%;
   }
 
   .case__item {
     gap: 2rem;
-  }
-
-  .case__body {
-    width: calc(100% + 2rem);
-    margin-right: -1rem;
-    margin-left: -1rem;
   }
 
   .case__body-content {
@@ -1095,15 +1181,6 @@
     top: 2rem;
     left: 3rem;
     gap: 1rem;
-  }
-
-  .case__foot-items {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .case__foot-item {
-    width: 100%;
   }
 
   .case .hero__btns {
@@ -1129,7 +1206,10 @@
     position: relative;
     right: 0;
     bottom: unset;
-    margin: 0 0 0 auto;
+  }
+
+  .advan__title {
+    font-size: 3.4rem;
   }
 
   .tenants .swiper-pagination {
@@ -1141,8 +1221,17 @@
     width: 28.4rem;
   }
 
-  .adv__head-content {
+  .advan__head-content {
     padding: 2rem 2rem 29.6rem;
+  }
+
+  .advan__head-content::before {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .advan__head-text {
+    max-width: 26.2rem;
   }
 
   .request__inner {
@@ -1168,11 +1257,8 @@
     display: none;
   }
 
-  .tabs__btns {
-    width: calc(100% + 2rem);
-    margin-left: -1rem;
-    gap: 1rem;
-    padding: 0 1rem;
+  .tabs__btn {
+    padding: 1rem;
   }
 
   .contact-us__inner {
@@ -1313,12 +1399,14 @@
   }
 }
 
-@media (max-width: 520px) {
-  .header__phone {
-    display: none;
-  }
-}
+@media (max-width: 520px) {}
 
 @media (max-width: 480px) {}
 
-@media (max-width: 360px) {}
+@media (max-width: 360px) {
+  .tabs__btn {
+    padding: 1rem 0.5rem;
+    width: fit-content;
+    font-size: 1.2rem;
+  }
+}
