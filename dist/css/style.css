@@ -143,6 +143,8 @@ html, body {
 
 input, button, textarea {
   font-family: inherit;
+  border-radius: unset;
+  border: 0;
 }
 
 input::-ms-clear {
