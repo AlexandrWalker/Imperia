@@ -8,7 +8,7 @@
         <ul>
           <li>
             <a href="/">
-              <img src="./images/icon/home-black.svg" alt="">
+              <i class="icon-home"></i>
               Главная
             </a>
           </li>
@@ -23,52 +23,83 @@
   <!-- Главный блок -->
   <section class="contacts">
     <div class="container-fluid">
-      <div class="contacts__inner">
+      <div class="contacts__inner container">
         <div class="contacts__head">
           <h1 class="contacts__title title">
             Контакты
           </h1>
-          <div class="contacts__item">
-            <p class="contacts__item-title">
-              Телефон:
-            </p>
-            <div class="contacts__item-content">
-              <a class="contacts__item-phone" href="+79133801122">
-                8-913-380-11-22
-              </a>
-              <div class="contacts__item-socail">
-                <a class="contacts__item-link" href="">
-                  <i class="icon-telegram"></i>
+          <div class="contacts__items">
+            <div class="contacts__item">
+              <p class="contacts__item-title">
+                Телефон:
+              </p>
+              <div class="contacts__item-content">
+                <a class="contacts__item-link contacts__item-phone" href="+79133801122">
+                  8-913-380-11-22
                 </a>
-                <a class="contacts__item-link" href="">
-                  <i class="icon-whatsapp"></i>
+                <div class="contacts__social">
+                  <a class="contacts__social-link" href="/">
+                    <i class="icon-telegram"></i>
+                  </a>
+                  <a class="contacts__social-link" href="/">
+                    <i class="icon-whatsapp"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__item">
+              <p class="contacts__item-title">
+                Эл. почта:
+              </p>
+              <div class="contacts__item-content">
+                <a class="contacts__item-link contacts__item-mail" href="mailto:mail@imperiagk.ru">
+                  mail@imperiagk.ru
                 </a>
               </div>
             </div>
-          </div>
-          <div class="contacts__item">
-            <p class="contacts__item-title">
-              Эл. почта:
-            </p>
-            <div class="contacts__item-content">
-              <a class="contacts__item-mail" href="mailto:mail@imperiagk.ru">
-                mail@imperiagk.ru
-              </a>
-            </div>
-          </div>
-          <div class="contacts__item">
-            <p class="contacts__item-title">
-              Адрес:
-            </p>
-            <div class="contacts__item-content">
-              <p class="contacts__item-text">
-                ​Улица Владимировская, 26/1​702 офис; 7 этаж
+            <div class="contacts__item">
+              <p class="contacts__item-title">
+                Адрес:
               </p>
+              <div class="contacts__item-content">
+                <p class="contacts__item-link contacts__item-text">
+                  ​Улица Владимировская, 26/1​702 офис; 7 этаж
+                </p>
+              </div>
+            </div>
+            <div class="contacts__item">
+              <p class="contacts__item-title">
+                Реквизиты:
+              </p>
+              <ul class="contacts__item-list">
+                <li>ИНН 5402068150</li>
+                <li>КПП 540201001</li>
+                <li>ОГРН 1215400031714</li>
+                <li>ОКПО: 70675314</li>
+              </ul>
+              <ul class="contacts__item-list">
+                <li>Расчетный счет: 40702810900510003333</li>
+                <li>Банк: Ф-Л СИБИРСКИЙ ПАО БАНК "ФК ОТКРЫТИЕ"</li>
+                <li>БИК: 045004867</li>
+                <li>Корр. счет: 30101810250040000867</li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="contacts__body">
-
+          <img class="contacts__body-img" src="./images/tmp/contacts/map.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Большой текст -->
+  <section class="preview">
+    <div class="container">
+      <div class="preview__inner">
+        <div class="preview__items">
+          <span class="preview__item">Надежнее чем банк</span>
+          <span class="preview__item">Опыт работы больше </span>
+          <span class="preview__item">9 лет “</span>
         </div>
       </div>
     </div>
@@ -106,8 +137,8 @@
                 </span>
               </div>
               <div class="form__group">
-                <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта"
-                  minlength="2" maxlength="40">
+                <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта" minlength="2"
+                  maxlength="40">
                 <i class="icon-mail"></i>
                 <span class="error">
                   Произошла ошибка! Поле заполнено неверно
@@ -115,7 +146,7 @@
               </div>
             </div>
             <textarea class="form-textarea" placeholder="Комментарий "></textarea>
-            <div class="contact-us__form-bottom">
+            <div class="form__bottom">
               <button class="contact-us__btn btn btn-yellow" type="submit">
                 Получить консультацию
               </button>

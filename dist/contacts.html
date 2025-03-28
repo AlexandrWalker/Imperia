@@ -10,6 +10,13 @@
   <meta name="format-detection" content="date=no">
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="./images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="./images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Империя" />
+  <link rel="manifest" href="./images/favicon/site.webmanifest" />
   <!-- title -->
   <title>ИМПЕРИЯ</title>
   <!-- styles -->
@@ -79,23 +86,23 @@
           <div class="nav__inner">
             <div class="nav__items">
               <div class="nav__item">
-                <a class="nav__item-link" href="/">
+                <a class="nav__item-link" href="/about">
                   О компании
                   <i class="icon-chevron-down-circle"></i>
                 </a>
                 <ul class="nav__list">
                   <li>
-                    <a class="nav__list-link" href="">
+                    <a class="nav__list-link" href="/history">
                       История
                     </a>
                   </li>
                   <li>
-                    <a class="nav__list-link" href="">
+                    <a class="nav__list-link" href="/licenses">
                       Документы
                     </a>
                   </li>
                   <li>
-                    <a class="nav__list-link" href="">
+                    <a class="nav__list-link" href="/vacancy">
                       Вакансии
                     </a>
                   </li>
@@ -104,61 +111,48 @@
               <div class="nav__item">
                 <a class="nav__item-link" href="/">
                   Наши объекты
+                </a>
+              </div>
+              <div class="nav__item">
+                <a class="nav__item-link" href="/service">
+                  Услуги
                   <i class="icon-chevron-down-circle"></i>
                 </a>
                 <ul class="nav__list">
                   <li>
-                    <a class="nav__list-link" href="">
-                      История
+                    <a class="nav__list-link" href="/investments">
+                      Инвестиции в коммерческую недвижимость
                     </a>
                   </li>
                   <li>
-                    <a class="nav__list-link" href="">
-                      Документы
+                    <a class="nav__list-link" href="/rent">
+                      Аренда торговых помещений
                     </a>
                   </li>
                   <li>
-                    <a class="nav__list-link" href="">
-                      Вакансии
+                    <a class="nav__list-link" href="/construction">
+                      Строительство объектов
+                    </a>
+                  </li>
+                  <li>
+                    <a class="nav__list-link" href="/control">
+                      Управление коммерческой недвижимостью
                     </a>
                   </li>
                 </ul>
               </div>
               <div class="nav__item">
-                <span class="nav__item-link">
-                  Направления деятельности
-                  <i class="icon-chevron-down-circle"></i>
-                </span>
-                <ul class="nav__list">
-                  <li>
-                    <a class="nav__list-link" href="">
-                      История
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Документы
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Вакансии
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="nav__item">
-                <a class="nav__item-link" href="/">
+                <a class="nav__item-link" href="/review">
                   Отзывы
                 </a>
               </div>
               <div class="nav__item">
-                <a class="nav__item-link" href="/">
+                <a class="nav__item-link" href="/contacts">
                   Контакты
                 </a>
               </div>
             </div>
-            <a class="nav__link" href="/">
+            <a id="presentation" class="nav__link" href="./documents/Империя презентация.pdf" download="Империя презентация.pdf">
               Скачать презентацию
             </a>
           </div>
@@ -174,7 +168,7 @@
         <ul>
           <li>
             <a href="/">
-              <img src="./images/icon/home-black.svg" alt="">
+              <i class="icon-home"></i>
               Главная
             </a>
           </li>
@@ -189,52 +183,83 @@
   <!-- Главный блок -->
   <section class="contacts">
     <div class="container-fluid">
-      <div class="contacts__inner">
+      <div class="contacts__inner container">
         <div class="contacts__head">
           <h1 class="contacts__title title">
             Контакты
           </h1>
-          <div class="contacts__item">
-            <p class="contacts__item-title">
-              Телефон:
-            </p>
-            <div class="contacts__item-content">
-              <a class="contacts__item-phone" href="+79133801122">
-                8-913-380-11-22
-              </a>
-              <div class="contacts__item-socail">
-                <a class="contacts__item-link" href="">
-                  <i class="icon-telegram"></i>
+          <div class="contacts__items">
+            <div class="contacts__item">
+              <p class="contacts__item-title">
+                Телефон:
+              </p>
+              <div class="contacts__item-content">
+                <a class="contacts__item-link contacts__item-phone" href="+79133801122">
+                  8-913-380-11-22
                 </a>
-                <a class="contacts__item-link" href="">
-                  <i class="icon-whatsapp"></i>
+                <div class="contacts__social">
+                  <a class="contacts__social-link" href="/">
+                    <i class="icon-telegram"></i>
+                  </a>
+                  <a class="contacts__social-link" href="/">
+                    <i class="icon-whatsapp"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__item">
+              <p class="contacts__item-title">
+                Эл. почта:
+              </p>
+              <div class="contacts__item-content">
+                <a class="contacts__item-link contacts__item-mail" href="mailto:mail@imperiagk.ru">
+                  mail@imperiagk.ru
                 </a>
               </div>
             </div>
-          </div>
-          <div class="contacts__item">
-            <p class="contacts__item-title">
-              Эл. почта:
-            </p>
-            <div class="contacts__item-content">
-              <a class="contacts__item-mail" href="mailto:mail@imperiagk.ru">
-                mail@imperiagk.ru
-              </a>
-            </div>
-          </div>
-          <div class="contacts__item">
-            <p class="contacts__item-title">
-              Адрес:
-            </p>
-            <div class="contacts__item-content">
-              <p class="contacts__item-text">
-                ​Улица Владимировская, 26/1​702 офис; 7 этаж
+            <div class="contacts__item">
+              <p class="contacts__item-title">
+                Адрес:
               </p>
+              <div class="contacts__item-content">
+                <p class="contacts__item-link contacts__item-text">
+                  ​Улица Владимировская, 26/1​702 офис; 7 этаж
+                </p>
+              </div>
+            </div>
+            <div class="contacts__item">
+              <p class="contacts__item-title">
+                Реквизиты:
+              </p>
+              <ul class="contacts__item-list">
+                <li>ИНН 5402068150</li>
+                <li>КПП 540201001</li>
+                <li>ОГРН 1215400031714</li>
+                <li>ОКПО: 70675314</li>
+              </ul>
+              <ul class="contacts__item-list">
+                <li>Расчетный счет: 40702810900510003333</li>
+                <li>Банк: Ф-Л СИБИРСКИЙ ПАО БАНК "ФК ОТКРЫТИЕ"</li>
+                <li>БИК: 045004867</li>
+                <li>Корр. счет: 30101810250040000867</li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="contacts__body">
-
+          <img class="contacts__body-img" src="./images/tmp/contacts/map.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Большой текст -->
+  <section class="preview">
+    <div class="container">
+      <div class="preview__inner">
+        <div class="preview__items">
+          <span class="preview__item">Надежнее чем банк</span>
+          <span class="preview__item">Опыт работы больше </span>
+          <span class="preview__item">9 лет “</span>
         </div>
       </div>
     </div>
@@ -272,8 +297,8 @@
                 </span>
               </div>
               <div class="form__group">
-                <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта"
-                  minlength="2" maxlength="40">
+                <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта" minlength="2"
+                  maxlength="40">
                 <i class="icon-mail"></i>
                 <span class="error">
                   Произошла ошибка! Поле заполнено неверно
@@ -281,7 +306,7 @@
               </div>
             </div>
             <textarea class="form-textarea" placeholder="Комментарий "></textarea>
-            <div class="contact-us__form-bottom">
+            <div class="form__bottom">
               <button class="contact-us__btn btn btn-yellow" type="submit">
                 Получить консультацию
               </button>
@@ -351,22 +376,22 @@
           <div class="footer__menu-inner">
             <ul class="footer__menu-list">
               <li class="footer__menu-item">
-                <a class="footer__menu-title" href="/">
+                <a class="footer__menu-title" href="/about">
                   О компании
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
+                <a class="footer__menu-link" href="/history">
                   История
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
+                <a class="footer__menu-link" href="/licenses">
                   Документы
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
+                <a class="footer__menu-link" href="/vacancy">
                   Вакансии
                 </a>
               </li>
@@ -385,39 +410,39 @@
             </ul>
             <ul class="footer__menu-list">
               <li class="footer__menu-item">
-                <a class="footer__menu-title" href="/">
+                <a class="footer__menu-title" href="/service">
                   Услуги
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
+                <a class="footer__menu-link" href="/investments">
                   Инвесторам
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
+                <a class="footer__menu-link" href="/rent">
                   Арендаторы
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
+                <a class="footer__menu-link" href="/control">
                   Управление недвижимостью
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
+                <a class="footer__menu-link" href="/construction">
                   Строительство коммерческих объектов
                 </a>
               </li>
             </ul>
             <ul class="footer__menu-list">
               <li class="footer__menu-item">
-                <a class="footer__menu-title" href="/">
+                <a class="footer__menu-title" href="/review">
                   Отзывы
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-title" href="/">
+                <a class="footer__menu-title" href="/contacts">
                   Контакты
                 </a>
               </li>
@@ -447,7 +472,7 @@
 
   <div class="modal" id="modal-callback">
     <div class="modal__box">
-      <button class="modal__close-btn close">
+      <button class="modal__close-btn">
       </button>
       <div class="modal__content">
         <form class="form" action="#" method="post" novalidate>

@@ -96,8 +96,13 @@
       }
 
       i {
-        font-size: 2rem;
+        font-size: 1.6rem;
         line-height: 1;
+
+        &.icon-whatsapp {
+          font-size: 2rem;
+          margin-top: -0.2rem;
+        }
       }
     }
   }

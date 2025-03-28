@@ -1,0 +1,119 @@
+.contacts {
+  color: var(--white);
+  background-color: var(--primary-black);
+
+  &__inner {
+    display: flex;
+  }
+
+  &__head {
+    padding: 9rem 0 3rem;
+    width: calc(100% - 69rem);
+  }
+
+  &__body {
+    width: 80.8rem;
+    margin-right: -12rem;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {}
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 51.1rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &-title {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 120%;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    &-link {
+      font-weight: 800;
+      font-size: 3.4rem;
+      line-height: 120%;
+      color: inherit;
+    }
+
+    &-mail {
+      color: var(--primary-accent);
+      text-decoration: underline;
+    }
+
+    &-list {
+      font-family: 'Winter Sans Trial';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 120%;
+      color: var(--white);
+      opacity: 0.5;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.4rem;
+      height: 3.4rem;
+      border-radius: 50%;
+      background-color: var(--primary-accent);
+
+      i {
+        font-size: 1.6rem;
+        color: var(--white);
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.preview {
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    font-family: 'Winter Sans Trial';
+    font-weight: 400;
+    font-size: 16.4rem;
+    line-height: 100%;
+
+    &:nth-child(1) {
+      font-weight: 800;
+    }
+
+    &:nth-child(3) {
+      font-size: 24rem;
+      color: var(--primary-accent);
+    }
+  }
+}
