@@ -37,6 +37,9 @@
     gap: 2rem;
 
     &-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 120%;
@@ -68,6 +71,12 @@
       line-height: 120%;
       color: var(--white);
       opacity: 0.5;
+    }
+
+    &-icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      object-fit: cover;
     }
   }
 
