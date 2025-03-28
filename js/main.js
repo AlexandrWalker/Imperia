@@ -5,6 +5,7 @@
       spaceBetween: 30,
       slidesPerView: 1,
       centeredSlides: true,
+      grabCursor: true,
       loop: true,
       speed: 600,
       mousewheel: {
@@ -37,6 +38,7 @@
       },
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
       },
       grid: false,
       autoplay: {
@@ -58,6 +60,7 @@
       spaceBetween: 10,
       slidesPerView: "auto",
       speed: 600,
+      grabCursor: true,
       loop: true,
       mousewheel: {
         forceToAxis: true,
@@ -72,6 +75,7 @@
       },
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
       },
       breakpoints: {
         601: {
@@ -79,6 +83,7 @@
           slidesPerView: 2,
           pagination: {
             el: ".swiper-pagination",
+            clickable: true,
           },
         },
         769: {
@@ -98,6 +103,7 @@
       slidesPerView: 1.65,
       spaceBetween: 108,
       speed: 600,
+      grabCursor: true,
       mousewheel: {
         forceToAxis: true,
       },
@@ -371,6 +377,18 @@
     };
 
     modalFunc();
+
+    const presentation = document.getElementById('presentation');
+
+    window.addEventListener('resize', function (event) {
+      if (this.window.innerWidth >= 769) {
+        presentation.setAttribute('href', './documents/Империя презентация.pdf');
+        presentation.setAttribute('download', './documents/Империя презентация.pdf');
+      } else {
+        presentation.setAttribute('href', './documents/Империя.pdf');
+        presentation.setAttribute('download', './documents/Империя.pdf');
+      }
+    }, true);
 
   });
 })();

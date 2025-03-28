@@ -10,6 +10,13 @@
   <meta name="format-detection" content="date=no">
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="./images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="./images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Империя" />
+  <link rel="manifest" href="./images/favicon/site.webmanifest" />
   <!-- title -->
   <title>ИМПЕРИЯ</title>
   <!-- styles -->
@@ -79,23 +86,23 @@
           <div class="nav__inner">
             <div class="nav__items">
               <div class="nav__item">
-                <a class="nav__item-link" href="/">
+                <a class="nav__item-link" href="/about">
                   О компании
                   <i class="icon-chevron-down-circle"></i>
                 </a>
                 <ul class="nav__list">
                   <li>
-                    <a class="nav__list-link" href="">
+                    <a class="nav__list-link" href="/history">
                       История
                     </a>
                   </li>
                   <li>
-                    <a class="nav__list-link" href="">
+                    <a class="nav__list-link" href="/licenses">
                       Документы
                     </a>
                   </li>
                   <li>
-                    <a class="nav__list-link" href="">
+                    <a class="nav__list-link" href="/vacancy">
                       Вакансии
                     </a>
                   </li>
@@ -104,61 +111,48 @@
               <div class="nav__item">
                 <a class="nav__item-link" href="/">
                   Наши объекты
+                </a>
+              </div>
+              <div class="nav__item">
+                <a class="nav__item-link" href="/service">
+                  Услуги
                   <i class="icon-chevron-down-circle"></i>
                 </a>
                 <ul class="nav__list">
                   <li>
-                    <a class="nav__list-link" href="">
-                      История
+                    <a class="nav__list-link" href="/investments">
+                      Инвестиции в коммерческую недвижимость
                     </a>
                   </li>
                   <li>
-                    <a class="nav__list-link" href="">
-                      Документы
+                    <a class="nav__list-link" href="/rent">
+                      Аренда торговых помещений
                     </a>
                   </li>
                   <li>
-                    <a class="nav__list-link" href="">
-                      Вакансии
+                    <a class="nav__list-link" href="/construction">
+                      Строительство объектов
+                    </a>
+                  </li>
+                  <li>
+                    <a class="nav__list-link" href="/control">
+                      Управление коммерческой недвижимостью
                     </a>
                   </li>
                 </ul>
               </div>
               <div class="nav__item">
-                <span class="nav__item-link">
-                  Направления деятельности
-                  <i class="icon-chevron-down-circle"></i>
-                </span>
-                <ul class="nav__list">
-                  <li>
-                    <a class="nav__list-link" href="">
-                      История
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Документы
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Вакансии
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="nav__item">
-                <a class="nav__item-link" href="/">
+                <a class="nav__item-link" href="/review">
                   Отзывы
                 </a>
               </div>
               <div class="nav__item">
-                <a class="nav__item-link" href="/">
+                <a class="nav__item-link" href="/contacts">
                   Контакты
                 </a>
               </div>
             </div>
-            <a class="nav__link" href="/">
+            <a id="presentation" class="nav__link" href="./documents/Империя презентация.pdf" download="Империя презентация.pdf">
               Скачать презентацию
             </a>
           </div>
@@ -174,7 +168,7 @@
         <ul>
           <li>
             <a href="/">
-              <img src="./images/icon/home-black.svg" alt="">
+              <i class="icon-home"></i>
               Главная
             </a>
           </li>
@@ -203,7 +197,7 @@
             <div class="tabs__item tabs-active" data-tab="review-1">
               <div class="review__items">
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-1.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-1.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -233,7 +227,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-2.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -263,7 +257,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-3.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-3.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -293,7 +287,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-4.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-4.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -323,7 +317,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-1.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-1.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -353,7 +347,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-2.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -383,7 +377,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-3.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-3.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -413,7 +407,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-4.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-4.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -447,7 +441,7 @@
             <div class="tabs__item" data-tab="review-2">
               <div class="review__items">
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-2.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -477,7 +471,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-3.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-3.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -507,7 +501,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-1.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-1.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -537,7 +531,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-4.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-4.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -567,7 +561,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-1.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-1.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -597,7 +591,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-2.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -627,7 +621,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-3.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-3.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -657,7 +651,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-4.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-4.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -691,7 +685,7 @@
             <div class="tabs__item" data-tab="review-3">
               <div class="review__items">
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-1.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-1.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -721,7 +715,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-3.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-3.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -751,7 +745,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-4.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-4.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -781,7 +775,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-1.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-1.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -811,7 +805,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-2.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -841,7 +835,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-3.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-3.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -871,7 +865,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-2.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -901,7 +895,7 @@
                   </div>
                 </div>
                 <div class="review__item">
-                  <img class="review__item-img" src="./images/main/tenants-4.svg" alt="">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-4.svg" alt="">
                   <div class="review__item-wrap">
                     <h3 class="review__item-title">
                       Название компании
@@ -980,7 +974,7 @@
               </div>
             </div>
             <textarea class="form-textarea" placeholder="Комментарий "></textarea>
-            <div class="contact-us__form-bottom">
+            <div class="form__bottom">
               <button class="contact-us__btn btn btn-yellow" type="submit">
                 Получить консультацию
               </button>
@@ -1050,22 +1044,22 @@
           <div class="footer__menu-inner">
             <ul class="footer__menu-list">
               <li class="footer__menu-item">
-                <a class="footer__menu-title" href="/">
+                <a class="footer__menu-title" href="/about">
                   О компании
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
+                <a class="footer__menu-link" href="/history">
                   История
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
+                <a class="footer__menu-link" href="/licenses">
                   Документы
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
+                <a class="footer__menu-link" href="/vacancy">
                   Вакансии
                 </a>
               </li>
@@ -1084,39 +1078,39 @@
             </ul>
             <ul class="footer__menu-list">
               <li class="footer__menu-item">
-                <a class="footer__menu-title" href="/">
+                <a class="footer__menu-title" href="/service">
                   Услуги
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
+                <a class="footer__menu-link" href="/investments">
                   Инвесторам
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
+                <a class="footer__menu-link" href="/rent">
                   Арендаторы
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
+                <a class="footer__menu-link" href="/control">
                   Управление недвижимостью
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
+                <a class="footer__menu-link" href="/construction">
                   Строительство коммерческих объектов
                 </a>
               </li>
             </ul>
             <ul class="footer__menu-list">
               <li class="footer__menu-item">
-                <a class="footer__menu-title" href="/">
+                <a class="footer__menu-title" href="/review">
                   Отзывы
                 </a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-title" href="/">
+                <a class="footer__menu-title" href="/contacts">
                   Контакты
                 </a>
               </li>
@@ -1146,7 +1140,7 @@
 
   <div class="modal" id="modal-callback">
     <div class="modal__box">
-      <button class="modal__close-btn close">
+      <button class="modal__close-btn">
       </button>
       <div class="modal__content">
         <form class="form" action="#" method="post" novalidate>
