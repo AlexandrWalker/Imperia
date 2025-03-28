@@ -160,9 +160,10 @@
     case__body.controller.control = [case__head, case__foot];
 
     var advan__thumbs = new Swiper(".advan__thumbs-init", {
+      slidesPerView: 1,
+      slidesPerGroup: "auto",
       allowPageScroll: "vertical",
       mousewheel: false,
-      slidesPerView: 1,
       watchSlidesProgress: true,
     });
 
@@ -313,6 +314,63 @@
 
     // Disable lag smoothing in GSAP to prevent any delay in scroll animations
     gsap.ticker.lagSmoothing(0);
+
+    /**
+     * Активация любого количества модальных окон
+     */
+    function modalFunc() {
+      var modal__btn = document.querySelector('.modal__btn');
+
+      if (!modal__btn) {
+        return;
+      } else {
+
+        var close = document.querySelectorAll('.modal__close-btn');
+        var openBtn = document.querySelectorAll('.modal__btn');
+
+        Array.from(openBtn, openButton => {
+          openButton.addEventListener('click', e => {
+
+            let open = document.getElementsByClassName('open');
+
+            if (open.length > 0 && open[0] !== this) {
+              open[0].classList.remove('open');
+            }
+
+            let modalId = e.target.getAttribute('data-id');
+            console.log(modalId);
+            document.getElementById(modalId).classList.add('open');
+            document.body.classList.add('no-scroll');
+
+            Array.from(close, closeButton => {
+              closeButton.addEventListener('click', e => {
+                document.getElementById(modalId).classList.remove("open");
+                document.body.classList.remove('no-scroll');
+              });
+
+              window.addEventListener('keydown', (e) => {
+                if (e.key === "Escape") {
+                  document.getElementById(modalId).classList.remove("open")
+                  document.body.classList.remove('no-scroll');
+                }
+              });
+
+              document.querySelector(".modal.open .modal__box").addEventListener('click', event => {
+                event._isClickWithInModal = true;
+              });
+
+              document.getElementById(modalId).addEventListener('click', event => {
+                if (event._isClickWithInModal) return;
+                event.currentTarget.classList.remove('open');
+                document.body.classList.remove('no-scroll');
+              });
+            });
+          });
+        });
+      }
+    };
+
+    modalFunc();
 
   });
 })();

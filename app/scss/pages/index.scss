@@ -20,8 +20,12 @@
     right: 0;
   }
 
-  &__slider {
+  &__content {
     width: calc(100% - 60rem - 20.9rem);
+  }
+
+  &__slider {
+    width: 100%;
     position: relative;
 
     &-item {
@@ -170,6 +174,10 @@
 
   &__title {
     margin-bottom: 3.7rem;
+  }
+
+  &__wrap {
+    width: 100%;
   }
 
   .swiper-wrapper {
@@ -385,6 +393,10 @@
     gap: 3rem;
     width: 54.6rem;
     padding: 6rem 0 0;
+
+    &-wrap {
+      width: 100%;
+    }
 
     &-content {
       display: flex;
@@ -755,6 +767,10 @@
       gap: 2rem;
     }
   }
+
+  &__textarea {
+    height: 10rem;
+  }
 }
 
 .path {
@@ -867,15 +883,7 @@
     color: var(--primary-accent);
   }
 
-  // .swiper-slide {
-  //   max-width: 40.5rem;
-  //   margin-right: calc((100% - (40.5rem * 3)) / 2) !important;
-  // }
-
   .swiper-slide {
-    // max-width: 40.5rem;
-    // width: 100% !important;
-    // margin-right: 23.3rem !important;
 
     &:nth-last-child(3) {
 
@@ -886,9 +894,7 @@
     }
   }
 
-  .swiper-slide-prev {
-    // margin-right: 0 !important;
-  }
+  .swiper-slide-prev {}
 }
 
 .stage {
@@ -1296,9 +1302,7 @@
 
   &__input {}
 
-  &__textarea {
-    height: 20rem;
-  }
+  &__textarea {}
 
   &__btn {
     max-width: 100%;
@@ -1359,6 +1363,7 @@
     }
 
     &-link {
+      display: flex;
       color: var(--primary-black);
       width: fit-content;
 
@@ -1378,10 +1383,15 @@
   }
 
   &__slider {
-    width: 54.4rem;
-    height: 35.5rem;
-    margin-top: -10.5rem;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
+
+    &-wrap {
+      width: 54.4rem;
+      height: 35.5rem;
+      margin-top: -10.5rem;
+    }
 
     &-item {
       width: 100%;
@@ -1465,6 +1475,7 @@
     &-content {
       padding: 0 0 0 14rem;
       overflow: hidden;
+      transition: all 0.5s ease;
     }
 
     &-text {

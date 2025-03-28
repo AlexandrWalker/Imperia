@@ -35,6 +35,7 @@ section {
   flex-direction: column;
   min-height: 100vh;
   position: relative;
+  padding-top: 20rem;
 }
 
 .main {
@@ -374,7 +375,7 @@ a {
 }
 
 /* form-input */
-input {
+.form-input {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 143%;
@@ -427,13 +428,13 @@ input {
   color: var(--primary-accent);
 }
 
-textarea {
+.form-textarea {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 143%;
   color: var(--white-80);
   width: 100%;
-  height: 10rem;
+  height: 20rem;
   overflow: hidden;
   padding: 1rem 2rem;
   background: transparent;
@@ -480,7 +481,7 @@ textarea {
   }
 }
 
-input[type=checkbox] {
+.form-checkbox {
   width: 2.4rem;
   min-width: 2.4rem;
   height: 2.4rem;
@@ -493,11 +494,17 @@ input[type=checkbox] {
   position: relative;
 }
 
-input[type=checkbox]:checked {
+.form-checkbox:checked {
   background: var(--primary-accent);
 }
 
 .form {
+
+  &__wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
 
   &__group {
     position: relative;
@@ -681,4 +688,129 @@ input[type=checkbox]:checked {
 
 .main-inner .title {
   margin-bottom: 4rem;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 110;
+  background-color: rgba(0, 0, 0, .3);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+
+  &__title {
+    color: var(--primary-accent);
+  }
+
+  &__btn {
+    cursor: pointer;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__box {
+    background-color: var(--white);
+    padding: 6rem 4rem 5rem 4rem;
+    position: relative;
+    max-width: 62.6rem;
+    width: 90vw;
+    max-height: 79.5rem;
+    height: fit-content;
+    overflow: hidden;
+    z-index: 1;
+    margin: 3rem 1.5rem;
+    box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+    transform: scale(0);
+    transition: transform .2s;
+    border-radius: var(--b-radius-18);
+  }
+
+  &__close {
+
+    &-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+
+    .modal__box {
+      transform: scale(1);
+    }
+  }
+
+  &__wrap {
+    position: relative;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  .form-textarea,
+  .form-input {
+    color: var(--primary-black-50);
+    border-color: var(--primary-black-50);
+
+    &::placeholder {
+      color: var(--primary-black-50);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--primary-black);
+      border-color: var(--primary-black);
+  
+      &::placeholder {
+        color: var(--primary-black);
+      }
+    }
+  }
+
+  .form-checkbox {
+    border-color: var(--primary-black);
+    background: transparent;
+
+    &:checked {
+      background-color: var(--primary-accent);
+    }
+  }
+
+  .checkbox__text {
+    color: var(--primary-black-50);
+  }
+
+  .btn {
+    width: 100%;
+  }
 }

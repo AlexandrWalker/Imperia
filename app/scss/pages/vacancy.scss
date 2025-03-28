@@ -27,7 +27,7 @@
       color: var(--primary-accent);
     }
 
-    &.active .adv__thumbs-icon {
+    &.active .advan__thumbs-icon {
       background-color: var(--primary-accent);
       transform: rotate(180deg);
 
@@ -38,6 +38,13 @@
   }
 
   &__head {
+    cursor: pointer;
+
+    &:hover {
+      .advan__thumbs-icon {
+        background-color: var(--primary-accent);
+      }
+    }
 
     &-title {
       display: flex;
@@ -93,7 +100,7 @@
     display: grid;
     grid-template-rows: 0fr;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 
     &-item {
       display: flex;
@@ -145,5 +152,6 @@
     overflow: hidden;
     max-width: 122rem;
     padding: 0;
+    transition: all 0.5s ease;
   }
 }
