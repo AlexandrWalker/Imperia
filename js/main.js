@@ -256,14 +256,6 @@
 
     accordionFunc();
 
-    function linkMore() {
-      var linkMore = document.querySelectorAll('.link-more');
-
-      linkMore.addEventListener('click', function (e) {
-        linkMore.classList.toggle('linkMore-active');
-      });
-    }
-
     /**
      * Управляет переключением кнопки Подробнее.
      * Добавляет и удаляет классы активности для кнопок Подробнее.
@@ -321,6 +313,8 @@
     // Disable lag smoothing in GSAP to prevent any delay in scroll animations
     gsap.ticker.lagSmoothing(0);
 
+
+
     /**
      * Активация любого количества модальных окон
      */
@@ -345,8 +339,22 @@
 
             let modalId = e.target.getAttribute('data-id');
             console.log(modalId);
-            document.getElementById(modalId).classList.add('open');
-            document.body.classList.add('no-scroll');
+            if (modalId) {
+              document.getElementById(modalId).classList.add('open');
+              document.body.classList.add('no-scroll');
+            } else {
+              return
+            }
+
+            let modalTitle = e.target.getAttribute('data-title');
+            if (modalTitle) {
+              document.getElementById("modal-title").innerHTML = modalTitle;
+            }
+
+            let modalText = e.target.getAttribute('data-text');
+            if (modalText) {
+              document.getElementById("modal-text").innerHTML = modalText;
+            }
 
             Array.from(close, closeButton => {
               closeButton.addEventListener('click', e => {
@@ -378,6 +386,55 @@
 
     modalFunc();
 
+    /**
+     * Управляет поведением меню-бургера.
+     */
+    function burgerNav() {
+      const burger = document.querySelector('.burger');
+      const burgerText = document.querySelector('.burger__text');
+      const menu = document.getElementById('mobile-menu');
+      const elements = document.querySelectorAll('.menu__list-link');
+      const head = document.querySelector('.head');
+
+      /**
+       * Переключает видимость меню.
+       */
+      const toggleMenu = () => {
+        const isOpened = burger.classList.toggle('burger--opened');
+        menu.classList.toggle('mobile-menu--opened', isOpened);
+        document.body.classList.toggle('no-scroll');
+        head.classList.toggle('head--active');
+
+        if (burger.classList[1]) {
+          burgerText.innerHTML = 'Закрыть';
+        } else {
+          burgerText.innerHTML = 'Меню';
+        }
+      };
+
+
+      /**
+       * Закрывает меню.
+       */
+      const closeMenu = () => {
+        burger.classList.remove('burger--opened');
+        menu.classList.remove('mobile-menu--opened');
+        document.body.classList.remove('no-scroll');
+      };
+
+      // Открытие/закрытие меню по клику на бургер
+      burger.addEventListener('click', toggleMenu);
+
+      // Закрытие меню по клику на пункты меню
+      elements.forEach((element) => element.addEventListener('click', closeMenu));
+    };
+
+    burgerNav();
+
+    document.getElementById('warning-btn').addEventListener('click', event => {
+      document.getElementById('warning-plate').style.display = 'none';
+    });
+
     const presentation = document.getElementById('presentation');
 
     window.addEventListener('resize', function (event) {
@@ -389,6 +446,7 @@
         presentation.setAttribute('download', './documents/Империя.pdf');
       }
     }, true);
+
 
   });
 })();
