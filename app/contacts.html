@@ -27,6 +27,133 @@
 </head>
 
 <body>
+  <!-- Бургер меню -->
+  <aside id="mobile-menu" class="menu">
+    <div class="menu__inner">
+      <div class="menu__head">
+        <div class="container">
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-title" href="/about">
+                  О компании
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="/history">
+                  История
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="/licenses">
+                  Документы
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="/vacancy">
+                  Вакансии
+                </a>
+              </li>
+            </ul>
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-title" href="/">
+                  Наши объекты
+                </a>
+              </li>
+            </ul>
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-title" href="/service">
+                  Услуги
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="/investments">
+                  Инвестиции в коммерческую недвижимость
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="/rent">
+                  Аренда торговых помещений
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="/construction">
+                  Строительство объектов
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="/control">
+                  Управление коммерческой недвижимостью
+                </a>
+              </li>
+            </ul>
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-title" href="/review">
+                  Отзывы
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-title" href="/contacts">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="menu__foot">
+        <div class="container">
+          <div class="menu__style footer__contact-list">
+            <div class="menu__style footer__contact-item">
+              <h6 class="menu__style footer__contact-title">
+                Телефон:
+              </h6>
+              <a class="menu__style footer__contact-phone" href="tel:+79133801122">
+                8-913-380-11-22
+              </a>
+            </div>
+            <div class="menu__style footer__contact-item">
+              <h6 class="menu__style footer__contact-title">
+                Эл.почта:
+              </h6>
+              <a class="menu__style footer__contact-email" href="emailto:mail@imperiagk.ru">
+                mail@imperiagk.ru
+              </a>
+            </div>
+            <div class="menu__style footer__contact-item">
+              <h6 class="menu__style footer__contact-title">
+                Адрес:
+              </h6>
+              <div class="menu__style footer__contact-wrap">
+                <span class="menu__style footer__contact-text">
+                  ​Улица Владимировская, 26/1​702 офис; 7 этаж
+                </span>
+                <span class="menu__style footer__contact-subtext">
+                  пн-пт с 8:00 до 19:00
+                </span>
+              </div>
+            </div>
+            <div class="menu__style footer__contact-item">
+              <h6 class="menu__style footer__contact-title">
+                Мессенджеры:
+              </h6>
+              <div class="menu__style footer__social">
+                <a class="menu__style footer__social-link" href="/">
+                  <i class="icon-telegram"></i>
+                </a>
+                <a class="menu__style footer__social-link" href="/">
+                  <i class="icon-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
   <div class="wrapper">
     <!-- Шапка сайта -->
     <header class="head">
@@ -75,9 +202,10 @@
                 </div>
               </div>
             </div>
-            <button class="burger">
-
-            </button>
+            <a class="burger" href="#!">
+              <p class="burger__text">Меню</p>
+              <span></span>
+            </a>
           </div>
         </div>
       </div>
@@ -109,7 +237,7 @@
                 </ul>
               </div>
               <div class="nav__item">
-                <a class="nav__item-link" href="/">
+                <a class="nav__item-link" href="/objects">
                   Наши объекты
                 </a>
               </div>
@@ -229,7 +357,7 @@
             </div>
             <div class="contacts__item">
               <p class="contacts__item-title">
-                <img class="contacts__item-icon" src="./../images/icon/copy.svg" alt="">
+                <img class="contacts__item-icon" src="./images/icon/copy.svg" alt="">
                 Реквизиты:
               </p>
               <ul class="contacts__item-list">
@@ -399,13 +527,8 @@
             </ul>
             <ul class="footer__menu-list">
               <li class="footer__menu-item">
-                <a class="footer__menu-title" href="/">
+                <a class="footer__menu-title" href="/objects">
                   Наши объекты
-                </a>
-              </li>
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">
-                  Проекты для инвестиций
                 </a>
               </li>
             </ul>
@@ -417,22 +540,22 @@
               </li>
               <li class="footer__menu-item">
                 <a class="footer__menu-link" href="/investments">
-                  Инвесторам
+                  Инвестиции в коммерческую недвижимость 
                 </a>
               </li>
               <li class="footer__menu-item">
                 <a class="footer__menu-link" href="/rent">
-                  Арендаторы
-                </a>
-              </li>
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/control">
-                  Управление недвижимостью
+                  Аренда торговых помещений
                 </a>
               </li>
               <li class="footer__menu-item">
                 <a class="footer__menu-link" href="/construction">
-                  Строительство коммерческих объектов
+                  Строительство объектов
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="/control">
+                  Управление коммерческой недвижимостью 
                 </a>
               </li>
             </ul>
@@ -456,6 +579,10 @@
           <div class="footer__bottom-inner">
             <span class="footer__bottom-text">
               © 2024 Империя
+              <div class="footer__bottom-links">
+                <a href="/">Карта сайта</a>
+                <a href="/">Политика конфиденциальности</a>
+              </div>
             </span>
 
             <a class="footer__bottom-logo" href="/">
@@ -463,25 +590,29 @@
             </a>
 
             <span class="footer__bottom-text">
-              Разработка сайта — <a href="/">Once&Twice</a>
+              Разработка и продвижение — <a href="/">Once&Twice</a>
             </span>
           </div>
         </div>
       </div>
     </footer>
   </div>
-
+  <!-- Попап окна -->
   <div class="modal" id="modal-callback">
     <div class="modal__box">
       <button class="modal__close-btn">
       </button>
       <div class="modal__content">
-        <form class="form" action="#" method="post" novalidate>
+        <form class="form" action="#" method="post">
           <div class="form__wrap">
-            <h2 class="modal__title block-title">
-              Примерный заголовок
-              в форме
-            </h2>
+            <div class="form__head">
+              <h2 id="modal-title" class="modal__title block-title">
+                Хотите зарабатывать вместе с Империей?
+              </h2>
+              <p id="modal-text" class="modal__text">
+                оставьте заявку и наш менеджер свяжется с вами в ближайшее время
+              </p>
+            </div>
             <div class="form__group">
               <input class="form-input" type="text" placeholder="Ваше имя">
               <i class="icon-user"></i>
@@ -510,7 +641,7 @@
               Получить консультацию
             </button>
             <div class="checkbox">
-              <input class="form-checkbox" type="checkbox" checked>
+              <input class="form-checkbox" type="checkbox" required>
               <p class="checkbox__text">
                 Нажимая кнопку, вы даёте согласие на <a href="">обработку ваших персональных данных</a>
               </p>
@@ -520,7 +651,74 @@
       </div>
     </div>
   </div>
-
+  
+  <div class="modal" id="modal-social">
+    <div class="modal__box">
+      <button class="modal__close-btn">
+      </button>
+      <div class="modal__content">
+        <div class="form__wrap">
+          <div class="form__head">
+            <h2 class="modal__title block-title">
+              Свяжитесь<br>
+              с нами
+            </h2>
+            <ul class="modal__list">
+              <li class="header__contact-item">
+                <a class="header__contact-link" href="/">
+                  в Телеграм
+                </a>
+                <i class="icon-telegram"></i>
+              </li>
+              <li class="header__contact-item">
+                <a class="header__contact-link" href="/">
+                  в WhatsApp
+                </a>
+                <i class="icon-whatsapp"></i>
+              </li>
+              <li class="header__contact-item">
+                <a class="header__contact-link" href="/">
+                  Напишите на почту
+                </a>
+                <i class="icon-mail"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Плашки -->
+  <section class="plate mob-block">
+    <div class="container-fluid">
+      <div class="plate__inner">
+        <div class="plate__btns">
+          <button class="plate__btn btn btn-red modal__btn" data-id="modal-social">
+            Связаться
+          </button>
+          <button class="plate__btn btn modal__btn" data-title="Получить консультацию"
+            data-text="Опишите свой вопрос или задачу в поле комментарий, мы вернемся к вам с подробной консультацией"
+            data-id="modal-callback">
+            Получить консультацию
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="warning-plate" class="warning">
+    <div class="container warning__container">
+      <div class="warning__inner">
+        <p class="warning__text">
+          Этот сайт использует файлы сооіе для хранения данных.
+          Продолжая использовать сайт, вы даете свое согласие на работу с этими файлами.
+        </p>
+        <button id="warning-btn" class="warning__btn btn btn-red">
+          Принять и закрыть
+        </button>
+      </div>
+    </div>
+  </section>
   <!-- scipts -->
   <script src="./libs/lenis/lenis.min.js"></script>
   <script src="./libs/gsap/gsap.min.js" defer></script>

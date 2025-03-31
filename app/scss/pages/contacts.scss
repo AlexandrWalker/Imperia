@@ -56,6 +56,11 @@
       font-size: 3.4rem;
       line-height: 120%;
       color: inherit;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--primary-accent);
+      }
     }
 
     &-mail {

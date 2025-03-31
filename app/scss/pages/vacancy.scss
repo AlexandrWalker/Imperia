@@ -42,6 +42,10 @@
     cursor: pointer;
 
     &:hover {
+      .vacancy__head-title {
+        color: var(--primary-accent);
+      }
+
       .advan__thumbs-icon {
         background-color: var(--primary-accent);
       }
