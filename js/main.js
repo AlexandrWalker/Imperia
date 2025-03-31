@@ -127,6 +127,35 @@
       },
     });
 
+    var projects__slider = new Swiper(".projects__slider-init", {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      speed: 600,
+      grabCursor: true,
+      loop: true,
+      mousewheel: {
+        forceToAxis: true,
+      },
+      navigation: {
+        nextEl: ".path__slider-next",
+        prevEl: ".path__slider-prev",
+      },
+      breakpoints: {
+        601: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        769: {
+          slidesPerView: 3,
+          spaceBetween: 108,
+        },
+        1201: {
+          slidesPerView: 3,
+          spaceBetween: 233,
+        }
+      },
+    });
+
     var case__head = new Swiper(".case__head-slider", {
       spaceBetween: 200,
       slidesPerView: 1,
@@ -260,33 +289,33 @@
      * Управляет переключением кнопки Подробнее.
      * Добавляет и удаляет классы активности для кнопок Подробнее.
      */
-    function moreFunc() {
+    // function moreFunc() {
 
-      document.querySelectorAll('.container').forEach((more) => {
-        more.addEventListener('click', (events) => {
-          const moreLink = events.target.closest('.link-more');
-          if (!moreLink || !more.contains(moreLink)) return;
+    //   document.querySelectorAll('.container').forEach((more) => {
+    //     more.addEventListener('click', (events) => {
+    //       const moreLink = events.target.closest('.link-more');
+    //       if (!moreLink || !more.contains(moreLink)) return;
 
-          events.stopPropagation();
+    //       events.stopPropagation();
 
-          // Ищем ближайший контейнер, к которому принадлежит нажатая кнопка
-          const currentContainer = moreLink.closest('.container');
-          if (!currentContainer) return;
+    //       // Ищем ближайший контейнер, к которому принадлежит нажатая кнопка
+    //       const currentContainer = moreLink.closest('.container');
+    //       if (!currentContainer) return;
 
-          // Сбрасываем активные состояния кнопок
-          const moreLinks = Array.from(currentContainer.querySelectorAll('.link-more'));
+    //       // Сбрасываем активные состояния кнопок
+    //       const moreLinks = Array.from(currentContainer.querySelectorAll('.link-more'));
 
-          moreLinks.forEach((links) => {
-            if (links.closest('.container') === currentContainer) {
-              links.parentNode.classList.toggle('link-more--active');
-            }
-          });
+    //       moreLinks.forEach((links) => {
+    //         if (links.closest('.container') === currentContainer) {
+    //           links.parentNode.classList.toggle('link-more--active');
+    //         }
+    //       });
 
-        });
-      });
-    };
+    //     });
+    //   });
+    // };
 
-    moreFunc();
+    // moreFunc();
 
     /**
      * Инициализация Lenis и ScrollTrigger
