@@ -244,7 +244,7 @@
       }
 
       .feat__img {
-        transform: scale(1.3);
+        // transform: scale(1.3);
       }
 
       .link {
@@ -1460,6 +1460,7 @@
       display: flex;
       flex-direction: row;
       align-items: flex-start;
+      justify-content: space-between;
       gap: 6rem;
       position: relative;
       padding: 0 0 0 14rem;
@@ -1470,6 +1471,7 @@
       font-weight: 800;
       font-size: 10rem;
       line-height: 105%;
+      text-align: right;
       text-transform: uppercase;
       position: absolute;
       top: -1.5rem;

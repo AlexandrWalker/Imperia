@@ -1,10 +1,11 @@
 .sample {
   height: 81.7rem;
   background-color: var(--primary-black);
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTE3NSIgaGVpZ2h0PSIyNzkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTk4OC4yOCAxLjc3OGgtLjAwNGE2LjIzMyA2LjIzMyAwIDAwLTIuNzkyLjY1NGgtLjAwMUw3MTAuMzMgMTM5LjAyOGwtLjAwMi4wMDFjLS43NDMuMzY0LTEuNTQxLjYtMi4zNjEuN2wtMzkyLjMyNCA0OC43MTYtLjAxNS4wMDNhNy4zMDkgNy4zMDkgMCAwMS0yLjYzOC0uMDAzbC0uMDE1LS4wMDItLjAxNC0uMDA0LTMyNS41NzYtNzkuNDQ0YTYuMzY3IDYuMzY3IDAgMDAtNS40NSAxLjE4MiA2LjM3OSA2LjM3OSAwIDAwLTIuNDM1IDUuMDIxdjM5LjMxNGE2LjQwNyA2LjQwNyAwIDAwNC4yMDggNi4wMDFsMzI2LjUyNiAxMTcuNTM0LjAwNy4wMDMuMDA3LjAwM2E2LjQzIDYuNDMgMCAwMDMuMjk0LjM3OWwuMDA4LS4wMDEgMzk0LjMyMS03MS45MzcuMDAzLS4wMDFhNS45NDcgNS45NDcgMCAwMDEuOTMtLjcwMmwuMDA3LS4wMDRMOTg1LjMxMyA1My4zOThsLjAwMi0uMDAxYTcuMTgyIDcuMTgyIDAgMDEyLjkxOC0uOTA1bC4wMTEtLjAwMSAxODAuMjg2LTExLjhoMGE2LjM2MyA2LjM2MyAwIDAwNC4yNy0yLjAzMiA2LjQwNCA2LjQwNCAwIDAwMS43LTQuNDIyVjYuNzc1YTYuMzk3IDYuMzk3IDAgMDAtMS45My00LjQ1M0E2LjM5NiA2LjM5NiAwIDAwMTE2OC4wOC41bC0xNzkuOCAxLjI3OHptMCAwTDExNjguMDcuNSA5ODguMjggMS43Nzh6IiBzdHJva2U9IiNFRTNBMjMiLz48L3N2Zz4=);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTE5NiIgaGVpZ2h0PSIyNzkiIHZpZXdCb3g9IjAgMCAxMTk2IDI3OSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwMDkuMjggMS43Nzc4NkwxMDA5LjI4IDEuNzc3ODlDMTAwOC4zMSAxLjc3NjA5IDEwMDcuMzUgMi4wMDAxMiAxMDA2LjQ4IDIuNDMyMjhMMTAwNi40OCAyLjQzMjYyTDczMS4zMyAxMzkuMDI3TDczMS4zMjggMTM5LjAyOEM3MzAuNTg2IDEzOS4zOTIgNzI5Ljc4OCAxMzkuNjI4IDcyOC45NjggMTM5LjcyN0wxMDA5LjI4IDEuNzc3ODZaTTEwMDkuMjggMS43Nzc4NkwxMTg5LjA3IDAuNTAwMDMxTDEwMDkuMjggMS43Nzc4NlpNMzM2LjY0MyAxODguNDQ0TDcyOC45NjcgMTM5LjcyOEwxMTg5LjA4IDAuNTAwMDMxQzExOTAuNzUgMC40OTM0NjkgMTE5Mi4zNyAxLjE0Nzk1IDExOTMuNTcgMi4zMjI0NUMxMTk0Ljc3IDMuNDk2MTkgMTE5NS40NyA1LjA5NTIxIDExOTUuNSA2Ljc3NDlMMTE5NS41IDM0LjIzMDFMMTE5NS41IDM0LjIzN0MxMTk1LjUyIDM1Ljg3NDIgMTE5NC45MSAzNy40NTc0IDExOTMuOCAzOC42NTg4QzExOTIuNjkgMzkuODYwMyAxMTkxLjE2IDQwLjU4NzkgMTE4OS41MyA0MC42OTEzTDExODkuNTMgNDAuNjkxM0wxMDA5LjI0IDUyLjQ5MUwxMDA5LjIzIDUyLjQ5MTlDMTAwOC4yMSA1Mi41ODA2IDEwMDcuMjEgNTIuODg5MiAxMDA2LjMyIDUzLjM5NjdDMTAwNi4zMSA1My4zOTcxIDEwMDYuMzEgNTMuMzk3NCAxMDA2LjMxIDUzLjM5NzhMNzMwLjgxMSAyMDUuNzg2TDczMC44MDQgMjA1Ljc5QzczMC4yMDYgMjA2LjEzNCA3MjkuNTUzIDIwNi4zNzIgNzI4Ljg3NCAyMDYuNDkyTDcyOC44NzEgMjA2LjQ5M0wzMzQuNTUgMjc4LjQzQzMzNC41NDcgMjc4LjQzMSAzMzQuNTQ1IDI3OC40MzEgMzM0LjU0MiAyNzguNDMxQzMzMy40MyAyNzguNTk1IDMzMi4yOTQgMjc4LjQ2NCAzMzEuMjQ4IDI3OC4wNTJMMzMxLjI0MSAyNzguMDQ5TDMzMS4yMzQgMjc4LjA0Nkw0LjcwODM3IDE2MC41MTJDMy40Nzc0MiAxNjAuMDYzIDIuNDEzODIgMTU5LjI0NyAxLjY2MTI1IDE1OC4xNzNDMC45MDg1NjkgMTU3LjEgMC41MDMyOTYgMTU1LjgyMSAwLjUgMTU0LjUxMVYxMTUuMTk3QzAuNDk5MTQ2IDExNC4yMjkgMC43MTc4OTYgMTEzLjI3NSAxLjEzOTc3IDExMi40MDVDMS41NjE2NSAxMTEuNTM2IDIuMTc1NjYgMTEwLjc3MyAyLjkzNTE4IDExMC4xNzZDMy42OTQ3IDEwOS41NzggNC41ODAwOCAxMDkuMTYyIDUuNTI0MDUgMTA4Ljk1N0M2LjQ2ODE0IDEwOC43NTIgNy40NDY0MSAxMDguNzY1IDguMzg0NzcgMTA4Ljk5NEwzMzMuOTYxIDE4OC40MzhMMzMzLjk3NSAxODguNDQyTDMzMy45OSAxODguNDQ0QzMzNC44NjIgMTg4LjYwNSAzMzUuNzU2IDE4OC42MDYgMzM2LjYyOCAxODguNDQ3QzMzNi42MzMgMTg4LjQ0NiAzMzYuNjM4IDE4OC40NDUgMzM2LjY0MyAxODguNDQ0WiIgc3Ryb2tlPSIjRUUzQTIzIi8+Cjwvc3ZnPgo=);
   background-repeat: no-repeat;
   background-size: 119.6rem 27.9rem;
-  background-position: -2.1rem 17.5rem;
+  background-position-x: -2.1rem;
+  background-position-y: 17.5rem;
 
   &__container {
     height: 100%;
@@ -21,7 +22,7 @@
     justify-content: space-between;
     padding: 9rem 0 5rem;
     color: var(--white);
-    width: calc(50% + 1rem);
+    width: calc(100% - 72rem);
     height: 100%;
   }
 
@@ -57,6 +58,13 @@
       white-space: nowrap;
     }
 
+    &-subtitle {
+      font-family: 'Winter Sans Trial';
+      font-weight: 800;
+      font-size: 3.4rem;
+      line-height: 120%;
+    }
+
     &-text {
       font-weight: 400;
       font-size: 2.4rem;
@@ -69,7 +77,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(50% - 1rem);
+    width: 72rem;
     padding: 6rem;
     background-color: var(--primary-grey);
     position: relative;
@@ -116,6 +124,15 @@
       font-weight: 400;
       font-size: 1.2rem;
       line-height: 120%;
+    }
+
+    &-count {
+      font-family: 'Winter Sans Trial';
+      font-weight: 800;
+      font-size: 3.4rem;
+      line-height: 105%;
+      text-transform: uppercase;
+      color: var(--primary-accent);
     }
   }
 
@@ -236,6 +253,10 @@
 
   .advan {
 
+    &__title {
+      width: 50%;
+    }
+
     &__head-content {
       padding: 3rem 6rem 10rem 13rem;
     }
@@ -249,12 +270,44 @@
       margin: 0;
       padding: 0 0 0 1.2rem;
     }
-    
+
 
     &__slider-wrap {
       margin-top: -4rem;
       width: 40.5rem;
       height: 32.5rem;
+    }
+  }
+
+  .about {
+
+    &__title {
+      left: -30rem;
+    }
+
+    .component::before {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTI1IiBoZWlnaHQ9IjI4NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48bWFzayBpZD0iYSIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iLTQxOSIgeT0iLTE5OSIgd2lkdGg9Ijg2MSIgaGVpZ2h0PSI4NjAiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjA5LjgzMy0xNzMuMDQybC02MDIuOTc1IDYwMi45NzVMLTQxOSA0MDQuMDc2bDYwMi45NzUtNjAyLjk3NSAyNS44NTggMjUuODU3em00Ni43NjMgNDUuNjYzbC02MDMuNTI1IDYwMy41MjYtMjUuODU4LTI1Ljg1OCA2MDMuNTI2LTYwMy41MjUgMjUuODU3IDI1Ljg1N3ptNDYuMjE0IDQ2LjIxNEwtMzAwLjcxNiA1MjIuMzZsLTI1Ljg1Ny0yNS44NTggNjAzLjUyNS02MDMuNTI1IDI1Ljg1OCAyNS44NTh6bTQ2LjIxMyA0Ni4yMTNsLTYwMy41MjUgNjAzLjUyNS0yNS44NTgtMjUuODU3TDMyMy4xNjYtNjAuODA5bDI1Ljg1NyAyNS44NTd6bTQ2Ljc2NCA0NS42NjNsLTYwMy41MjYgNjAzLjUyNi0yNS44NTctMjUuODU4TDM2OS45MjktMTUuMTQ2bDI1Ljg1OCAyNS44NTd6TTQ0MiA1Ni45MjVMLTE2MS41MjUgNjYwLjQ1bC0yNS44NTgtMjUuODU3TDQxNi4xNDIgMzEuMDY3IDQ0MiA1Ni45MjV6IiBmaWxsPSIjRUUzQTIzIi8+PC9tYXNrPjxnIG1hc2s9InVybCgjYSkiPjxwYXRoIGZpbGw9IiNGNUY1RjUiIGQ9Ik0tNDYgMGg1NzF2Mjg1SC00NnoiLz48L2c+PC9zdmc+);
+      aspect-ratio: unset;
+      width: 57.5rem;
+    }
+  }
+
+  .geo {
+
+    &__title {
+      width: auto;
+      font-weight: 400;
+
+      span {
+        font-weight: 800;
+      }
+    }
+  }
+
+  .tenants {
+
+    .block-title {
+      width: auto;
     }
   }
 }

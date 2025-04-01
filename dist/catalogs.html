@@ -288,256 +288,364 @@
       </nav>
     </header>
 <!-- Содержимое сайта -->
-<main class="main main-inner">
+<main class="main catalogs">
   <!-- Главный блок -->
-  <section class="breadcrumbs grey">
-    <div class="container">
-      <div class="breadcrumbs__inner">
-        <ul>
-          <li>
-            <a href="/">
-              <i class="icon-home"></i>
-              Главная
-            </a>
-          </li>
-          <li class="slash">/</li>
-          <li>
-            Вакансии
-          </li>
-        </ul>
+  <section class="sample">
+    <div class="container sample__container">
+      <div class="sample__inner">
+        <div class="sample__head">
+          <h1 class="sample__title title">
+            объекты и
+            <br>
+            <span>география присутствия</span>
+          </h1>
+          <img class="sample__head-img" src="./images/tmp/sample/catalog-hero.svg" alt="">
+        </div>
+        <div class="sample__body">
+          <div class="sample__body-items">
+            <div class="sample__body-item">
+              <span class="sample__body-title">
+                20 лет
+              </span>
+              <span class="sample__body-text">
+                на рынке инвестиций
+              </span>
+            </div>
+            <div class="sample__body-item">
+              <span class="sample__body-title">
+                272
+              </span>
+              <span class="sample__body-text">
+                объектов возведено
+                в 10 городах
+              </span>
+            </div>
+            <div class="sample__body-item">
+              <span class="sample__body-title">
+                1200
+              </span>
+              <span class="sample__body-text">
+                инвестиционных
+                объекта
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <!-- Главный блок -->
-  <section class="vacancy">
-    <div class="container vacancy__container">
-      <div class="vacancy__inner">
-        <h1 class="vacancy__title title">
-          Вакансии
-        </h1>
-        <div class="vacancy__items">
-          <div class="vacancy__item accordion">
-            <div class="vacancy__head">
-              <h3 class="vacancy__head-title">
-                Название вакансии
-                <span class="advan__thumbs-icon">
-                  <i class="icon-plus"></i>
-                </span>
-              </h3>
-              <a class="vacancy__head-link" href="/">
-                Смотреть на <span>hh</span>
-              </a>
-              <p class="vacancy__head-text">
-                Задача организации, в особенности же начало повседневной работы по формированию позиции обеспечивает
-                широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
-              </p>
+  <!-- Каталог объектов -->
+  <section class="catalogues">
+    <div class="container">
+      <div class="catalogues__inner">
+        <div class="catalogues__head">
+          <h2 class="catalogues__title block-title">
+            Наши объекты
+          </h2>
+          <div class="catalogues__filter">
+            <div class="dropdown">
+              <button class="dropdown__button" data-value="Тип">
+                <span class="dropdown__button-text">Тип</span>
+                <i class="icon-chevron-down"></i>
+              </button>
+              <ul class="dropdown__list dropdown__list-border">
+                <li class="dropdown__list-item " data-value="Торговый комплекс">
+                  Торговый комплекс
+                </li>
+                <li class="dropdown__list-item" data-value="Жилое помещение">
+                  Жилое помещение
+                </li>
+                <li class="dropdown__list-item" data-value="Комната">
+                  Комната
+                </li>
+              </ul>
+              <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
             </div>
-            <div class="vacancy__body">
-              <div class="vacancy__content">
-                <div class="vacancy__body-item">
-                  <p class="vacancy__body-title">
-                    Требуемый опыт работы
-                  </p>
-                  <ul class="vacancy__body-list">
-                    <li>
-                      От 3 до 6 лет
-                    </li>
-                    <li>
-                      Полная занятость
-                    </li>
-                  </ul>
-                </div>
-                <div class="vacancy__body-item">
-                  <p class="vacancy__body-title">
-                    Обязанности
-                  </p>
-                  <ul class="vacancy__body-list">
-                    <li>
-                      Составление графиков планово-предупредительного ремонта бурового оборудования
-                    </li>
-                    <li>
-                      Контроль своевременного и качественного выполнения технических обслуживаний,
-                      планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                    </li>
-                    <li>
-                      Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
-                    </li>
-                    <li>
-                      Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого инструмента
-                    </li>
-                  </ul>
-                </div>
-                <div class="vacancy__body-item">
-                  <p class="vacancy__body-title">
-                    Требования:
-                  </p>
-                  <ul class="vacancy__body-list">
-                    <li>
-                      Составление графиков планово-предупредительного ремонта бурового оборудования
-                    </li>
-                    <li>
-                      Контроль своевременного и качественного выполнения технических обслуживаний,
-                      планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                    </li>
-                    <li>
-                      Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
-                    </li>
-                  </ul>
-                </div>
-                <a class="vacancy__body-btn btn btn-red" href="/">
-                  Откликнуться на вакансию
-                </a>
-              </div>
+            <div class="dropdown">
+              <button class="dropdown__button" data-value="Год запуска">
+                <span class="dropdown__button-text">Год запуска</span>
+                <i class="icon-chevron-down"></i>
+              </button>
+              <ul class="dropdown__list dropdown__list-border">
+                <li class="dropdown__list-item " data-value="2024">
+                  2024
+                </li>
+                <li class="dropdown__list-item" data-value="2023">
+                  2023
+                </li>
+                <li class="dropdown__list-item" data-value="2022">
+                  2022
+                </li>
+                <li class="dropdown__list-item" data-value="2021">
+                  2021
+                </li>
+              </ul>
+              <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
             </div>
+            <div class="dropdown">
+              <button class="dropdown__button" data-value="Площадь м2">
+                <span class="dropdown__button-text">Площадь</span> м2
+                <i class="icon-chevron-down"></i>
+              </button>
+              <ul class="dropdown__list dropdown__list-border">
+                <li class="dropdown__list-item" data-value="200">
+                  200
+                </li>
+                <li class="dropdown__list-item" data-value="250">
+                  250
+                </li>
+                <li class="dropdown__list-item" data-value="300">
+                  300
+                </li>
+              </ul>
+              <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
+            </div>
+            <div class="dropdown">
+              <button class="dropdown__button" data-value="Регион">
+                <span class="dropdown__button-text">Регион</span>
+                <i class="icon-chevron-down"></i>
+              </button>
+              <ul class="dropdown__list dropdown__list-border">
+                <li class="dropdown__list-item" data-value="Россия">
+                  Россия
+                </li>
+                <li class="dropdown__list-item" data-value="Казахстан">
+                  Казахстан
+                </li>
+              </ul>
+              <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
+            </div>
+            <a class="catalogues__filter-btn btn btn-red" href="/">
+              Все объекты
+            </a>
           </div>
-          <div class="vacancy__item accordion active">
-            <div class="vacancy__head">
-              <h3 class="vacancy__head-title">
-                Название вакансии
-                <span class="advan__thumbs-icon">
-                  <i class="icon-plus"></i>
-                </span>
-              </h3>
-              <a class="vacancy__head-link" href="/">
-                Смотреть на <span>hh</span>
-              </a>
-              <p class="vacancy__head-text">
-                Задача организации, в особенности же начало повседневной работы по формированию позиции обеспечивает
-                широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
-              </p>
+        </div>
+        <div class="catalogues__items">
+          <a class="catalogues__item" href="/">
+            <div class="catalogues__item-head">
+              <img class="catalogues__item-img" src="./images/tmp/main/case-1.png" alt="">
+              <span class="catalogues__item-count">
+                1
+              </span>
             </div>
-            <div class="vacancy__body">
-              <div class="vacancy__content">
-                <div class="vacancy__body-item">
-                  <p class="vacancy__body-title">
-                    Требуемый опыт работы
-                  </p>
-                  <ul class="vacancy__body-list">
-                    <li>
-                      От 3 до 6 лет
-                    </li>
-                    <li>
-                      Полная занятость
-                    </li>
-                  </ul>
-                </div>
-                <div class="vacancy__body-item">
-                  <p class="vacancy__body-title">
-                    Обязанности
-                  </p>
-                  <ul class="vacancy__body-list">
-                    <li>
-                      Составление графиков планово-предупредительного ремонта бурового оборудования
-                    </li>
-                    <li>
-                      Контроль своевременного и качественного выполнения технических обслуживаний,
-                      планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                    </li>
-                    <li>
-                      Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
-                    </li>
-                    <li>
-                      Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого инструмента
-                    </li>
-                  </ul>
-                </div>
-                <div class="vacancy__body-item">
-                  <p class="vacancy__body-title">
-                    Требования:
-                  </p>
-                  <ul class="vacancy__body-list">
-                    <li>
-                      Составление графиков планово-предупредительного ремонта бурового оборудования
-                    </li>
-                    <li>
-                      Контроль своевременного и качественного выполнения технических обслуживаний,
-                      планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                    </li>
-                    <li>
-                      Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
-                    </li>
-                  </ul>
-                </div>
-                <a class="vacancy__body-btn btn btn-red" href="/">
-                  Откликнуться на вакансию
-                </a>
+            <div class="catalogues__item-body">
+              <h5 class="catalogues__item-title">
+                Торговый комплекс под ключ для торговый сети «Магнит»
+              </h5>
+              <div class="catalogues__item-wrap">
+                <h6 class="catalogues__item-subtitle">
+                  Адрес объекта
+                </h6>
+                <p class="catalogues__item-text">
+                  г. Новосибирск, ул. Примерная, 8, корпус
+                </p>
               </div>
+              <span class="link">
+                <i class="icon-chevron-down"></i>
+                Подробнее
+              </span>
             </div>
-          </div>
-          <div class="vacancy__item accordion">
-            <div class="vacancy__head">
-              <h3 class="vacancy__head-title">
-                Название вакансии
-                <span class="advan__thumbs-icon">
-                  <i class="icon-plus"></i>
-                </span>
-              </h3>
-              <a class="vacancy__head-link" href="/">
-                Смотреть на <span>hh</span>
-              </a>
-              <p class="vacancy__head-text">
-                Задача организации, в особенности же начало повседневной работы по формированию позиции обеспечивает
-                широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
-              </p>
+          </a>
+          <a class="catalogues__item" href="/">
+            <div class="catalogues__item-head">
+              <img class="catalogues__item-img" src="./images/tmp/main/path-3.png" alt="">
+              <span class="catalogues__item-count">
+                2
+              </span>
             </div>
-            <div class="vacancy__body">
-              <div class="vacancy__content">
-                <div class="vacancy__body-item">
-                  <p class="vacancy__body-title">
-                    Требуемый опыт работы
-                  </p>
-                  <ul class="vacancy__body-list">
-                    <li>
-                      От 3 до 6 лет
-                    </li>
-                    <li>
-                      Полная занятость
-                    </li>
-                  </ul>
-                </div>
-                <div class="vacancy__body-item">
-                  <p class="vacancy__body-title">
-                    Обязанности
-                  </p>
-                  <ul class="vacancy__body-list">
-                    <li>
-                      Составление графиков планово-предупредительного ремонта бурового оборудования
-                    </li>
-                    <li>
-                      Контроль своевременного и качественного выполнения технических обслуживаний,
-                      планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                    </li>
-                    <li>
-                      Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
-                    </li>
-                    <li>
-                      Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого инструмента
-                    </li>
-                  </ul>
-                </div>
-                <div class="vacancy__body-item">
-                  <p class="vacancy__body-title">
-                    Требования:
-                  </p>
-                  <ul class="vacancy__body-list">
-                    <li>
-                      Составление графиков планово-предупредительного ремонта бурового оборудования
-                    </li>
-                    <li>
-                      Контроль своевременного и качественного выполнения технических обслуживаний,
-                      планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                    </li>
-                    <li>
-                      Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
-                    </li>
-                  </ul>
-                </div>
-                <a class="vacancy__body-btn btn btn-red" href="/">
-                  Откликнуться на вакансию
-                </a>
+            <div class="catalogues__item-body">
+              <h5 class="catalogues__item-title">
+                Торговый комплекс под ключ для торговый сети «Магнит»
+              </h5>
+              <div class="catalogues__item-wrap">
+                <h6 class="catalogues__item-subtitle">
+                  Адрес объекта
+                </h6>
+                <p class="catalogues__item-text">
+                  г. Новосибирск, ул. Примерная, 8, корпус
+                </p>
               </div>
+              <span class="link">
+                <i class="icon-chevron-down"></i>
+                Подробнее
+              </span>
             </div>
-          </div>
+          </a>
+          <a class="catalogues__item" href="/">
+            <div class="catalogues__item-head">
+              <img class="catalogues__item-img" src="./images/tmp/main/path-1.png" alt="">
+              <span class="catalogues__item-count">
+                3
+              </span>
+            </div>
+            <div class="catalogues__item-body">
+              <h5 class="catalogues__item-title">
+                Торговый комплекс под ключ для торговый сети «Магнит»
+              </h5>
+              <div class="catalogues__item-wrap">
+                <h6 class="catalogues__item-subtitle">
+                  Адрес объекта
+                </h6>
+                <p class="catalogues__item-text">
+                  г. Новосибирск, ул. Примерная, 8, корпус
+                </p>
+              </div>
+              <span class="link">
+                <i class="icon-chevron-down"></i>
+                Подробнее
+              </span>
+            </div>
+          </a>
+          <a class="catalogues__item" href="/">
+            <div class="catalogues__item-head">
+              <img class="catalogues__item-img" src="./images/tmp/main/case-1.png" alt="">
+              <span class="catalogues__item-count">
+                4
+              </span>
+            </div>
+            <div class="catalogues__item-body">
+              <h5 class="catalogues__item-title">
+                Торговый комплекс под ключ для торговый сети «Магнит»
+              </h5>
+              <div class="catalogues__item-wrap">
+                <h6 class="catalogues__item-subtitle">
+                  Адрес объекта
+                </h6>
+                <p class="catalogues__item-text">
+                  г. Новосибирск, ул. Примерная, 8, корпус
+                </p>
+              </div>
+              <span class="link">
+                <i class="icon-chevron-down"></i>
+                Подробнее
+              </span>
+            </div>
+          </a>
+          <a class="catalogues__item" href="/">
+            <div class="catalogues__item-head">
+              <img class="catalogues__item-img" src="./images/tmp/main/path-3.png" alt="">
+              <span class="catalogues__item-count">
+                5
+              </span>
+            </div>
+            <div class="catalogues__item-body">
+              <h5 class="catalogues__item-title">
+                Торговый комплекс под ключ для торговый сети «Магнит»
+              </h5>
+              <div class="catalogues__item-wrap">
+                <h6 class="catalogues__item-subtitle">
+                  Адрес объекта
+                </h6>
+                <p class="catalogues__item-text">
+                  г. Новосибирск, ул. Примерная, 8, корпус
+                </p>
+              </div>
+              <span class="link">
+                <i class="icon-chevron-down"></i>
+                Подробнее
+              </span>
+            </div>
+          </a>
+          <a class="catalogues__item" href="/">
+            <div class="catalogues__item-head">
+              <img class="catalogues__item-img" src="./images/tmp/main/path-1.png" alt="">
+              <span class="catalogues__item-count">
+                6
+              </span>
+            </div>
+            <div class="catalogues__item-body">
+              <h5 class="catalogues__item-title">
+                Торговый комплекс под ключ для торговый сети «Магнит»
+              </h5>
+              <div class="catalogues__item-wrap">
+                <h6 class="catalogues__item-subtitle">
+                  Адрес объекта
+                </h6>
+                <p class="catalogues__item-text">
+                  г. Новосибирск, ул. Примерная, 8, корпус
+                </p>
+              </div>
+              <span class="link">
+                <i class="icon-chevron-down"></i>
+                Подробнее
+              </span>
+            </div>
+          </a>
+          <a class="catalogues__item" href="/">
+            <div class="catalogues__item-head">
+              <img class="catalogues__item-img" src="./images/tmp/main/case-1.png" alt="">
+              <span class="catalogues__item-count">
+                7
+              </span>
+            </div>
+            <div class="catalogues__item-body">
+              <h5 class="catalogues__item-title">
+                Торговый комплекс под ключ для торговый сети «Магнит»
+              </h5>
+              <div class="catalogues__item-wrap">
+                <h6 class="catalogues__item-subtitle">
+                  Адрес объекта
+                </h6>
+                <p class="catalogues__item-text">
+                  г. Новосибирск, ул. Примерная, 8, корпус
+                </p>
+              </div>
+              <span class="link">
+                <i class="icon-chevron-down"></i>
+                Подробнее
+              </span>
+            </div>
+          </a>
+          <a class="catalogues__item" href="/">
+            <div class="catalogues__item-head">
+              <img class="catalogues__item-img" src="./images/tmp/main/path-3.png" alt="">
+              <span class="catalogues__item-count">
+                8
+              </span>
+            </div>
+            <div class="catalogues__item-body">
+              <h5 class="catalogues__item-title">
+                Торговый комплекс под ключ для торговый сети «Магнит»
+              </h5>
+              <div class="catalogues__item-wrap">
+                <h6 class="catalogues__item-subtitle">
+                  Адрес объекта
+                </h6>
+                <p class="catalogues__item-text">
+                  г. Новосибирск, ул. Примерная, 8, корпус
+                </p>
+              </div>
+              <span class="link">
+                <i class="icon-chevron-down"></i>
+                Подробнее
+              </span>
+            </div>
+          </a>
+          <a class="catalogues__item" href="/">
+            <div class="catalogues__item-head">
+              <img class="catalogues__item-img" src="./images/tmp/main/path-1.png" alt="">
+              <span class="catalogues__item-count">
+                9
+              </span>
+            </div>
+            <div class="catalogues__item-body">
+              <h5 class="catalogues__item-title">
+                Торговый комплекс под ключ для торговый сети «Магнит»
+              </h5>
+              <div class="catalogues__item-wrap">
+                <h6 class="catalogues__item-subtitle">
+                  Адрес объекта
+                </h6>
+                <p class="catalogues__item-text">
+                  г. Новосибирск, ул. Примерная, 8, корпус
+                </p>
+              </div>
+              <span class="link">
+                <i class="icon-chevron-down"></i>
+                Подробнее
+              </span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -549,14 +657,12 @@
         <div class="contact-us__body">
           <div class="contact-us__content">
             <h2 class="contact-us__title title">
-              <span>хотите у нас работать?</span>
-              <br>
+              <span>у вас остались вопросы?</span>
               свяжитесь
               с нами
             </h2>
             <p class="contact-us__text">
-              Если у вас есть какие то интересные предложения, обращайтесь! Наша компания всегда готова
-              решить любую
+              Если у вас есть какие то интересные предложения, обращайтесь! Наша компания всегда готова решить любую
               задачу.
             </p>
           </div>
@@ -576,8 +682,8 @@
                 </span>
               </div>
               <div class="form__group">
-                <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта"
-                  minlength="2" maxlength="40">
+                <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта" minlength="2"
+                  maxlength="40">
                 <i class="icon-mail"></i>
                 <span class="error">
                   Произошла ошибка! Поле заполнено неверно
@@ -590,10 +696,9 @@
                 Получить консультацию
               </button>
               <div class="checkbox">
-                <input class="form-checkbox" type="checkbox" checked>
+                <input class="form-checkbox" type="checkbox">
                 <p class="checkbox__text">
-                  Нажимая кнопку, вы даёте согласие на <a href="">обработку ваших персональных
-                    данных</a>
+                  Нажимая кнопку, вы даёте согласие на <a href="">обработку ваших персональных данных</a>
                 </p>
               </div>
             </div>

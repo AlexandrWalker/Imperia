@@ -33,6 +33,8 @@
       slidesPerView: "auto",
       spaceBetween: 10,
       speed: 600,
+      freeMode: true,
+      grabCursor: true,
       mousewheel: {
         forceToAxis: true,
       },
@@ -127,6 +129,35 @@
       },
     });
 
+    var review__slider = new Swiper(".review__slider-init", {
+      slidesPerView: 1.5,
+      spaceBetween: 10,
+      speed: 600,
+      grabCursor: true,
+      loop: true,
+      mousewheel: {
+        forceToAxis: true,
+      },
+      navigation: {
+        nextEl: ".review__slider-next",
+        prevEl: ".review__slider-prev",
+      },
+      breakpoints: {
+        601: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        769: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1201: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        }
+      },
+    });
+
     var projects__slider = new Swiper(".projects__slider-init", {
       slidesPerView: 2,
       spaceBetween: 10,
@@ -137,8 +168,8 @@
         forceToAxis: true,
       },
       navigation: {
-        nextEl: ".path__slider-next",
-        prevEl: ".path__slider-prev",
+        nextEl: ".projects__slider-next",
+        prevEl: ".projects__slider-prev",
       },
       breakpoints: {
         601: {
@@ -460,6 +491,50 @@
 
     burgerNav();
 
+    /**
+     * dropdown
+     */
+    if (document.querySelectorAll('.dropdown')) {
+      document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+        const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+        const dropDownBtnText = dropDownWrapper.querySelector('.dropdown__button-text');
+        const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+        const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+        const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+
+        dropDownBtn.addEventListener('click', function (e) {
+          dropDownList.classList.toggle('dropdown__list--visible');
+          this.classList.add('dropdown__button--active');
+        });
+
+        dropDownListItems.forEach(function (listItem) {
+          listItem.addEventListener('click', function (e) {
+            e.stopPropagation();
+            dropDownBtnText.innerHTML = this.innerHTML;
+            dropDownBtn.dataset.value = this.dataset.value;
+            dropDownBtn.focus();
+            dropDownBtn.click();
+            dropDownInput.value = this.dataset.value;
+            dropDownList.classList.remove('dropdown__list--visible');
+          });
+        });
+
+        document.addEventListener('click', function (e) {
+          if (e.target !== dropDownBtn) {
+            dropDownBtn.classList.remove('dropdown__button--active');
+            dropDownList.classList.remove('dropdown__list--visible');
+          }
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Tab' || e.key === 'Escape') {
+            dropDownBtn.classList.remove('dropdown__button--active');
+            dropDownList.classList.remove('dropdown__list--visible');
+          }
+        });
+      });
+    }
+
     document.getElementById('warning-btn').addEventListener('click', event => {
       document.getElementById('warning-plate').style.display = 'none';
     });
@@ -475,7 +550,6 @@
         presentation.setAttribute('download', './documents/Империя.pdf');
       }
     }, true);
-
 
   });
 })();
