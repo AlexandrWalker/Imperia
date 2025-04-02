@@ -535,6 +535,17 @@
       });
     }
 
+    addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
+      const head = this.document.querySelector('.head');
+
+      if (scrollPosition > 0 && scrollPosition !== 0) {
+        head.classList.add('fixed');
+      } else {
+        head.classList.remove('fixed');
+      }
+    });
+
     document.getElementById('warning-btn').addEventListener('click', event => {
       document.getElementById('warning-plate').style.display = 'none';
     });
