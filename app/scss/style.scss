@@ -3,6 +3,7 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
+
 /* component styles */
 @import 'elements/header.scss';
 @import 'elements/footer.scss';
@@ -10,19 +11,24 @@
 @import 'elements/modal.scss';
 @import 'elements/plate.scss';
 @import 'elements/dropdown.scss';
+
 /* main page */
 @import 'pages/index.scss';
+
 /* inner pages */
 @import 'pages/catalogs.scss';
+@import 'pages/objects.scss';
 @import 'pages/service.scss';
 @import 'pages/review.scss';
 @import 'pages/licenses.scss';
 @import 'pages/vacancy.scss';
 @import 'pages/contacts.scss';
+
 /* sample pages */
 @import 'pages/investments.scss';
 @import 'pages/rent.scss';
 @import 'pages/construction.scss';
 @import 'pages/control.scss';
+
 /* adaptive styles */
 @import 'media';

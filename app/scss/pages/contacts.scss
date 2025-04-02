@@ -69,19 +69,25 @@
     }
 
     &-list {
-      font-family: 'Winter Sans Trial';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 1.6rem;
-      line-height: 120%;
-      color: var(--white);
-      opacity: 0.5;
+      ul {
+        font-family: 'Winter Sans Trial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 120%;
+        color: var(--white);
+        opacity: 0.5;
+      }
     }
 
     &-icon {
       width: 2.4rem;
       height: 2.4rem;
       object-fit: cover;
+      background-image: url(./../images/icon/copy.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      cursor: pointer;
     }
   }
 

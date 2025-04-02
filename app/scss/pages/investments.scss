@@ -47,7 +47,8 @@
     &-img {
       width: 8rem;
       height: 8rem;
-      object-fit: cover;
+      background-repeat: no-repeat;
+      background-size: 100%;
     }
 
     &-title {
@@ -99,6 +100,48 @@
       width: 100%;
       height: auto;
       object-fit: contain;
+    }
+  }
+
+  &-feat {
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4rem;
+      width: auto;
+    }
+
+    &__items {
+      display: flex;
+      gap: 14rem;
+      border-bottom: 0.1rem solid var(--primary-black-30);
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 6.4rem;
+      padding: 0 9rem 5.5rem 0;
+      border-right: 0.1rem solid var(--primary-black-30);
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      &-img {
+        width: fit-content;
+        height: 17.1rem;
+        object-fit: contain;
+      }
+
+      &-title {
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 120%;
+        color: var(--primary-black-70);
+        max-width: 18rem;
+      }
     }
   }
 }
@@ -309,5 +352,18 @@
     .block-title {
       width: auto;
     }
+  }
+}
+
+.investments {
+  .sample__feat-item:nth-child(1) .sample__feat-img {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggc3Ryb2tlPSIjRUUzQTIzIiBkPSJNMTUuNTgyLjVINzkuNXY2My45MThIMTUuNTgyeiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDE1LjA4Mmg2NC45MThWODBIMHoiLz48cGF0aCBmaWxsPSIjRUUzQTIzIiBkPSJNMzMgMTVoMzIuMTMxdjMyLjEzMUgzM3oiLz48L3N2Zz4=);
+
+  }
+  .sample__feat-item:nth-child(2) .sample__feat-img {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggc3Ryb2tlPSIjRUUzQTIzIiBkPSJNMTUuNTgyLjVINzkuNXY2My45MThIMTUuNTgyeiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDE1LjA4Mmg2NC45MThWODBIMHoiLz48cGF0aCBmaWxsPSIjRUUzQTIzIiBkPSJNMzMgMTVoMzIuMTMxdjMyLjEzMUgzM3oiLz48L3N2Zz4=);
+  }
+  .sample__feat-item:nth-child(3) .sample__feat-img {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggc3Ryb2tlPSIjRUUzQTIzIiBkPSJNMTUuNTgyLjVINzkuNXY2My45MThIMTUuNTgyeiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDE1LjA4Mmg2NC45MThWODBIMHoiLz48cGF0aCBmaWxsPSIjRUUzQTIzIiBkPSJNMzMgMTVoMzIuMTMxdjMyLjEzMUgzM3oiLz48L3N2Zz4=);
   }
 }

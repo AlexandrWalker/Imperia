@@ -1,0 +1,10 @@
+.plan {
+  padding-top: 5rem;
+  background-color: var(--white);
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}

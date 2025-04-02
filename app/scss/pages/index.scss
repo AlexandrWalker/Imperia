@@ -1381,6 +1381,18 @@
       margin-bottom: 3rem;
     }
 
+    &-icon {
+      display: block;
+      width: 6.7rem;
+      height: 5.4rem;
+      aspect-ratio: 1 / 1;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjciIGhlaWdodD0iNTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTI4LjA4IDkuMTUzYy0xMC4wOC40OC0xNy43NiA2Ljk2LTE3LjI4IDE4IDEuNDQtLjQ4IDMuMTItLjcyIDUuMjgtLjcyIDguMTYgMCAxMy40NCA0LjU2IDEzLjQ0IDEzLjQ0IDAgOC42NC01LjI4IDE0LjE2LTE0LjE2IDE0LjE2QzYuMjQgNTMuNzkzIDAgNDcuNzkzIDAgMzIuOTEzIDAgMTguOTkzIDUuMDQtLjkyNyAyOC4wOC4wMzN2OS4xMnptOS42IDIzLjc2YzAtMTMuOTIgNC44LTMzLjg0IDI3Ljg0LTMyLjg4djkuMTJjLTEwLjA4LjQ4LTE3LjUyIDYuOTYtMTcuMDQgMTggMS40NC0uNDggMy4xMi0uNzIgNS4wNC0uNzIgOC4xNiAwIDEzLjQ0IDQuNTYgMTMuNDQgMTMuNDQgMCA4LjY0LTUuMDQgMTQuMTYtMTQuMTYgMTQuMTYtOS4xMi0uMjQtMTUuMTItNi4yNC0xNS4xMi0yMS4xMnoiIGZpbGw9IiMzMTJEMkQiLz48L3N2Zz4=);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      margin-bottom: 3rem;
+    }
+
     &-text {
       font-weight: 400;
       font-size: 1.6rem;
