@@ -539,7 +539,7 @@
       const scrollPosition = window.scrollY;
       const head = this.document.querySelector('.head');
 
-      if (scrollPosition > 0 && scrollPosition !== 0) {
+      if (scrollPosition > 50 && scrollPosition !== 50) {
         head.classList.add('fixed');
       } else {
         head.classList.remove('fixed');
