@@ -42,7 +42,14 @@
     height: auto;
   }
 
-  
+  .advan__title {
+    font-weight: 400;
+
+    span {
+      font-weight: 800;
+    }
+  }
+
   .projects__address-title {
     color: var(--primary-black);
   }

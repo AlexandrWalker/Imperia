@@ -25,13 +25,9 @@
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iIzMxMkQyRCIgc3Ryb2tlPSIjMzEyRDJEIiBkPSJNLjUgMzMuNWgzMS4xMzF2MzEuMTMxSC41eiIvPjxwYXRoIGZpbGw9IiMzMTJEMkQiIGQ9Ik0zMyAwaDMyLjEzMXYzMi4xMzFIMzN6Ii8+PHBhdGggZmlsbD0iI0VFM0EyMyIgZD0iTTMzIDMzaDQ3djQ3SDMzeiIvPjxwYXRoIGZpbGw9IiMzMTJEMkQiIHN0cm9rZT0iIzMxMkQyRCIgZD0iTS41LjVoMzEuMTMxdjMxLjEzMUguNXoiLz48L3N2Zz4=);
   }
 
-  .case {
-    margin-top: 19.2rem;
-  }
-
-  .case__title {
-    top: -13.2rem;
-    width: 36%;
+  .advan__title {
+    max-width: 120rem;
+    width: 100%;
   }
 
   .advan__head {
@@ -46,5 +42,13 @@
     left: unset;
     text-align: center;
     width: 7rem;
+  }
+
+  .titles__title {
+    font-weight: 400;
+
+    span {
+      font-weight: 800;
+    }
   }
 }

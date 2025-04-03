@@ -32,7 +32,7 @@ section {
   flex-direction: column;
   min-height: 100dvh;
   position: relative;
-  padding-top: 20rem;
+  // padding-top: 20rem;
 }
 
 .main {
@@ -59,6 +59,22 @@ section {
 .no-scroll {
   overflow: hidden;
   height: 100dvh;
+}
+
+.titles {
+  margin: 0;
+
+  &__inner {
+    padding: 4rem 0;
+  }
+
+  &__title {
+    max-width: 120rem;
+  }
+
+  .block-title {
+    width: auto;
+  }
 }
 
 .title {
@@ -672,10 +688,24 @@ a {
     color: var(--primary-black);
   }
 
+  &.white {
+    background-color: var(--white);
+    color: var(--primary-black);
+  }
+
   &__inner {
     display: flex;
     align-items: center;
     height: 3rem;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      padding: 0;
+      margin: 0;
+      background: none;
+    }
   }
 
   ul {
@@ -688,6 +718,7 @@ a {
     font-weight: 400;
     font-size: 1.2rem;
     line-height: 1;
+    white-space: nowrap;
   }
 
   a {

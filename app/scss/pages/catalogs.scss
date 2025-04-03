@@ -123,6 +123,7 @@
 
     &-title {
       width: min-content;
+      font-weight: 800;
     }
 
     &-img {
@@ -132,6 +133,7 @@
       position: absolute;
       top: 7.4rem;
       right: -16.6rem;
+      z-index: -1;
     }
   }
 

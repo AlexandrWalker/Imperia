@@ -159,7 +159,8 @@
   }
 
   .wrapper {
-    padding: 8rem 0 6.4rem;
+    // padding: 8rem 0 6.4rem;
+    padding: 0 0 6.4rem;
   }
 
   .head {
@@ -330,6 +331,10 @@
     gap: 3rem;
   }
 
+  .sample-page .case__head {
+    padding: 3rem 0 0;
+  }
+
   .case__head {
     padding: 3rem 0 0;
     width: 100%;
@@ -345,6 +350,7 @@
     height: auto;
   }
 
+  .sample-page .case__head-text,
   .case__head-text {
     -webkit-line-clamp: 3;
     display: -webkit-box;
@@ -374,8 +380,15 @@
   }
 
   .sample-page .case {
-    margin-top: 9rem;
     margin-bottom: 29rem;
+  }
+
+  .titles__inner {
+    padding: 3rem 0;
+  }
+
+  .titles__title.title {
+    font-size: 3.4rem;
   }
 
   .control .case__title {
@@ -1376,6 +1389,8 @@
 
   .catalogs .sample__title {
     font-size: 4.4rem;
+    font-weight: 800;
+    width: 60%;
   }
 
   .catalogs .sample__inner {
@@ -1595,6 +1610,40 @@
 
   .catalogs .sample__body-item {
     width: calc(50% - 1.5rem);
+    gap: 1rem;
+  }
+
+  .catalogs .sample__title {
+    width: 100%;
+    font-size: 3.4rem;
+  }
+
+  .catalogs .sample__head {
+    height: 46.5rem;
+  }
+
+  .catalogs .sample__head-img {
+    width: 50.2rem;
+    height: auto;
+    top: unset;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1rem;
+  }
+
+  .catalogs .sample__body-title {
+    font-size: 4.4rem;
+  }
+
+  .catalogues__item-count {
+    width: 5rem;
+    height: 5rem;
+    font-size: 3.4rem;
+  }
+
+  .catalogues__item-body {
+    gap: 1rem;
   }
 }
 
@@ -1628,7 +1677,8 @@
   }
 
   .wrapper {
-    padding: 8rem 0 6.4rem;
+    // padding: 8rem 0 6.4rem;
+    padding: 0 0 6.4rem;
   }
 
   .header__logo {
@@ -1641,6 +1691,7 @@
 
   .hero__slider-item {
     padding: 5.6rem 1rem;
+    min-height: 46.5rem;
   }
 
   .hero__feat {
@@ -1691,6 +1742,14 @@
   .case__head-img {
     width: 100%;
     height: 100%;
+  }
+
+  .titles__inner {
+    padding: 2rem 0;
+  }
+
+  .titles__title.title {
+    font-size: 2.4rem;
   }
 
   .case__item {
@@ -2087,6 +2146,12 @@
   .plan {
     padding: 2rem 0;
   }
+
+  .breadcrumbs__inner {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+    padding: 0 1rem;
+  }
 }
 
 @media (max-width: 520px) {}
@@ -2103,7 +2168,8 @@
 
 @media (max-width: 380px) {
   .wrapper {
-    padding: 8rem 0 12.4rem;
+    // padding: 8rem 0 12.4rem;
+    padding: 0 0 12.4rem;
   }
 
   .plate__btns {

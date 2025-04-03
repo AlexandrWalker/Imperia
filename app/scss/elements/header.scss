@@ -1,10 +1,10 @@
 .head {
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
   z-index: 101;
-  height: 20rem;
+  height: fit-content;
   background-color: var(--primary-bg);
   box-shadow: 0px 7px 29.9px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
@@ -15,7 +15,7 @@
   }
 
   &.fixed {
-    height: fit-content;
+
     .header__inner {
       padding: 2rem 0;
     }
