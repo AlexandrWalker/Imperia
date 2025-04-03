@@ -1,7 +1,7 @@
 html {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-tap-highlight-color: transparent;
-
+  overflow-x: hidden;
   --refRes: 1920;
   font-size: calc(100vw / var(--refRes) * 10);
 
@@ -11,7 +11,6 @@ html {
 }
 
 body {
-  overflow-x: hidden;
   min-width: 320px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -32,7 +31,6 @@ section {
   flex-direction: column;
   min-height: 100dvh;
   position: relative;
-  // padding-top: 20rem;
 }
 
 .main {
@@ -615,7 +613,6 @@ a {
   }
 
   &__btn {
-    font-family: 'Roboto';
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 143%;
@@ -629,7 +626,7 @@ a {
     cursor: pointer;
     transition: all 0.3s ease;
 
-    &.tabs-active {
+    &.mixitup-control-active {
       color: var(--white);
       border-color: var(--primary-accent);
       background-color: var(--primary-accent);
@@ -639,25 +636,6 @@ a {
       color: var(--white);
       border-color: var(--primary-black);
       background-color: var(--primary-black);
-    }
-  }
-
-  &__item {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-    height: 0;
-    position: absolute;
-    bottom: 100%;
-    z-index: -1000;
-
-    &.tabs-active {
-      opacity: 1;
-      pointer-events: all;
-      visibility: visible;
-      height: auto;
-      position: static;
-      transition: opacity 0.3s ease;
     }
   }
 
