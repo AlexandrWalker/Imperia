@@ -306,6 +306,11 @@
 
       Array.from(accordionHead).forEach(function (accordionItem, i, accordionHead) {
         accordionItem.addEventListener('click', function (e) {
+          if (this.parentNode.dataset.skip) {
+            this.classList.toggle('active');
+            return;
+          }
+
           if (accordionActive.length > 0 && accordionActive[0] !== this) {
             accordionActive[0].classList.remove('active');
           }
@@ -539,7 +544,7 @@
       const scrollPosition = window.scrollY;
       const head = this.document.querySelector('.head');
 
-      if (scrollPosition > 50 && scrollPosition !== 50) {
+      if (scrollPosition > 1 && scrollPosition !== 1) {
         head.classList.add('fixed');
       } else {
         head.classList.remove('fixed');
