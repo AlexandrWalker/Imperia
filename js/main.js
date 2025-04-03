@@ -252,54 +252,6 @@
       },
     });
 
-    /**
-     * Управляет переключением вкладок на странице.
-     * Добавляет и удаляет классы активности для кнопок и панелей вкладок.
-     * Поддерживает вложенные табы любой глубины и сохраняет активное состояние у вложенных табов при переключении внешних.
-     */
-    function tabsFunc() {
-      document.querySelectorAll('.tabs').forEach((tabsContainer) => {
-        tabsContainer.addEventListener('click', (event) => {
-          const tabsBtn = event.target.closest('.tabs__btn');
-          if (!tabsBtn || !tabsContainer.contains(tabsBtn)) return;
-
-          // Останавливаем всплытие, чтобы вложенные табы не влияли на родительские
-          event.stopPropagation();
-
-          // Ищем ближайший контейнер, к которому принадлежит нажатая кнопка
-          const currentTabsContainer = tabsBtn.closest('.tabs');
-          if (!currentTabsContainer) return;
-
-          // Сбрасываем активные состояния кнопок и панелей только внутри текущего уровня
-          const tabsBtns = Array.from(currentTabsContainer.querySelectorAll('.tabs__btn'));
-          const tabsPanels = Array.from(currentTabsContainer.querySelectorAll('.tabs__item'));
-
-          tabsBtns.forEach((btn) => {
-            if (btn.closest('.tabs') === currentTabsContainer) {
-              btn.classList.remove('tabs-active');
-            }
-          });
-
-          tabsPanels.forEach((panel) => {
-            if (panel.closest('.tabs') === currentTabsContainer) {
-              panel.classList.remove('tabs-active');
-            }
-          });
-
-          // Устанавливаем активное состояние для выбранной вкладки
-          tabsBtn.classList.add('tabs-active');
-          const targetPanel = currentTabsContainer.querySelector(
-            `.tabs__item[data-tab="${tabsBtn.dataset.tab}"]`,
-          );
-          if (targetPanel) {
-            targetPanel.classList.add('tabs-active');
-          }
-        });
-      });
-    };
-
-    tabsFunc();
-
     function accordionFunc() {
       var accordionHead = document.querySelectorAll('.accordion'),
         accordionActive = document.getElementsByClassName('active');
@@ -320,6 +272,8 @@
     }
 
     accordionFunc();
+
+
 
     /**
      * Управляет переключением кнопки Подробнее.
@@ -451,6 +405,8 @@
 
     modalFunc();
 
+
+
     /**
      * Управляет поведением меню-бургера.
      */
@@ -496,6 +452,8 @@
 
     burgerNav();
 
+
+
     /**
      * dropdown
      */
@@ -540,6 +498,8 @@
       });
     }
 
+
+
     addEventListener('scroll', function () {
       const scrollPosition = window.scrollY;
       const head = this.document.querySelector('.head');
@@ -550,6 +510,23 @@
         head.classList.remove('fixed');
       }
     });
+
+    
+
+    if (document.querySelector('.mix')) {
+      var mixer = mixitup('.tabs__items', {
+        animation: {
+          duration: 500,
+          effects: 'stagger(3ms) fade scale(0.4)',
+          easing: 'ease'
+        },
+        load: {
+          filter: '.mix-1'
+        }
+      });
+    }
+
+
 
     document.getElementById('warning-btn').addEventListener('click', event => {
       document.getElementById('warning-plate').style.display = 'none';
