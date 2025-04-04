@@ -707,6 +707,7 @@
   }
 
   .tenants .swiper-pagination {
+    display: block;
     left: unset;
   }
 
@@ -948,7 +949,7 @@
   }
 
   .footer__bottom-inner {
-    // height: 5rem;
+    display: flex;
     height: fit-content;
     padding: 1rem 0;
     flex-wrap: wrap;
@@ -1205,6 +1206,7 @@
     font-size: 1.4rem;
   }
 
+  .contacts__item-text,
   .contacts__item-link {
     font-size: 2.4rem;
   }

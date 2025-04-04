@@ -169,7 +169,8 @@
     z-index: 2;
 
     &-inner {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
       justify-content: space-between;
       align-items: center;
       gap: 3rem;

@@ -63,6 +63,13 @@
       }
     }
 
+    &-text {
+      font-weight: 800;
+      font-size: 3.4rem;
+      line-height: 120%;
+      color: inherit;
+    }
+
     &-mail {
       color: var(--primary-accent);
       text-decoration: underline;

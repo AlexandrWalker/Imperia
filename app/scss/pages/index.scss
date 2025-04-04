@@ -753,6 +753,7 @@
   }
 
   .swiper-pagination {
+    display: none;
     position: relative;
     bottom: unset;
     left: unset;
@@ -1349,6 +1350,11 @@
 
   &__title {
     margin-bottom: 4rem;
+    font-weight: 400;
+
+    span {
+      font-weight: 800;
+    }
   }
 
   &__content {

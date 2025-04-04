@@ -83,20 +83,14 @@
         601: {
           spaceBetween: 10,
           slidesPerView: 2,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
         },
         769: {
           spaceBetween: 20,
           slidesPerView: 3,
-          pagination: false,
         },
         1441: {
           spaceBetween: 20,
           slidesPerView: 4,
-          pagination: false,
         }
       },
     });
@@ -360,7 +354,7 @@
             console.log(modalId);
             if (modalId) {
               document.getElementById(modalId).classList.add('open');
-              document.body.classList.add('no-scroll');
+              lenis.stop();
             } else {
               return
             }
@@ -378,13 +372,13 @@
             Array.from(close, closeButton => {
               closeButton.addEventListener('click', e => {
                 document.getElementById(modalId).classList.remove("open");
-                document.body.classList.remove('no-scroll');
+                lenis.start();
               });
 
               window.addEventListener('keydown', (e) => {
                 if (e.key === "Escape") {
                   document.getElementById(modalId).classList.remove("open")
-                  document.body.classList.remove('no-scroll');
+                  lenis.start();
                 }
               });
 
@@ -395,7 +389,7 @@
               document.getElementById(modalId).addEventListener('click', event => {
                 if (event._isClickWithInModal) return;
                 event.currentTarget.classList.remove('open');
-                document.body.classList.remove('no-scroll');
+                lenis.start();
               });
             });
           });
