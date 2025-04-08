@@ -102,7 +102,7 @@
               </div>
             </div>
           </div>
-          <div class="vacancy__item accordion active">
+          <div class="vacancy__item accordion">
             <div class="vacancy__head">
               <h3 class="vacancy__head-title">
                 Название вакансии
@@ -288,8 +288,8 @@
                 </span>
               </div>
               <div class="form__group">
-                <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта"
-                  minlength="2" maxlength="40">
+                <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта" minlength="2"
+                  maxlength="40">
                 <i class="icon-mail"></i>
                 <span class="error">
                   Произошла ошибка! Поле заполнено неверно
@@ -297,6 +297,12 @@
               </div>
             </div>
             <textarea class="form-textarea" placeholder="Комментарий "></textarea>
+            <div class="form__group">
+              <input class="form-file-input" id="form-file" type="file">
+              <label class="form-file" for="form-file">
+                <span>Прикрепить резюме</span> <span>(не более 20 мегабайт)</span>
+              </label>
+            </div>
             <div class="form__bottom">
               <button class="contact-us__btn btn btn-yellow" type="submit">
                 Получить консультацию

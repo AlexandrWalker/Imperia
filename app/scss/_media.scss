@@ -1498,6 +1498,11 @@
   .plan {
     padding: 4rem 0;
   }
+
+  .form-file {
+    margin-bottom: -1rem;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 660px) {
