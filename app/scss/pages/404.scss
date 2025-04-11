@@ -1,0 +1,46 @@
+.notfound {
+  background-color: var(--primary-black);
+  color: var(--white);
+  margin: 0;
+
+  &__inner {
+    position: relative;
+    padding: 6rem 0;
+  }
+
+  &__title {
+    font-family: 'Winter Sans Trial';
+    font-weight: 800;
+    font-size: 11.6rem;
+    line-height: 105%;
+    text-transform: uppercase;
+  }
+
+  &__count {
+    font-family: 'Winter Sans Trial';
+    font-weight: 800;
+    font-size: 48.2rem;
+    line-height: 105%;
+    color: var(--primary-accent);
+    display: block;
+    margin-top: -3rem;
+  }
+
+  &__text {
+    font-family: 'Winter Sans Trial';
+    font-weight: 400;
+    font-size: 8.6rem;
+    line-height: 105%;
+    text-transform: uppercase;
+  }
+
+  &__img {
+    width: auto;
+    height: 58.5rem;
+    object-fit: contain;
+    position: absolute;
+    bottom: 4.7rem;
+    left: 120rem;
+    z-index: 1;
+  }
+}

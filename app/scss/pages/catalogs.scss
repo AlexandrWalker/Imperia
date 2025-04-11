@@ -110,90 +110,115 @@
       line-height: 120%;
     }
   }
-}
 
-.catalogs .sample {
-  background-color: var(--primary-yellow);
-  background-image: none;
-
-  &__head {
-    position: relative;
-    z-index: 2;
-    color: var(--primary-black);
-
-    &-title {
-      width: min-content;
-      font-weight: 800;
-    }
-
-    &-img {
-      width: 127.8rem;
-      height: 82.8rem;
-      object-fit: contain;
-      position: absolute;
-      top: 7.4rem;
-      right: -16.6rem;
-      z-index: -1;
-    }
-  }
-
-  &__body {
-    justify-content: flex-start;
-    background-color: var(--primary-black);
-    padding: 6.5rem 0 6.5rem 28rem;
-    z-index: 1;
-
-    &::before {
-      background-color: var(--primary-black);
-    }
-
-    &-items {
-      display: flex;
-      flex-direction: column;
-      gap: 6rem;
-      width: 100%;
-    }
+  &__filter {
 
     &-item {
       display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      padding-bottom: 6rem;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+      min-width: 21.2rem;
+      height: 5rem;
+      padding: 1.3rem;
+      background: transparent;
+      border: 0.1rem solid var(--primary-black);
+      color: var(--primary-black);
+      font-weight: 600;
+      font-size: 1.4rem;
+      text-align: left;
       position: relative;
 
-      &::before {
-        content: "";
-        display: block;
-        width: 100dvh;
-        height: 0.1rem;
-        background-color: var(--white-05);
-        position: absolute;
-        bottom: 0;
-        left: 0;
-      }
-
-      &:last-child {
-        padding-bottom: 0;
-
-        &::before {
-          display: none;
-        }
+      &:active,
+      &:focus,
+      &:hover {
+        border-color: var(--primary-accent);
       }
     }
 
-    &-title {
-      font-family: 'Winter Sans Trial';
-      font-weight: 800;
-      font-size: 8rem;
-      line-height: 105%;
-      color: var(--primary-accent);
+    &-input {
+      background: transparent;
+
+      &::placeholder {
+        color: var(--primary-black);
+      }
+    }
+  }
+}
+
+.catalogs {
+
+  .sample {
+    color: var(--white);
+    height: 81.7rem;
+    position: relative;
+    background: linear-gradient(to right, var(--primary-accent) 93.75%, var(--primary-black) 6.25%);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 57rem;
+      height: 57.7rem;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTcwIiBoZWlnaHQ9IjU3NyIgdmlld0JveD0iMCAwIDU3MCA1NzciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogICAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiDQogICAgICAgIGQ9Ik0wLjQzMTcwNCA0MC41MzkyTDM4LjgyNSAwSDEwOS4xNjVMMC40MzIyOTUgMTEwLjQ2VjQwLjUzOTJIMC40MzE3MDRaTTU3MCA3NS45MDQ4TDcwLjM0IDU3N0gwTDU3MCA1Ljk4NDE4Vjc1LjkwNDhaTTU3MCAyMTMuNjg1TDIwOC41MTIgNTc3SDEzOC4xNzJMNTcwIDE0My43NjVWMjEzLjY4NVYyMTMuNjg1Wk01NzAgMzQ2LjU1NkwzNDEuODY3IDU3N0gyNzEuNTI3TDU2OS45OTkgMjc2LjYzNlYzNDYuNTU2SDU3MFpNNTcwIDQ4NS4wMzJMNDc3Ljk1OSA1NzdINDA3LjYxOUw1NjkuOTk5IDQxNS4xMTJWNDg1LjAzMkw1NzAgNDg1LjAzMlpNMC40MzE3MDQgNDUxLjE1OEw0NDkuNjYzIDBINTIwLjAwM0wwLjQzMTcwNCA1MjEuMDc5VjQ1MS4xNThaTTAuNDMxNzA0IDMxMi4xNzFMMzA4LjI3MiAwSDM3OC42MTJMMC40MzE3MDQgMzgyLjA5MVYzMTIuMTcxWk0wLjQzMTcwNCAxNzUuODEzTDE3NC45MTcgMEgyNDUuMjU3TDAuNDMyMjk1IDI0NS43MzNWMTc1LjgxMkwwLjQzMTcwNCAxNzUuODEzWiINCiAgICAgICAgZmlsbD0iI0ZBQ0EyQSIgLz4NCjwvc3ZnPg==);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
     }
 
-    &-text {
-      font-weight: 400;
-      font-size: 2.4rem;
-      line-height: 120%;
-      color: var(--white-70);
+    &__inner {
+      flex-direction: row;
+      padding: 6rem 0;
+      position: relative;
+      justify-content: space-between;
+    }
+
+    &__title {
+      z-index: 2;
+
+      span {
+        color: var(--primary-black);
+        font-weight: 400;
+      }
+    }
+
+    &__items {
+      display: flex;
+      gap: 9rem;
+      z-index: 2;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 25rem;
+
+      &-count {
+        font-family: 'Winter Sans Trial';
+        font-weight: 800;
+        font-size: 6.4rem;
+        line-height: 105%;
+      }
+
+      &-text {
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 120%;
+      }
+    }
+
+    &__img {
+      position: absolute;
+      bottom: -5.1rem;
+      left: 4.3rem;
+      z-index: 1;
+      width: auto;
+      height: 78rem;
+      object-fit: contain;
     }
   }
 }

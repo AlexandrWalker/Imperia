@@ -5,43 +5,40 @@
   <section class="sample">
     <div class="container sample__container">
       <div class="sample__inner">
-        <div class="sample__head">
-          <h1 class="sample__title title">
-            объекты<br>
-            и <span>география присутствия</span>
-          </h1>
-          <img class="sample__head-img" src="./images/tmp/sample/catalog-hero.svg" alt="">
-        </div>
-        <div class="sample__body">
-          <div class="sample__body-items">
-            <div class="sample__body-item">
-              <span class="sample__body-title">
-                20 лет
-              </span>
-              <span class="sample__body-text">
-                на рынке инвестиций
-              </span>
-            </div>
-            <div class="sample__body-item">
-              <span class="sample__body-title">
-                272
-              </span>
-              <span class="sample__body-text">
-                объектов возведено
-                в 10 городах
-              </span>
-            </div>
-            <div class="sample__body-item">
-              <span class="sample__body-title">
-                1200
-              </span>
-              <span class="sample__body-text">
-                инвестиционных
-                объекта
-              </span>
-            </div>
+        <h1 class="sample__title title">
+          объекты<br>
+          <span>и география<br> присутствия
+          </span>
+        </h1>
+        <div class="sample__items">
+          <div class="sample__item">
+            <span class="sample__item-count">
+              20 лет
+            </span>
+            <p class="sample__item-text">
+              На рынке инвестиций
+            </p>
+          </div>
+          <div class="sample__item">
+            <span class="sample__item-count">
+              272
+            </span>
+            <p class="sample__item-text">
+              Объектов возведено
+              в 10 городах
+            </p>
+          </div>
+          <div class="sample__item">
+            <span class="sample__item-count">
+              1200
+            </span>
+            <p class="sample__item-text">
+              Инвестиционных
+              объекта
+            </p>
           </div>
         </div>
+        <img class="sample__img" src="./../images/tmp/sample/catalog-hero.svg" alt="">
       </div>
     </div>
   </section>
@@ -93,23 +90,8 @@
               </ul>
               <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
             </div>
-            <div class="dropdown">
-              <button class="dropdown__button" data-value="Площадь м2">
-                <span class="dropdown__button-text">Площадь</span> м2
-                <i class="icon-chevron-down"></i>
-              </button>
-              <ul class="dropdown__list dropdown__list-border">
-                <li class="dropdown__list-item" data-value="200">
-                  200
-                </li>
-                <li class="dropdown__list-item" data-value="250">
-                  250
-                </li>
-                <li class="dropdown__list-item" data-value="300">
-                  300
-                </li>
-              </ul>
-              <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
+            <div class="catalogues__filter-item">
+              <input class="catalogues__filter-input" type="text" placeholder="Площадь от м2">
             </div>
             <div class="dropdown">
               <button class="dropdown__button" data-value="Регион">

@@ -17,6 +17,8 @@
     border: 0.1rem solid var(--primary-black-10);
     width: calc(25% - 1.5rem);
     transition: all 0.3s ease;
+    cursor: pointer;
+    color: inherit;
 
     &:hover {
 

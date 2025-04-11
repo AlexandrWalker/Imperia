@@ -43,11 +43,21 @@
     }
 
     &:hover {
-      color: var(--primary-accent);
 
-      i::before {
-        background-color: var(--primary-black);
+      i {
+        transform: scale(-1, -1);
+
+        &::before {
+          background-color: var(--primary-black);
+        }
       }
+    }
+  }
+
+  &__input {
+
+    &:hover {
+      border-color: var(--primary-accent);
     }
   }
 
@@ -81,6 +91,10 @@
       }
 
       &--active {
+        color: var(--primary-accent);
+      }
+
+      &:hover {
         color: var(--primary-accent);
       }
     }

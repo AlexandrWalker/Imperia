@@ -449,7 +449,7 @@
 
 
     /**
-     * dropdown
+     * Установка dropdown
      */
     if (document.querySelectorAll('.dropdown')) {
       document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
@@ -494,6 +494,9 @@
 
 
 
+    /**
+     * Присвоение fixed класса шапке при скролле
+     */
     addEventListener('scroll', function () {
       const scrollPosition = window.scrollY;
       const head = this.document.querySelector('.head');
@@ -505,8 +508,11 @@
       }
     });
 
-    
 
+
+    /**
+     * Инициализация mixitup
+     */
     if (document.querySelector('.mix')) {
       var mixer = mixitup('.tabs__items', {
         animation: {
@@ -537,6 +543,15 @@
         presentation.setAttribute('download', './documents/Империя.pdf');
       }
     }, true);
+
+
+
+    /**
+     * Инициализация Fancybox
+     */
+    Fancybox.bind('[data-fancybox="gallery"]', {
+      // Your custom options
+    });
 
   });
 })();

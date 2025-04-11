@@ -1,8 +1,12 @@
 .vacancy {
   padding-top: 4rem;
 
-  &__title {
-    margin-bottom: 11rem;
+  .vacancy__title {
+    margin-bottom: 3rem;
+  }
+
+  &__tabs {
+    margin-bottom: 3rem;
   }
 
   &__items {
@@ -158,5 +162,11 @@
     max-width: 122rem;
     padding: 0;
     transition: all 0.5s ease;
+  }
+
+  .tabs__items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 }
