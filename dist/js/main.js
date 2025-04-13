@@ -547,6 +547,30 @@
 
 
     /**
+     * Vue
+     */
+    var geo = document.querySelectorAll('.geo__item'),
+      geoActive = document.getElementsByClassName('geo__active');
+
+    Array.from(geo).forEach(function (geoItem, i, geo) {
+      geoItem.addEventListener('click', function (e) {
+        if (geoActive.length > 0 && geoActive[0] !== this) {
+          geoActive[0].classList.remove('geo__active');
+        }
+        this.classList.toggle('geo__active');
+
+        e.stopPropagation();
+        document.getElementById('geo-img').setAttribute('src', this.dataset.img);
+        document.getElementById('geo-name').innerText = this.dataset.name;
+        document.getElementById('geo-address').innerText = this.dataset.address;
+        document.getElementById('geo-year').innerText = this.dataset.year;
+        document.getElementById('geo-square').innerText = this.dataset.square;
+      });
+    });
+
+
+
+    /**
      * Инициализация Fancybox
      */
     Fancybox.bind('[data-fancybox="gallery"]', {

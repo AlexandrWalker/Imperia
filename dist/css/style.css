@@ -2896,6 +2896,111 @@ a {
   flex-direction: column;
   padding: 0 1rem;
 }
+.geo__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+  width: 50rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: var(--white);
+}
+.geo__block-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
+.geo__block-close::before {
+  content: "";
+  display: block;
+  width: 3.6rem;
+  height: 0.2rem;
+  border-radius: 0.1rem;
+  background-color: var(--primary-black);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transition: all 0.3s ease;
+}
+.geo__block-close::after {
+  content: "";
+  display: block;
+  width: 3.6rem;
+  height: 0.2rem;
+  border-radius: 0.1rem;
+  background-color: var(--primary-black);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-135deg);
+  transition: all 0.3s ease;
+}
+.geo__block-close:hover::before, .geo__block-close:hover::after {
+  background-color: var(--primary-accent);
+}
+.geo__block-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 460/304;
+}
+.geo__block-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.geo__block-name {
+  font-weight: 800;
+  font-size: 2.4rem;
+  line-height: 100%;
+  color: var(--primary-accent);
+}
+.geo__block-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.geo__block-title {
+  font-family: "Winter Sans Trial";
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 120%;
+}
+.geo__block-text {
+  font-family: "Winter Sans Trial";
+  font-weight: 800;
+  font-size: 1.6rem;
+  line-height: 120%;
+}
+.geo__block-count {
+  font-family: "Winter Sans Trial";
+  font-weight: 800;
+  font-size: 3.4rem;
+  line-height: 120%;
+  color: var(--primary-accent);
+}
+.geo__block-wrap {
+  display: flex;
+  flex-direction: row;
+  gap: 3.6rem;
+}
+.geo__block-btn {
+  width: 100%;
+}
 
 .contact-us__inner {
   padding: 6rem 10rem 4.6rem 14rem;
