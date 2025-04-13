@@ -1,0 +1,254 @@
+.create {
+  height: 81.7rem;
+  color: var(--white);
+  position: relative;
+  margin-bottom: 2rem;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: linear-gradient(0deg, rgba(49, 45, 45, 0.78), rgba(49, 45, 45, 0.78));
+  }
+
+  &__container {
+    height: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 9rem 0;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    &-title {}
+
+    &-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 8rem;
+      height: 8rem;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICAgIDxyZWN0IHg9IjE1LjU3ODEiIHk9IjAuNSIgd2lkdGg9IjYzLjkxOCIgaGVpZ2h0PSI2My45MTgiIHN0cm9rZT0iI0VFM0EyMyIvPg0KICAgICAgPHJlY3QgeT0iMTUuMDgyIiB3aWR0aD0iNjQuOTE4IiBoZWlnaHQ9IjY0LjkxOCIgZmlsbD0id2hpdGUiLz4NCiAgICAgIDxyZWN0IHg9IjMzIiB5PSIxNSIgd2lkdGg9IjMyLjEzMTEiIGhlaWdodD0iMzIuMTMxMSIgZmlsbD0iI0VFM0EyMyIvPg0KICAgICAgPC9zdmc+DQogICAgICA=);
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    &-count {
+      font-family: 'Winter Sans Trial';
+      font-weight: 800;
+      font-size: 6.4rem;
+      line-height: 105%;
+      text-transform: uppercase;
+      color: var(--primary-yellow);
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 2.4rem;
+      line-height: 120%;
+    }
+  }
+}
+
+.create_s {
+
+  &__inner {
+    display: flex;
+  }
+
+  &__block {
+    background: linear-gradient(to top, var(--primary-black) 72%, transparent 28%);
+  }
+
+  &__img {
+    width: auto;
+    height: 72rem;
+    object-fit: contain;
+    position: relative;
+    right: -2.3rem;
+    z-index: 1;
+  }
+
+  &__content {
+    padding: 3.4rem 14rem 7rem 14rem;
+    background-color: var(--primary-accent);
+    color: var(--white);
+    max-width: 97rem;
+    height: fit-content;
+    position: relative;
+    margin-top: auto;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 38.3rem;
+      height: 38.6rem;
+      background-image: url(data:image/svg+xml;base64,ICAgICAgPHN2ZyB3aWR0aD0iMzgzIiBoZWlnaHQ9IjM4OCIgdmlld0JveD0iMCAwIDM4MyAzODgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAuMjkwMDc1IDI4LjExMjJMMjYuMDg3NyAwLjk0NTE5SDczLjM1MTJMMC4yOTA0NzIgNzQuOTY5VjI4LjExMjJIMC4yOTAwNzVaTTM4MyA1MS44MTIzTDQ3LjI2MzYgMzg3LjYxOEgwTDM4MyA0Ljk1NTQ1VjUxLjgxMjNaTTM4MyAxNDQuMTQ1TDE0MC4xMDYgMzg3LjYxOEg5Mi44NDIyTDM4MyA5Ny4yODgxVjE0NC4xNDVWMTQ0LjE0NVpNMzgzIDIzMy4xODhMMjI5LjcxMSAzODcuNjE4SDE4Mi40NDdMMzgzIDE4Ni4zMzFWMjMzLjE4OEgzODNaTTM4MyAzMjUuOTg2TDMyMS4xNTUgMzg3LjYxOEgyNzMuODkxTDM4MyAyNzkuMTI5VjMyNS45ODZMMzgzIDMyNS45ODZaTTAuMjkwMDc1IDMwMy4yODZMMzAyLjE0MiAwLjk0NTE5SDM0OS40MDZMMC4yOTAwNzUgMzUwLjE0M1YzMDMuMjg2Wk0wLjI5MDA3NSAyMTAuMTQ0TDIwNy4xMzcgMC45NDUxOUgyNTQuNEwwLjI5MDA3NSAyNTcuMDAxVjIxMC4xNDRaTTAuMjkwMDc1IDExOC43NjVMMTE3LjUzMiAwLjk0NTE5SDE2NC43OTVMMC4yOTA0NzIgMTY1LjYyMVYxMTguNzY0TDAuMjkwMDc1IDExOC43NjVaIiBmaWxsPSIjRkFDQTJBIi8+DQo8L3N2Zz4NCg==);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      bottom: 0;
+      right: -26.2rem;
+    }
+
+    &-title {
+      font-family: 'Winter Sans Trial';
+      font-style: italic;
+      font-weight: 800;
+      font-size: 3.4rem;
+      line-height: 105%;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+    }
+
+    &-text {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 120%;
+      margin-bottom: 5rem;
+    }
+
+    &-name {
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 120%;
+    }
+
+    &-post {
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.6rem;
+      line-height: 120%;
+    }
+  }
+
+  .advan__head-icon {
+    width: 10.9rem;
+    height: 8.4em;
+  }
+}
+
+.create_f {
+
+  &__title {
+    margin-bottom: 4rem;
+    width: auto;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    &-wrap {
+      position: relative;
+      width: 100%;
+      height: 35rem;
+      background-color: var(--primary-grey);
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &-count {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 14rem;
+      height: 14rem;
+      background-color: var(--primary-accent);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-family: 'Winter Sans Trial';
+      font-weight: 800;
+      font-size: 6.4rem;
+      line-height: 110%;
+      text-align: center;
+      color: var(--white);
+
+      &--red {
+        background-color: var(--primary-accent);
+        color: var(--white);
+      }
+
+      &--red-1 {
+        background-color: var(--primary-accent);
+        color: var(--primary-black);
+      }
+
+      &--yellow {
+        background-color: var(--primary-yellow);
+        color: var(--primary-black);
+      }
+
+      &--white {
+        background-color: var(--white);
+        color: var(--primary-black);
+      }
+
+      &--black {
+        background-color: var(--primary-black);
+        color: var(--white);
+      }
+
+      &--grey {
+        background-color: var(--primary-grey);
+        color: var(--primary-black);
+      }
+    }
+
+    &-text {
+      font-weight: 600;
+      font-size: 2.4rem;
+      line-height: 142%;
+      padding-left: 3rem;
+      color: var(--primary-black);
+      border-left: 0.1rem solid var(--primary-black);
+    }
+  }
+
+  .swiper-slide {
+
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      padding-top: 2rem;
+    }
+  }
+}
