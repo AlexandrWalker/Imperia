@@ -783,8 +783,8 @@
 
   .projects .swiper-slide:nth-last-child(3) .path__item-img::before,
   .projects .swiper-slide:nth-last-child(3) .path__item-img::after,
-  .path__item-img::before,
-  .path__item-img::after {
+  .path__item-img::before:not(.create-page .path__item-img::before ),
+  .path__item-img::after:not(.create-page .path__item-img::after) {
     display: none;
   }
 
