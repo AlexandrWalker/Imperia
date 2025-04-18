@@ -1276,6 +1276,9 @@ a {
   transition: all 0.3s ease;
 }
 
+.footer {
+  overflow: hidden;
+}
 .footer__contact {
   padding: 4rem 0 4.5rem;
   background-color: var(--primary-grey);
@@ -4025,6 +4028,11 @@ a {
   z-index: 1;
 }
 
+.create-page .path,
+.create-page .tenants {
+  overflow: hidden;
+}
+
 .create {
   height: 81.7rem;
   color: var(--white);
@@ -5248,8 +5256,8 @@ a {
   }
   .projects .swiper-slide:nth-last-child(3) .path__item-img::before,
   .projects .swiper-slide:nth-last-child(3) .path__item-img::after,
-  .path__item-img::before,
-  .path__item-img::after {
+  .path__item-img::before:not(.create-page .path__item-img::before),
+  .path__item-img::after:not(.create-page .path__item-img::after) {
     display: none;
   }
   .slider__btns {
