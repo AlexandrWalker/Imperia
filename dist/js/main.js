@@ -445,7 +445,7 @@
         // document.body.classList.toggle('no-scroll');
         head.classList.toggle('head--active');
 
-        if(menu.classList.contains('mobile-menu--opened')) {
+        if (menu.classList.contains('mobile-menu--opened')) {
           lenis.stop();
         } else {
           lenis.start();
@@ -545,8 +545,8 @@
     /**
      * Инициализация mixitup
      */
-    if (document.querySelector('.mix')) {
-      var mixer = mixitup('.tabs__items', {
+    if (document.querySelector('.other-mix')) {
+      var mixer = mixitup('.other-mix', {
         animation: {
           duration: 500,
           effects: 'stagger(3ms) fade scale(0.4)',
@@ -554,6 +554,20 @@
         },
         load: {
           filter: '.mix-1'
+        }
+      });
+    }
+
+    if (document.querySelector('.vacancy-mix')) {
+
+      var mixerVacancy = mixitup('.vacancy-mix', {
+        animation: {
+          duration: 500,
+          effects: 'stagger(3ms) fade scale(0.4)',
+          easing: 'ease'
+        },
+        load: {
+          filter: 'all'
         }
       });
     }

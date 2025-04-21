@@ -255,6 +255,19 @@
       }
     }
   }
+
+  .tenants {
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    &__body {
+      width: 100%;
+    }
+  }
 }
 
 .sample-page {

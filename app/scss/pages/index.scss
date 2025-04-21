@@ -681,6 +681,7 @@
 }
 
 .tenants {
+  overflow: hidden;
 
   &__head {
     display: flex;
@@ -688,6 +689,12 @@
     align-items: center;
     gap: 3rem;
     margin-bottom: 4rem;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
   }
 
   &__item {
@@ -814,6 +821,7 @@
 }
 
 .path {
+  overflow: hidden;
 
   &__head {
     display: flex;
@@ -1447,6 +1455,7 @@
 }
 
 .advan {
+  overflow: hidden;
 
   &__title {
     margin-bottom: 4rem;

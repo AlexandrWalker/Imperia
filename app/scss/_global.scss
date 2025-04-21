@@ -556,6 +556,10 @@ a {
     cursor: pointer;
     margin-top: -1rem;
 
+    &:hover span:first-child {
+      text-decoration-line: none;
+    }
+
     span:first-child {
       text-decoration-line: underline;
     }

@@ -1,6 +1,9 @@
 .create-page {
+
   .path,
-  .tenants {
+  .tenants,
+  .contact-us,
+  .advan {
     overflow: hidden;
   }
 }
@@ -168,6 +171,7 @@
 }
 
 .create_f {
+  overflow: hidden;
 
   &__title {
     margin-bottom: 4rem;
