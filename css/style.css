@@ -777,6 +777,9 @@ a {
   cursor: pointer;
   margin-top: -1rem;
 }
+.form-file:hover span:first-child {
+  text-decoration-line: none;
+}
 .form-file span:first-child {
   text-decoration-line: underline;
 }
@@ -2453,12 +2456,20 @@ a {
     opacity: 0;
   }
 }
+.tenants {
+  overflow: hidden;
+}
 .tenants__head {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
   margin-bottom: 4rem;
+}
+.tenants__wrap {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 .tenants__item {
   display: flex;
@@ -2564,6 +2575,9 @@ a {
   height: 10rem;
 }
 
+.path {
+  overflow: hidden;
+}
 .path__head {
   display: flex;
   justify-content: space-between;
@@ -3080,6 +3094,9 @@ a {
   max-width: 100%;
 }
 
+.advan {
+  overflow: hidden;
+}
 .advan__title {
   margin-bottom: 4rem;
   font-weight: 400;
@@ -4028,7 +4045,9 @@ a {
 }
 
 .create-page .path,
-.create-page .tenants {
+.create-page .tenants,
+.create-page .contact-us,
+.create-page .advan {
   overflow: hidden;
 }
 
@@ -4170,6 +4189,9 @@ a {
   height: 8.4em;
 }
 
+.create_f {
+  overflow: hidden;
+}
 .create_f__title {
   margin-bottom: 4rem;
   width: auto;
@@ -4444,6 +4466,15 @@ a {
 }
 .projects .path__item-content {
   gap: 2rem;
+}
+.projects .tenants__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.projects .tenants__body {
+  width: 100%;
 }
 
 .sample-page .service__item {
@@ -5262,6 +5293,10 @@ a {
   .slider__btns {
     display: none;
   }
+  .tenants .slider__btns {
+    display: flex;
+    flex-direction: row;
+  }
   .tenants__head {
     margin-bottom: 2rem;
   }
@@ -5946,6 +5981,15 @@ a {
     left: unset;
     height: 30rem;
   }
+  .create-page .tenants__head {
+    margin-bottom: 1rem;
+  }
+  .create-page .tenants .swiper-pagination {
+    display: none;
+  }
+  .create-page .projects__wrap-btn {
+    --button-padding-x: 1.35rem;
+  }
 }
 @media (max-width: 660px) {
   .header__phone {
@@ -6033,6 +6077,9 @@ a {
   }
   .catalogues__item-body {
     gap: 1rem;
+  }
+  .create-page .projects__wrap {
+    width: 100%;
   }
 }
 @media (max-width: 600px) {
