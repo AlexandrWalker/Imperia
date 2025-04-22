@@ -324,14 +324,15 @@
         </div>
         <div class="service__body">
           <img class="service__body-img" src="./images/tmp/main/about.png" alt="">
-          <a class="service__btn btn-box" href="/">
+          <span class="service__btn btn-box modal__btn" data-id="modal-callback" data-title="Получить консультацию"
+            data-text="Опишите свой вопрос или задачу в поле комментарий, мы вернемся к вам с подробной консультацией">
             <span>
               <i class="icon-arrow"></i>
             </span>
             <p>
               Получить консультацию
             </p>
-          </a>
+          </span>
         </div>
       </div>
     </div>
@@ -489,8 +490,8 @@
                 </span>
               </div>
               <div class="form__group">
-                <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта"
-                  minlength="2" maxlength="40">
+                <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта" minlength="2"
+                  maxlength="40">
                 <i class="icon-mail"></i>
                 <span class="error">
                   Произошла ошибка! Поле заполнено неверно
@@ -652,9 +653,9 @@
               <img src="./images/logo/logo-white.svg" alt="">
             </a>
 
-            <span class="footer__bottom-text">
-              Разработка и продвижение сайта — <a href="https://1and2.ru/">Once&Twice</a>
-            </span>
+            <a class="footer__bottom-text footer__bottom-link" href="https://1and2.ru/">
+              Разработка и продвижение сайта — Once&Twice
+            </a>
           </div>
         </div>
       </div>
