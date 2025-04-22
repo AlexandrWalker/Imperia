@@ -26,15 +26,21 @@
 
   &__items {
     display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    max-width: 51.1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem 5rem;
+    // max-width: 51.1rem;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    width: calc(45% - 2.5rem);
+
+    &:nth-child(odd) {
+      width: calc(55% - 2.5rem);
+    }
 
     &-title {
       display: flex;
@@ -111,11 +117,21 @@
       height: 3.4rem;
       border-radius: 50%;
       background-color: var(--primary-accent);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: var(--white);
+
+        i {
+          color: var(--primary-black);
+        }
+      }
 
       i {
         font-size: 1.6rem;
         color: var(--white);
         object-fit: contain;
+        transition: all 0.3s ease;
       }
     }
   }

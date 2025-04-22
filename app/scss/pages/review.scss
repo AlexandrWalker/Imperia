@@ -18,6 +18,12 @@
     padding: 3rem;
     border: 0.1rem solid var(--primary-black-10);
     width: calc(25% - 1.5rem);
+    color: inherit;
+
+    &:hover {
+      background-color: var(--white);
+      border-color: transparent;
+    }
 
     &-wrap {
       display: flex;
@@ -75,5 +81,17 @@
         color: var(--primary-accent);
       }
     }
+  }
+
+  .projects__address-title {
+    font-size: 1.2rem;
+  }
+
+  .projects__address-text {
+    font-size: 1rem;
+  }
+
+  .tenants__item {
+    width: calc(25% - 1.5rem);
   }
 }

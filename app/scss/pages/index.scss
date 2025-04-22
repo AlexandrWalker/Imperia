@@ -250,12 +250,13 @@
     color: inherit;
 
     &:hover {
-      .feat__content-title {
-        color: var(--primary-accent);
-      }
 
       .feat__img {
-        // transform: scale(1.3);
+        transform: scale(1.2);
+      }
+
+      .feat__num {
+        background-color: var(--primary-black);
       }
 
       .link {
@@ -282,7 +283,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s linear;
+    transition: transform 2s linear;
   }
 
   &__num {
@@ -301,6 +302,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    transition: all 0.3s ease;
   }
 
   &__content {

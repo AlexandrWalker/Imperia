@@ -31,9 +31,9 @@
 
     var feat__slider = new Swiper(".feat__slider-init", {
       slidesPerView: "auto",
+      slidesPerGroup: 1,
       spaceBetween: 10,
       speed: 600,
-      freeMode: true,
       grabCursor: true,
       mousewheel: {
         forceToAxis: true,
@@ -332,7 +332,7 @@
     // Initialize a new Lenis instance for smooth scrolling
     const lenis = new Lenis({
       anchors: {
-        offset: 100,
+        offset: -100,
         onComplete: () => {
           console.log('scrolled to anchor')
         }
@@ -548,7 +548,7 @@
     if (document.querySelector('.other-mix')) {
       var mixer = mixitup('.other-mix', {
         animation: {
-          duration: 500,
+          duration: 600,
           effects: 'stagger(3ms) fade scale(0.4)',
           easing: 'ease'
         },
@@ -562,7 +562,7 @@
 
       var mixerVacancy = mixitup('.vacancy-mix', {
         animation: {
-          duration: 500,
+          duration: 600,
           effects: 'stagger(3ms) fade scale(0.4)',
           easing: 'ease'
         },
@@ -579,14 +579,23 @@
     });
 
     const presentation = document.getElementById('presentation');
+    const stageItems = document.querySelectorAll('.stage__item');
 
     window.addEventListener('resize', function (event) {
       if (this.window.innerWidth >= 769) {
         presentation.setAttribute('href', './documents/Империя презентация.pdf');
         presentation.setAttribute('download', './documents/Империя презентация.pdf');
+
+        stageItems.forEach(stageElem => {
+          stageElem.classList.remove('accordion');
+        });
       } else {
         presentation.setAttribute('href', './documents/Империя.pdf');
         presentation.setAttribute('download', './documents/Империя.pdf');
+
+        stageItems.forEach(stageElem => {
+          stageElem.classList.add('accordion');
+        });
       }
     }, true);
 
@@ -655,6 +664,17 @@
         }
       );
     }
+
+
+
+    /* Copyboard */
+    document.querySelector("#copyButton").addEventListener("click", function () {
+      navigator.clipboard.writeText(document.querySelector("#copyContent").innerText).then(function () {
+        console.log('Text copied to clipboard');
+      }).catch(function (error) {
+        console.error('Error:', error);
+      });
+    });
 
 
 

@@ -151,6 +151,12 @@ a {
   max-width: 21.2rem;
   width: 100%;
   height: 5rem;
+
+  &:hover {
+    --button-color: var(--white);
+    --button-bgcolor: var(--primary-black);
+    --button-border-color: var(--primary-black);
+  }
 }
 
 .btn-yellow {

@@ -203,6 +203,13 @@
       }
     }
 
+    &-link {
+
+      &:hover {
+        text-decoration-line: underline;
+      }
+    }
+
     &-logo {
       width: 23.1rem;
       height: 3.7rem;
