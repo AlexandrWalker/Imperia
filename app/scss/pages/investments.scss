@@ -225,6 +225,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 2rem;
+      overflow: hidden;
     }
 
     &__head {
@@ -325,7 +326,7 @@
       left: 0;
     }
 
-    &__head-text {
+    &__head-text:not(.objects .advan__head-text) {
       margin: 0;
       padding: 0 0 0 1.2rem;
     }

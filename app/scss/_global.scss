@@ -738,6 +738,10 @@ a {
     align-items: center;
     gap: 1rem;
     color: inherit;
+    
+    &:hover {
+      color: var(--primary-accent);
+    }
   }
 
   img {

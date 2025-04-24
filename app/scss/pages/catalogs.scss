@@ -229,10 +229,144 @@
       position: absolute;
       bottom: -5.1rem;
       left: 4.3rem;
-      z-index: 1;
+      z-index: 5;
       width: auto;
       height: 78rem;
       object-fit: contain;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
+  }
+
+  &__list {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        .catalogs__list-count {
+          background-color: var(--primary-accent);
+        }
+
+        .catalogs__list-count::after,
+        .catalogs__list-count::before {
+          border-color: var(--primary-accent);
+        }
+      }
+
+      &.reverse {
+        flex-direction: row-reverse;
+
+        .catalogs__list-text {
+          text-align: right;
+        }
+      }
+
+      &.nsk {
+        position: absolute;
+        left: 23.42%;
+        bottom: 32.4%;
+      }
+
+      &.tomsk {
+        position: absolute;
+        left: 36.175%;
+        bottom: 39.7%;
+      }
+
+      &.altay {
+        position: absolute;
+        left: 34.1%;
+        bottom: 23.46%;
+      }
+
+      &.irkutsk {
+        position: absolute;
+        right: 41.4%;
+        bottom: 30.77%;
+      }
+
+      &.khabarovsk {
+        position: absolute;
+        right: 21.9%;
+        bottom: 21.79%;
+      }
+    }
+
+    &-count {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background-color: var(--primary-black);
+      transition: all 0.3s ease;
+      font-family: 'Winter Sans Trial';
+      font-weight: 800;
+      font-size: 2rem;
+      text-align: center;
+      color: var(--white);
+      position: relative;
+      z-index: 2;
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        left: -0.5rem;
+        right: -0.5rem;
+        top: -0.5rem;
+        bottom: -0.5rem;
+        z-index: -1;
+        opacity: 0;
+        border: 0.95rem solid var(--primary-black-50);
+        border-radius: 50%;
+        animation: pulse 2.5s linear infinite;
+        transition: all 0.3s ease;
+      }
+
+      &::after {
+        animation-delay: 1.25s;
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 110%;
+      color: var(--primary-black);
+      width: min-content;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
   }
 }

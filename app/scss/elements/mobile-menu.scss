@@ -56,10 +56,33 @@
     }
 
     &-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+
+      i {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.6rem;
+        flex-shrink: 0;
+        color: var(--primary-accent);
+        transition: all 0.3s ease;
+      }
 
       &:not(:last-child) {
         margin-bottom: 3rem;
       }
+    }
+
+    &-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+      transition: all 0.5s ease;
     }
 
     &-title {

@@ -68,10 +68,6 @@
       mousewheel: {
         forceToAxis: true,
       },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
       navigation: {
         nextEl: ".tenants__slider-next",
         prevEl: ".tenants__slider-prev",
@@ -268,6 +264,56 @@
             rows: 2,
           },
         }
+      },
+    });
+
+    var objects__slider = new Swiper(".objects__slider-init", {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      speed: 600,
+      grabCursor: true,
+      mousewheel: {
+        forceToAxis: true,
+      },
+      navigation: {
+        nextEl: ".objects__slider-next",
+        prevEl: ".objects__slider-prev",
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1201: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        }
+      },
+    });
+
+    var objects_s__slider = new Swiper(".objects-s__slider", {
+      slidesPerView: 1,
+      grabCursor: true,
+      speed: 600,
+      loop: true,
+      mousewheel: {
+        forceToAxis: true,
+      },
+      effect: "fade",
+      fadeEffect: {
+        crossFade: false
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: ".case__slider-next",
+        prevEl: ".case__slider-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       },
     });
 
@@ -667,14 +713,19 @@
 
 
 
-    /* Copyboard */
-    document.querySelector("#copyButton").addEventListener("click", function () {
-      navigator.clipboard.writeText(document.querySelector("#copyContent").innerText).then(function () {
-        console.log('Text copied to clipboard');
-      }).catch(function (error) {
-        console.error('Error:', error);
+    /**
+     *  Copyboard
+     */
+    const copyButton = document.querySelector("#copyButton");
+    if (copyButton) {
+      copyButton.addEventListener("click", function () {
+        navigator.clipboard.writeText(document.querySelector("#copyContent").innerText).then(function () {
+          console.log('Text copied to clipboard');
+        }).catch(function (error) {
+          console.error('Error:', error);
+        });
       });
-    });
+    }
 
 
 

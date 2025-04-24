@@ -52,6 +52,7 @@
     &-link {
       color: var(--primary-accent);
       text-decoration-line: underline;
+      pointer-events: none;
     }
 
     &-author {
