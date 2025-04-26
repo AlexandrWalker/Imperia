@@ -24,6 +24,8 @@
   <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/icomoon-style.css">
   <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="./libs/splitting/splitting.css">
+  <link rel="stylesheet" href="./libs/splitting/splitting-cells.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -307,7 +309,7 @@
     </header>
 <!-- Содержимое сайта -->
 <main class="main main-inner">
-  <!-- Главный блок -->
+  <!-- Хлебные крошки -->
   <section class="breadcrumbs grey">
     <div class="container">
       <div class="breadcrumbs__inner">
@@ -318,7 +320,6 @@
               Главная
             </a>
           </li>
-          <li class="slash">/</li>
           <li>
             Партнеры о нас
           </li>
@@ -340,174 +341,358 @@
           </div>
           <div class="tabs__items other-mix">
             <div class="review__items mix mix-1" style="">
-              <div class="tenants__item">
-                <div class="tenants__item-head">
-                  <img class="tenants__item-logo" src="./images/tmp/main/tenants-1.svg" alt="Примус">
+              <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                data-caption="Навзание лицензии">
+                <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
+                <div class="review__item-wrap">
+                  <h3 class="review__item-title">
+                    Название компании
+                  </h3>
+                  <p class="review__item-text">
+                    Задача организации, в особенности же начало повседневной работы по формированию позиции
+                    обеспечивает
+                    широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                  </p>
+                  <span class="review__item-link link" href="/">
+                    <i class="icon-chevron-down"></i>
+                    Читать весь отзыв
+                  </span>
                 </div>
-                <div class="tenants__content">
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>сотрудничество</p>
-                      <span>7 лет</span>
-                    </div>
+                <div class="review__item-wrap">
+                  <div class="review__item-author">
+                    <span class="review__item-name">
+                      Василий Петров
+                    </span>
+                    <span class="review__item-post">
+                      Директор компании
+                    </span>
                   </div>
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>объектов</p>
-                      <span>325</span>
+                  <div class="tenants__content">
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>сотрудничество</p>
+                        <span>7 лет</span>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tenants__item">
-                <div class="tenants__item-head">
-                  <img class="tenants__item-logo" src="./images/tmp/main/tenants-1.svg" alt="Примус">
-                </div>
-                <div class="tenants__content">
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>сотрудничество</p>
-                      <span>7 лет</span>
-                    </div>
-                  </div>
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>объектов</p>
-                      <span>325</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tenants__item">
-                <div class="tenants__item-head">
-                  <img class="tenants__item-logo" src="./images/tmp/main/tenants-1.svg" alt="Примус">
-                </div>
-                <div class="tenants__content">
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>сотрудничество</p>
-                      <span>7 лет</span>
-                    </div>
-                  </div>
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>объектов</p>
-                      <span>325</span>
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>объектов</p>
+                        <span>325</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="tenants__item">
-                <div class="tenants__item-head">
-                  <img class="tenants__item-logo" src="./images/tmp/main/tenants-1.svg" alt="Примус">
+              </a>
+              <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                data-caption="Навзание лицензии">
+                <img class="review__item-img" src="./images/tmp/main/tenants-3.svg" alt="">
+                <div class="review__item-wrap">
+                  <h3 class="review__item-title">
+                    Название компании
+                  </h3>
+                  <p class="review__item-text">
+                    Задача организации, в особенности же начало повседневной работы по формированию позиции
+                    обеспечивает
+                    широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                  </p>
+                  <span class="review__item-link link" href="/">
+                    <i class="icon-chevron-down"></i>
+                    Читать весь отзыв
+                  </span>
                 </div>
-                <div class="tenants__content">
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>сотрудничество</p>
-                      <span>7 лет</span>
-                    </div>
+                <div class="review__item-wrap">
+                  <div class="review__item-author">
+                    <span class="review__item-name">
+                      Василий Петров
+                    </span>
+                    <span class="review__item-post">
+                      Директор компании
+                    </span>
                   </div>
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>объектов</p>
-                      <span>325</span>
+                  <div class="tenants__content">
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>сотрудничество</p>
+                        <span>7 лет</span>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tenants__item">
-                <div class="tenants__item-head">
-                  <img class="tenants__item-logo" src="./images/tmp/main/tenants-1.svg" alt="Примус">
-                </div>
-                <div class="tenants__content">
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>сотрудничество</p>
-                      <span>7 лет</span>
-                    </div>
-                  </div>
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>объектов</p>
-                      <span>325</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tenants__item">
-                <div class="tenants__item-head">
-                  <img class="tenants__item-logo" src="./images/tmp/main/tenants-1.svg" alt="Примус">
-                </div>
-                <div class="tenants__content">
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>сотрудничество</p>
-                      <span>7 лет</span>
-                    </div>
-                  </div>
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>объектов</p>
-                      <span>325</span>
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>объектов</p>
+                        <span>325</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="tenants__item">
-                <div class="tenants__item-head">
-                  <img class="tenants__item-logo" src="./images/tmp/main/tenants-1.svg" alt="Примус">
+              </a>
+              <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                data-caption="Навзание лицензии">
+                <img class="review__item-img" src="./images/tmp/main/tenants-1.svg" alt="">
+                <div class="review__item-wrap">
+                  <h3 class="review__item-title">
+                    Название компании
+                  </h3>
+                  <p class="review__item-text">
+                    Задача организации, в особенности же начало повседневной работы по формированию позиции
+                    обеспечивает
+                    широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                  </p>
+                  <span class="review__item-link link" href="/">
+                    <i class="icon-chevron-down"></i>
+                    Читать весь отзыв
+                  </span>
                 </div>
-                <div class="tenants__content">
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>сотрудничество</p>
-                      <span>7 лет</span>
+                <div class="review__item-wrap">
+                  <div class="review__item-author">
+                    <span class="review__item-name">
+                      Василий Петров
+                    </span>
+                    <span class="review__item-post">
+                      Директор компании
+                    </span>
+                  </div>
+                  <div class="tenants__content">
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>сотрудничество</p>
+                        <span>7 лет</span>
+                      </div>
+                    </div>
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>объектов</p>
+                        <span>325</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>объектов</p>
-                      <span>325</span>
+                </div>
+              </a>
+              <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                data-caption="Навзание лицензии">
+                <img class="review__item-img" src="./images/tmp/main/tenants-4.svg" alt="">
+                <div class="review__item-wrap">
+                  <h3 class="review__item-title">
+                    Название компании
+                  </h3>
+                  <p class="review__item-text">
+                    Задача организации, в особенности же начало повседневной работы по формированию позиции
+                    обеспечивает
+                    широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                  </p>
+                  <span class="review__item-link link" href="/">
+                    <i class="icon-chevron-down"></i>
+                    Читать весь отзыв
+                  </span>
+                </div>
+                <div class="review__item-wrap">
+                  <div class="review__item-author">
+                    <span class="review__item-name">
+                      Василий Петров
+                    </span>
+                    <span class="review__item-post">
+                      Директор компании
+                    </span>
+                  </div>
+                  <div class="tenants__content">
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>сотрудничество</p>
+                        <span>7 лет</span>
+                      </div>
+                    </div>
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>объектов</p>
+                        <span>325</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="tenants__item">
-                <div class="tenants__item-head">
-                  <img class="tenants__item-logo" src="./images/tmp/main/tenants-1.svg" alt="Примус">
+              </a>
+              <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                data-caption="Навзание лицензии">
+                <img class="review__item-img" src="./images/tmp/main/tenants-1.svg" alt="">
+                <div class="review__item-wrap">
+                  <h3 class="review__item-title">
+                    Название компании
+                  </h3>
+                  <p class="review__item-text">
+                    Задача организации, в особенности же начало повседневной работы по формированию позиции
+                    обеспечивает
+                    широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                  </p>
+                  <span class="review__item-link link" href="/">
+                    <i class="icon-chevron-down"></i>
+                    Читать весь отзыв
+                  </span>
                 </div>
-                <div class="tenants__content">
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>сотрудничество</p>
-                      <span>7 лет</span>
+                <div class="review__item-wrap">
+                  <div class="review__item-author">
+                    <span class="review__item-name">
+                      Василий Петров
+                    </span>
+                    <span class="review__item-post">
+                      Директор компании
+                    </span>
+                  </div>
+                  <div class="tenants__content">
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>сотрудничество</p>
+                        <span>7 лет</span>
+                      </div>
+                    </div>
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>объектов</p>
+                        <span>325</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="tenants__content-item">
-                    <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                    <div class="tenants__content-wrap">
-                      <p>объектов</p>
-                      <span>325</span>
+                </div>
+              </a>
+              <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                data-caption="Навзание лицензии">
+                <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
+                <div class="review__item-wrap">
+                  <h3 class="review__item-title">
+                    Название компании
+                  </h3>
+                  <p class="review__item-text">
+                    Задача организации, в особенности же начало повседневной работы по формированию позиции
+                    обеспечивает
+                    широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                  </p>
+                  <span class="review__item-link link" href="/">
+                    <i class="icon-chevron-down"></i>
+                    Читать весь отзыв
+                  </span>
+                </div>
+                <div class="review__item-wrap">
+                  <div class="review__item-author">
+                    <span class="review__item-name">
+                      Василий Петров
+                    </span>
+                    <span class="review__item-post">
+                      Директор компании
+                    </span>
+                  </div>
+                  <div class="tenants__content">
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>сотрудничество</p>
+                        <span>7 лет</span>
+                      </div>
+                    </div>
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>объектов</p>
+                        <span>325</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
+              <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                data-caption="Навзание лицензии">
+                <img class="review__item-img" src="./images/tmp/main/tenants-3.svg" alt="">
+                <div class="review__item-wrap">
+                  <h3 class="review__item-title">
+                    Название компании
+                  </h3>
+                  <p class="review__item-text">
+                    Задача организации, в особенности же начало повседневной работы по формированию позиции
+                    обеспечивает
+                    широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                  </p>
+                  <span class="review__item-link link" href="/">
+                    <i class="icon-chevron-down"></i>
+                    Читать весь отзыв
+                  </span>
+                </div>
+                <div class="review__item-wrap">
+                  <div class="review__item-author">
+                    <span class="review__item-name">
+                      Василий Петров
+                    </span>
+                    <span class="review__item-post">
+                      Директор компании
+                    </span>
+                  </div>
+                  <div class="tenants__content">
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>сотрудничество</p>
+                        <span>7 лет</span>
+                      </div>
+                    </div>
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>объектов</p>
+                        <span>325</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                data-caption="Навзание лицензии">
+                <img class="review__item-img" src="./images/tmp/main/tenants-4.svg" alt="">
+                <div class="review__item-wrap">
+                  <h3 class="review__item-title">
+                    Название компании
+                  </h3>
+                  <p class="review__item-text">
+                    Задача организации, в особенности же начало повседневной работы по формированию позиции
+                    обеспечивает
+                    широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                  </p>
+                  <span class="review__item-link link" href="/">
+                    <i class="icon-chevron-down"></i>
+                    Читать весь отзыв
+                  </span>
+                </div>
+                <div class="review__item-wrap">
+                  <div class="review__item-author">
+                    <span class="review__item-name">
+                      Василий Петров
+                    </span>
+                    <span class="review__item-post">
+                      Директор компании
+                    </span>
+                  </div>
+                  <div class="tenants__content">
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>сотрудничество</p>
+                        <span>7 лет</span>
+                      </div>
+                    </div>
+                    <div class="tenants__content-item">
+                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                      <div class="tenants__content-wrap">
+                        <p>объектов</p>
+                        <span>325</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
             <div class="review__items mix mix-2" style="display: none;">
               <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
@@ -536,13 +721,9 @@
                       Директор компании
                     </span>
                   </div>
-                  <div class="projects__address">
-                    <h6 class="projects__address-title">
-                      Адрес объекта
-                    </h6>
-                    <p class="projects__address-text">
-                      г. Новосибирск, ул. Примерная, 8, корпус
-                    </p>
+                  <div class="review__item-solutions">
+                    <p>Адрес объекта</p>
+                    <span>г. Новосибирск, ул. Примерная, 8, корпус</span>
                   </div>
                 </div>
               </a>
@@ -572,13 +753,9 @@
                       Директор компании
                     </span>
                   </div>
-                  <div class="projects__address">
-                    <h6 class="projects__address-title">
-                      Адрес объекта
-                    </h6>
-                    <p class="projects__address-text">
-                      г. Новосибирск, ул. Примерная, 8, корпус
-                    </p>
+                  <div class="review__item-solutions">
+                    <p>Адрес объекта</p>
+                    <span>г. Новосибирск, ул. Примерная, 8, корпус</span>
                   </div>
                 </div>
               </a>
@@ -608,13 +785,9 @@
                       Директор компании
                     </span>
                   </div>
-                  <div class="projects__address">
-                    <h6 class="projects__address-title">
-                      Адрес объекта
-                    </h6>
-                    <p class="projects__address-text">
-                      г. Новосибирск, ул. Примерная, 8, корпус
-                    </p>
+                  <div class="review__item-solutions">
+                    <p>Адрес объекта</p>
+                    <span>г. Новосибирск, ул. Примерная, 8, корпус</span>
                   </div>
                 </div>
               </a>
@@ -644,13 +817,9 @@
                       Директор компании
                     </span>
                   </div>
-                  <div class="projects__address">
-                    <h6 class="projects__address-title">
-                      Адрес объекта
-                    </h6>
-                    <p class="projects__address-text">
-                      г. Новосибирск, ул. Примерная, 8, корпус
-                    </p>
+                  <div class="review__item-solutions">
+                    <p>Адрес объекта</p>
+                    <span>г. Новосибирск, ул. Примерная, 8, корпус</span>
                   </div>
                 </div>
               </a>
@@ -680,13 +849,9 @@
                       Директор компании
                     </span>
                   </div>
-                  <div class="projects__address">
-                    <h6 class="projects__address-title">
-                      Адрес объекта
-                    </h6>
-                    <p class="projects__address-text">
-                      г. Новосибирск, ул. Примерная, 8, корпус
-                    </p>
+                  <div class="review__item-solutions">
+                    <p>Адрес объекта</p>
+                    <span>г. Новосибирск, ул. Примерная, 8, корпус</span>
                   </div>
                 </div>
               </a>
@@ -716,13 +881,9 @@
                       Директор компании
                     </span>
                   </div>
-                  <div class="projects__address">
-                    <h6 class="projects__address-title">
-                      Адрес объекта
-                    </h6>
-                    <p class="projects__address-text">
-                      г. Новосибирск, ул. Примерная, 8, корпус
-                    </p>
+                  <div class="review__item-solutions">
+                    <p>Адрес объекта</p>
+                    <span>г. Новосибирск, ул. Примерная, 8, корпус</span>
                   </div>
                 </div>
               </a>
@@ -752,13 +913,9 @@
                       Директор компании
                     </span>
                   </div>
-                  <div class="projects__address">
-                    <h6 class="projects__address-title">
-                      Адрес объекта
-                    </h6>
-                    <p class="projects__address-text">
-                      г. Новосибирск, ул. Примерная, 8, корпус
-                    </p>
+                  <div class="review__item-solutions">
+                    <p>Адрес объекта</p>
+                    <span>г. Новосибирск, ул. Примерная, 8, корпус</span>
                   </div>
                 </div>
               </a>
@@ -788,18 +945,17 @@
                       Директор компании
                     </span>
                   </div>
-                  <div class="projects__address">
-                    <h6 class="projects__address-title">
-                      Адрес объекта
-                    </h6>
-                    <p class="projects__address-text">
-                      г. Новосибирск, ул. Примерная, 8, корпус
-                    </p>
+                  <div class="review__item-solutions">
+                    <p>Адрес объекта</p>
+                    <span>г. Новосибирск, ул. Примерная, 8, корпус</span>
                   </div>
                 </div>
               </a>
             </div>
           </div>
+          <a class="review__btn btn btn-red" href="">
+            Еще отзывы
+          </a>
         </div>
       </div>
     </div>
@@ -840,7 +996,7 @@
               <div class="form__group">
                 <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта" minlength="2"
                   maxlength="40">
-                <i class="icon-mail"></i>
+                <i class="icon-mail-form"></i>
                 <span class="error">
                   Произошла ошибка! Поле заполнено неверно
                 </span>
@@ -1047,7 +1203,7 @@
             <div class="form__group">
               <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта" minlength="2"
                 maxlength="40">
-              <i class="icon-mail"></i>
+              <i class="icon-mail-form"></i>
               <span class="error">
                 Произошла ошибка! Поле заполнено неверно
               </span>
@@ -1139,15 +1295,18 @@
   </section>
   <!-- scipts -->
   <script src="./libs/lenis/lenis.min.js"></script>
-  <script src="./libs/gsap/gsap.min.js" defer></script>
-  <script src="./libs/gsap/ScrollSmoother.min.js" defer></script>
-  <script src="./libs/gsap/ScrollTrigger.min.js" defer></script>
-  <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
-  <script src="./libs/mixitup/mixitup.min.js" defer></script>
-  <script src="./libs/jquery/jquery.min.js" defer></script>
-  <script src="./libs/fancybox/jquery.fancybox.min.js" defer></script>
+  <script src="./libs/gsap/gsap.min.js"></script>
+  <script src="./libs/gsap/ScrollSmoother.min.js"></script>
+  <script src="./libs/gsap/ScrollTrigger.min.js"></script>
+  <script src="./libs/gsap/tweenmax.min.js"></script>
+  <script src="./libs/swiper/swiper-bundle.min.js"></script>
+  <script src="./libs/mixitup/mixitup.min.js"></script>
+  <script src="./libs/jquery/jquery.min.js"></script>
+  <script src="./libs/fancybox/jquery.fancybox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/transfer-elements@1.0.7/dist/transfer-elements.min.js"></script>
-  <script src="./js/main.js" defer></script>
+  <script src="./libs/splitting/splitting.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

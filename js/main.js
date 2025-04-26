@@ -93,7 +93,7 @@
     });
 
     var path__slider = new Swiper(".path__slider-init", {
-      slidesPerView: 1.65,
+      slidesPerView: 'auto',
       spaceBetween: 108,
       speed: 600,
       grabCursor: true,
@@ -105,10 +105,6 @@
         prevEl: ".path__slider-prev",
       },
       breakpoints: {
-        601: {
-          slidesPerView: 2,
-          spaceBetween: 108,
-        },
         769: {
           slidesPerView: 3,
           spaceBetween: 108,
@@ -121,7 +117,7 @@
     });
 
     var review__slider = new Swiper(".review__slider-init", {
-      slidesPerView: 1.5,
+      slidesPerView: 1,
       spaceBetween: 10,
       speed: 600,
       grabCursor: true,
@@ -134,6 +130,10 @@
         prevEl: ".review__slider-prev",
       },
       breakpoints: {
+        361: {
+          slidesPerView: 1.5,
+          spaceBetween: 10,
+        },
         601: {
           slidesPerView: 2,
           spaceBetween: 20,
@@ -202,6 +202,10 @@
       mousewheel: {
         forceToAxis: true,
       },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
     });
 
     var case__foot = new Swiper(".case__foot-slider", {
@@ -268,7 +272,7 @@
     });
 
     var objects__slider = new Swiper(".objects__slider-init", {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 10,
       speed: 600,
       grabCursor: true,
@@ -280,6 +284,10 @@
         prevEl: ".objects__slider-prev",
       },
       breakpoints: {
+        381: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
         769: {
           slidesPerView: 3,
           spaceBetween: 20,
@@ -335,8 +343,6 @@
         });
       });
     }
-
-    accordionFunc();
 
 
 
@@ -624,10 +630,13 @@
       document.getElementById('warning-plate').style.display = 'none';
     });
 
+
+
     const presentation = document.getElementById('presentation');
     const stageItems = document.querySelectorAll('.stage__item');
 
-    window.addEventListener('resize', function (event) {
+
+    window.addEventListener('resize', function () {
       if (this.window.innerWidth >= 769) {
         presentation.setAttribute('href', './documents/Империя презентация.pdf');
         presentation.setAttribute('download', './documents/Империя презентация.pdf');
@@ -645,7 +654,15 @@
       }
     }, true);
 
+    if ((this.window.innerWidth <= 768) || (~['Android', 'iPhone',
+      'iPod', 'iPad', 'BlackBerry'].indexOf(navigator.platform))) {
+      presentation.setAttribute('href', './documents/Империя.pdf');
+      presentation.setAttribute('download', './documents/Империя.pdf');
 
+      stageItems.forEach(stageElem => {
+        stageElem.classList.add('accordion');
+      });
+    }
 
     /**
      * Geo
@@ -726,6 +743,257 @@
         });
       });
     }
+
+
+
+    accordionFunc();
+
+
+
+    /* Анимация */
+    gsap.registerPlugin(ScrollTrigger);
+
+    const titleChars = document.querySelectorAll('[data-splitting="chars"]');
+    titleChars.forEach(titleChar => {
+      const char = new SplitType(titleChar, { types: 'words, chars' });
+    });
+
+    const titleWords = document.querySelectorAll('[data-splitting="words"]');
+    titleWords.forEach(titleWord => {
+      const word = new SplitType(titleWord, { types: 'words, words' });
+    });
+
+    const fadeLeftToRightContainers = document.querySelectorAll('[data-animation="fadeLeftToRightAnim"]');
+    fadeLeftToRightContainers.forEach(fadeLeftToRightContainer => {
+      const tl = gsap.timeline({
+        paused: true
+      });
+      tl.from(fadeLeftToRightContainer, {
+        opacity: 1,
+        width: "15%",
+        duration: .8,
+        ease: "power1.out",
+        stagger: {
+          amount: .8
+        }
+      });
+      scrollTriggerPlayer(fadeLeftToRightContainer, tl)
+    });
+
+    const fadeLongToWidthContainers = document.querySelectorAll('[data-animation="fadeLongToWidth"]');
+    fadeLongToWidthContainers.forEach(fadeLongToWidthContainer => {
+      const tl = gsap.timeline({
+        paused: true
+      });
+      tl.from(fadeLongToWidthContainer, {
+        opacity: 1,
+        width: "120%",
+        x: -120,
+        duration: .8,
+        ease: "power1.out",
+        stagger: {
+          amount: .8
+        }
+      });
+      scrollTriggerPlayer(fadeLongToWidthContainer, tl)
+    });
+
+    const fadeLongToShortContainers = document.querySelectorAll('[data-animation="fadeLongToShort"]');
+    fadeLongToShortContainers.forEach(fadeLongToShortContainer => {
+      const tl = gsap.timeline({
+        paused: true
+      });
+      tl.from(fadeLongToShortContainer, {
+        opacity: 1,
+        width: "100%",
+        duration: .8,
+        ease: "power1.out",
+        stagger: {
+          amount: .8
+        }
+      });
+      scrollTriggerPlayer(fadeLongToShortContainer, tl)
+    });
+
+    const parallaxContainers = document.querySelectorAll('[data-animation="parallax"]');
+    parallaxContainers.forEach(parallaxContainer => {
+      gsap.fromTo(parallaxContainer, {
+        y: "0%"
+      }, {
+        y: "15%",
+        scrollTrigger: {
+          trigger: parallaxContainer,
+          start: "top 60%",
+          end: "bottom top",
+          scrub: true
+        }
+      })
+    });
+
+    const fadeInItems = document.querySelectorAll('[data-animation="fadeIn"]');
+    fadeInItems.forEach(fadeUpItem => {
+      const chars = fadeUpItem.querySelectorAll("div.char");
+      const tl = gsap.timeline({
+        paused: true
+      });
+      tl.from(chars, {
+        opacity: 0,
+        duration: .3,
+        ease: "power1.out",
+        stagger: {
+          amount: .8
+        }
+      });
+      scrollTriggerPlayer(fadeUpItem, tl)
+    });
+
+    const revealItems = document.querySelectorAll('[data-animation="reveal"]');
+    revealItems.forEach(revealItem => {
+      const word = revealItem.querySelectorAll("div.word");
+      const tl = gsap.timeline({
+        paused: true
+      });
+      tl.from(word, {
+        opacity: 0,
+        y: "10",
+        duration: .4,
+        ease: "power1.out",
+        stagger: {
+          amount: .6
+        }
+      });
+      scrollTriggerPlayer(revealItem, tl)
+    });
+
+    const fadeUpItems = document.querySelectorAll('[data-animation="fadeUp"]');
+    fadeUpItems.forEach(fadeUpItem => {
+      const tl = gsap.timeline({
+        paused: true
+      });
+      tl.from(fadeUpItem, {
+        opacity: 0,
+        y: "80",
+        duration: .8,
+        ease: "power1.out",
+        stagger: {
+          amount: .8
+        }
+      });
+      scrollTriggerPlayer(fadeUpItem, tl)
+    });
+
+    const fadeDownItems = document.querySelectorAll('[data-animation="fadeDown"]');
+    fadeDownItems.forEach(fadeDownItem => {
+      const tl = gsap.timeline({
+        paused: true
+      });
+      tl.from(fadeDownItem, {
+        opacity: 0,
+        y: "40",
+        duration: .8,
+        ease: "power1.out",
+        stagger: {
+          amount: .8
+        }
+      });
+      scrollTriggerPlayer(fadeDownItem, tl, "top 60%")
+    });
+
+    const fadeLeftToRightItems = document.querySelectorAll('[data-animation="fadeLeftToRight"]');
+    fadeLeftToRightItems.forEach(parentItem => {
+      const items = parentItem.querySelectorAll(".item--animation");
+      const tl = gsap.timeline({
+        paused: true
+      });
+      const staggerAmount = items.length < 5 ? .8 : 1.2;
+      tl.from(items, {
+        opacity: 0,
+        y: 10,
+        duration: .3,
+        ease: "power1.in",
+        stagger: {
+          amount: staggerAmount
+        }
+      });
+      scrollTriggerPlayer(parentItem, tl)
+    });
+
+    const fadeBottomToTopItems = document.querySelectorAll('[data-animation="fadeBottomToTop"]');
+    fadeBottomToTopItems.forEach(parentItem => {
+      const items = parentItem.querySelectorAll(".item--animation");
+      const tl = gsap.timeline({
+        paused: true
+      });
+      const staggerAmount = items.length < 5 ? .8 : 1.2;
+      tl.from(items, {
+        opacity: 0,
+        y: 30,
+        duration: .3,
+        ease: "power1.in",
+        stagger: {
+          amount: staggerAmount
+        }
+      });
+      scrollTriggerPlayer(parentItem, tl)
+    });
+
+    const cropDownItems = document.querySelectorAll('[data-animation="cropDown"]');
+    cropDownItems.forEach(cropDownItem => {
+      const image = cropDownItem.querySelector("img");
+      const tl = gsap.timeline({
+        paused: true
+      });
+      tl.from(image, {
+        height: 0,
+        duration: 1.2,
+        ease: "expoScale"
+      });
+      scrollTriggerPlayer(cropDownItem, tl, "top 60%")
+    });
+
+    function scrollTriggerPlayer(triggerElement, timeline, onEnterStart = "top 85%") {
+      ScrollTrigger.create({
+        trigger: triggerElement,
+        start: "top bottom",
+        onLeaveBack: () => {
+          timeline.progress(0);
+          timeline.pause()
+        }
+      });
+      ScrollTrigger.create({
+        trigger: triggerElement,
+        start: onEnterStart,
+        onEnter: () => timeline.play()
+      })
+    }
+
+    const advanItems = document.querySelectorAll('.advan__thumbs-item');
+    advanItems.forEach(advanItem => {
+      const tl = gsap.timeline({
+        paused: true
+      });
+      tl.from(advanItem, {
+        opacity: 0,
+        x: -50,
+        duration: .8,
+        ease: "power1.out",
+        stagger: {
+          amount: .8
+        }
+      });
+      scrollTriggerPlayer(advanItem, tl)
+    });
+
+
+    /**
+     * Перерасчёт высоты для моб.
+     */
+    // We listen to the resize event
+    // window.addEventListener('resize', () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.001;
+    document.documentElement.style.setProperty('--vh', `${vh}rem`);
+    // });
 
 
 
