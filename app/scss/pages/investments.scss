@@ -94,7 +94,7 @@
 
   &-feat {
 
-    &__title {
+    &__title:not(.construction .sample-feat__title) {
       display: flex;
       flex-direction: column;
       margin-bottom: 4rem;

@@ -107,6 +107,7 @@
     padding: 10rem 12rem 10rem 14rem;
     margin-top: 6rem;
     position: relative;
+    z-index: 1;
 
     &::before {
       content: "";
@@ -149,6 +150,7 @@
     width: 50%;
     height: 61.5rem;
     position: relative;
+    z-index: 2;
 
     &-img {
       width: 100%;

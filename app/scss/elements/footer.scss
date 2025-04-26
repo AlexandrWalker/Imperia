@@ -182,6 +182,7 @@
       line-height: 167%;
       color: var(--primary-white);
       white-space: nowrap;
+      width: fit-content;
 
       &:first-child {
         display: flex;
@@ -191,6 +192,7 @@
 
       &:last-child {
         text-align: right;
+        margin: 0 0 0 auto;
       }
 
       a {

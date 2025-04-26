@@ -988,6 +988,44 @@
       scrollTriggerPlayer(advanItem, tl)
     });
 
+    const serviceRedItems = document.querySelectorAll('.service__block.red');
+    serviceRedItems.forEach(serviceRedItem => {
+      const serviceRedItemInner = serviceRedItem.querySelector(".service__item");
+      const tl = gsap.timeline({
+        paused: true
+      });
+      tl.from(serviceRedItemInner, {
+        opacity: 1,
+        x: 50,
+        duration: .8,
+        ease: "power1.out",
+        stagger: {
+          amount: .8
+        }
+      });
+      scrollTriggerPlayer(serviceRedItemInner, tl)
+    });
+
+    const serviceYellowItems = document.querySelectorAll('.service__block.yellow');
+    serviceYellowItems.forEach(serviceYellowItem => {
+      const serviceYellowItemInner = serviceYellowItem.querySelector(".service__item");
+      const tl = gsap.timeline({
+        paused: true
+      });
+      tl.from(serviceYellowItemInner, {
+        opacity: 1,
+        x: -50,
+        duration: .8,
+        ease: "power1.out",
+        stagger: {
+          amount: .8
+        }
+      });
+      scrollTriggerPlayer(serviceYellowItemInner, tl)
+    });
+
+
+
 
     /**
      * Перерасчёт высоты для моб.
