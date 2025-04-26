@@ -679,10 +679,14 @@
           }
           this.classList.toggle('geo__active');
           geoBlock.classList.add('show');
+          // document.body.classList.add('no-scroll');
+          lenis.stop();
 
           let geo__close = document.querySelector('.geo__block-close');
           geo__close.addEventListener('click', function () {
             geoBlock.classList.remove('show');
+            // document.body.classList.remove('no-scroll');
+            lenis.start();
 
             if (geoActive.length > 0 && geoActive[0] !== this) {
               geoActive[0].classList.remove('geo__active');

@@ -1189,10 +1189,88 @@
 
     &:hover {
 
-      .geo__item-list {
+      .geo__item-wrap {
         opacity: 1;
         visibility: visible;
         pointer-events: all;
+
+        &::before {
+          content: "";
+          display: block;
+          height: 0.7rem;
+          border: 0.4rem solid transparent;
+          border-bottom: 0.7rem solid var(--white);
+          position: absolute;
+          left: 50%;
+          bottom: 100%;
+          transform: translateX(-50%);
+          transition: all 0.2s ease;
+        }
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 17.4rem;
+        height: 1rem;
+        z-index: 1;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:hover.geo__item-omsk {
+        &::before {
+          left: 0;
+          transform: unset;
+        }
+
+        .geo__item-wrap {
+          left: 0;
+          transform: unset;
+
+          &::before {
+            left: 3.2rem;
+            transform: unset;
+          }
+        }
+      }
+    }
+
+    &.geo__item-pavlodar {
+      &::before {
+        left: 0;
+        transform: unset;
+      }
+
+      .geo__item-wrap {
+        top: unset;
+        bottom: calc(100% + 1rem);
+
+        &::before {
+          top: 100%;
+          bottom: unset;
+          transform: translateX(-50%) scale(-1, -1);
+        }
+      }
+    }
+
+    &.geo__item-altay {
+      &::before {
+        left: 0;
+        transform: unset;
+      }
+
+      .geo__item-wrap {
+        top: unset;
+        bottom: calc(100% + 1rem);
+
+        &::before {
+          top: 100%;
+          bottom: unset;
+          transform: translateX(-50%) scale(-1, -1);
+        }
       }
     }
 
@@ -1216,36 +1294,37 @@
       }
     }
 
-    &-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      background-color: var(--white);
-      font-size: 1.2rem;
-      font-weight: 300;
-      position: absolute;
-      top: calc(100% + 1rem);
-      z-index: 1;
-      width: max-content;
-      padding: 1rem 0;
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: all 0.3s ease;
-
-      p {
-        font-weight: 600;
-      }
-
-      span {
-        font-weight: 400;
-      }
-    }
-
     &-wrap {
       display: flex;
       flex-direction: column;
-      padding: 0 1rem;
+      padding: 2rem;
+      width: 17.4rem;
+      background-color: var(--white);
+      transition: all 0.3s ease;
+      position: absolute;
+      top: calc(100% + 1rem);
+      left: 50%;
+      z-index: 2;
+      transform: translateX(-50%);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      font-size: 1.4rem;
+      line-height: 120%;
+    }
+
+    &-title {
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    &-text {
+      font-weight: 400;
+      margin-bottom: 3rem;
+
+      span {
+        color: var(--primary-accent);
+      }
     }
   }
 

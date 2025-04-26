@@ -995,19 +995,36 @@
     margin-top: -4.6rem;
   }
 
+  .geo__content {
+    height: 50rem;
+  }
+
   .geo__block {
-    width: 30rem;
+    width: 33.4rem;
     gap: 1.5rem;
+    padding: 5rem 1rem 1rem;
+  }
+
+  .geo__block-close {
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .geo__block-close::before,
+  .geo__block-close::after {
+    width: 2.4rem;
   }
 
   .geo__block-content {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .geo__block-btn {
     line-height: 3rem;
     padding: 0.5rem;
-    height: 4rem;
+    height: 5rem;
   }
 
   .geo__block-count {
@@ -1016,10 +1033,6 @@
 
   .geo {
     // display: none;
-  }
-
-  .geo__content {
-    height: 50rem;
   }
 
   .geo__pic {
@@ -2199,6 +2212,29 @@
     margin: 0;
   }
 
+  .geo__content {
+    height: 71.2rem;
+  }
+
+  .geo__block{
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    top: unset;
+    bottom: -100%;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    padding: 5rem 2rem 1rem;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .geo__block.show {
+    bottom: 0;
+    left: 0;
+  }
+
   /* case */
   .case__body {
     margin-top: 8.6rem;
@@ -2310,6 +2346,14 @@
 
   .advan__head-content {
     padding: 2rem 2rem 29.6rem;
+  }
+
+  .investments .advan__head-content {
+    padding: 2rem 2rem 8rem;
+  }
+
+  .investments .advan__head-content::before {
+    display: none;
   }
 
   .advan__head-content::before {
@@ -2656,6 +2700,10 @@
   .catalogues__filter-btn {
     width: 100%;
     min-width: unset;
+  }
+
+  .menu {
+    height: calc(var(--vh, 1vh) * 100);
   }
 
   .menu__list-item:not(:last-child) {
