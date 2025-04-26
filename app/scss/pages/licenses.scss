@@ -32,12 +32,12 @@
         color: var(--white);
       }
 
-      .link {
+      .licenses__icon {
         color: var(--white);
       }
 
-      .link__icon {
-        fill: var(--primary-black);
+      .licenses__icon i {
+        color: var(--primary-black);
         background-color: var(--white);
       }
     }
@@ -60,6 +60,47 @@
 
     .link {
       text-decoration-line: underline;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      color: var(--white);
+      background-color: var(--primary-accent);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .dropdown {
+    display: none;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    i::before {
+      width: unset;
+      height: unset;
+      border-radius: unset;
+      background-color: unset;
+      font-size: 1.5rem;
+      color: var(--primary-accent);
+    }
+  }
+
+  .dropdown__button--active {
+
+    i {
+      transform: scale(-1, -1);
     }
   }
 }

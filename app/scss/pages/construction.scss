@@ -36,6 +36,22 @@
   .projects__address-title {
     color: var(--primary-black);
   }
+
+  .catalogues__item-subtitle {
+    color: var(--primary-black);
+  }
+
+  .catalogues__item-text {
+    font-family: "Winter Sans Trial", serif;
+    font-weight: 800;
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    color: var(--primary-accent);
+  }
+
+  .catalogues__item:hover .catalogues__item-text {
+    color: var(--white);
+  }
 }
 
 .sample-page {

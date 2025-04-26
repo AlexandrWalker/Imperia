@@ -31,6 +31,7 @@ section {
   flex-direction: column;
   min-height: 100dvh;
   position: relative;
+  padding-top: 20rem;
 }
 
 .main {
@@ -94,6 +95,7 @@ section {
   line-height: 105%;
   text-transform: uppercase;
   color: var(--primary-black);
+  font-kerning: none;
   width: min-content;
 
   span {
@@ -110,6 +112,10 @@ p {
 
 a {
   transition: all 0.3s ease;
+}
+
+.text--accent {
+  color: var(--primary-accent);
 }
 
 /* buttons */
@@ -211,12 +217,14 @@ a {
     height: 6rem;
     border-radius: 50%;
     background-color: var(--primary-black);
+    pointer-events: none;
   }
 
   i {
     font-size: 1.1rem;
     line-height: 100%;
     color: var(--white);
+    pointer-events: none;
   }
 
   p {
@@ -225,6 +233,7 @@ a {
     font-size: 1.6rem;
     line-height: 110%;
     word-break: break-word;
+    pointer-events: none;
   }
 
   &:hover {
@@ -275,7 +284,7 @@ a {
     transform: rotate(-90deg);
     background-color: var(--primary-accent);
     overflow: hidden;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     line-height: 1;
     color: var(--white);
     transition: all 0.3s ease;
@@ -430,7 +439,7 @@ a {
 
     i {
       color: var(--primary-accent);
-      font-size: 1.6rem;
+      font-size: 2.4rem;
       line-height: 100%;
       position: absolute;
       right: 2rem;
@@ -682,14 +691,6 @@ a {
   }
 }
 
-.icon-telegram::before {
-  margin-left: -0.2rem;
-}
-
-.icon-whatsapp:before {
-  margin-right: -0.1rem;
-}
-
 .breadcrumbs {
   background-color: var(--primary-black);
   color: var(--white);
@@ -727,10 +728,18 @@ a {
   }
 
   li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     font-weight: 400;
     font-size: 1.2rem;
     line-height: 1;
     white-space: nowrap;
+
+    &:not(:last-child)::after {
+      content: "/";
+      color: var(--primary-accent);
+    }
   }
 
   a {
@@ -738,7 +747,7 @@ a {
     align-items: center;
     gap: 1rem;
     color: inherit;
-    
+
     &:hover {
       color: var(--primary-accent);
     }

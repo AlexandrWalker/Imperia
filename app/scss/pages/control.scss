@@ -8,6 +8,14 @@
       color: var(--primary-black);
     }
 
+    &__title {
+      font-weight: 300;
+
+      span {
+        font-weight: 800;
+      }
+    }
+
     &__feat-subtitle {
       word-break: break-word;
     }
@@ -50,5 +58,13 @@
     span {
       font-weight: 800;
     }
+  }
+
+  .service__pic-btn p {
+    width: auto;
+  }
+
+  .advan {
+    overflow: unset;
   }
 }

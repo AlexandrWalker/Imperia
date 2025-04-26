@@ -2,7 +2,7 @@
 <!-- Содержимое сайта -->
 <main class="main sample-page construction">
   <!-- Хлебные крошки -->
-  <section class="breadcrumbs white">
+  <section class="breadcrumbs grey">
     <div class="container">
       <div class="breadcrumbs__inner">
         <ul>
@@ -12,7 +12,6 @@
               Главная
             </a>
           </li>
-          <li class="slash">/</li>
           <li>
             Строительство
           </li>
@@ -22,7 +21,7 @@
   </section>
   <!-- Главный блок -->
   <section class="sample">
-    <div class="container sample__container">
+    <div class="container-fluid sample__container">
       <div class="sample__inner">
         <div class="sample__head">
           <h1 class="sample__title title">
@@ -81,13 +80,13 @@
             </div>
           </div>
           <div class="service__pic">
-            <img class="service__pic-img" src="./images/tmp/main/path-3.png" alt="">
+            <img class="service__pic-img" src="./images/tmp/construction/cover.png" alt="">
             <span class="service__pic-btn btn-box btn-box--red modal__btn" data-id="modal-callback">
               <span>
                 <i class="icon-arrow"></i>
               </span>
               <p>
-                Оставить заявку на объект
+                Получить консультацию по строительству
               </p>
             </span>
           </div>
@@ -256,7 +255,8 @@
       </div>
     </div>
   </section>
-  <!-- Типовые объекты -->
+  <!-- Типовые объекты
+       Сквозной блок -->
   <section class="path projects">
     <div class="container">
       <div class="path__inner">
@@ -266,232 +266,226 @@
           </h2>
         </div>
         <div class="projects__wrap">
-          <a class="projects__wrap-btn btn btn-outline" href="/Imperia/catalogs.html">
-            Все проекты
+          <a class="projects__wrap-btn btn btn-outline" href="/Imperia/review.html">
+            Все объекты
           </a>
           <div class="slider__btns">
-            <div class="projects__slider-prev swiper-button-prev icon-chevron-right"></div>
-            <div class="projects__slider-next swiper-button-next icon-chevron-right"></div>
+            <div class="objects__slider-prev swiper-button-prev icon-chevron-right"></div>
+            <div class="objects__slider-next swiper-button-next icon-chevron-right"></div>
           </div>
         </div>
         <div class="path__body">
-          <div class="path__slider projects__slider-init">
+          <div class="objects__slider objects__slider-init">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="path__item">
-                  <div class="path__item-img">
-                    <img src="./images/tmp/main/path-1.png" alt="">
-                    <a class="projects__btn btn-box btn-box--red" href="/Imperia/objects.html">
-                      <span>
-                        <i class="icon-arrow"></i>
-                      </span>
-                      <p>
-                        Подробнее
-                      </p>
-                    </a>
+                <a class="catalogues__item" href="/Imperia/objects.html">
+                  <div class="catalogues__item-head">
+                    <img class="catalogues__item-img" src="./images/tmp/main/hero-2.png" alt="">
+                    <span class="catalogues__item-count">
+                      1
+                    </span>
                   </div>
-                  <div class="path__item-content">
-                    <h4 class="path__item-title">
+                  <div class="catalogues__item-body">
+                    <h5 class="catalogues__item-title">
                       Торговый комплекс под ключ для торговый сети «Магнит»
-                    </h4>
-                    <div class="projects__address">
-                      <h6 class="projects__address-title">
-                        Адрес объекта
+                    </h5>
+                    <div class="catalogues__item-wrap">
+                      <h6 class="catalogues__item-subtitle">
+                        Площадь объекта
                       </h6>
-                      <p class="projects__address-count">
+                      <p class="catalogues__item-text">
                         1068 м2
                       </p>
                     </div>
-                    <div class="projects__address">
-                      <h6 class="projects__address-title">
+                    <div class="catalogues__item-wrap">
+                      <h6 class="catalogues__item-subtitle">
                         Стоимость от
                       </h6>
-                      <p class="projects__address-count">
+                      <p class="catalogues__item-text">
                         15 000 000 ₽
                       </p>
                     </div>
+                    <span class="link">
+                      <i class="icon-chevron-down"></i>
+                      Подробнее
+                    </span>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="swiper-slide">
-                <div class="path__item">
-                  <div class="path__item-img">
-                    <img src="./images/tmp/main/path-1.png" alt="">
-                    <a class="projects__btn btn-box btn-box--red" href="/Imperia/objects.html">
-                      <span>
-                        <i class="icon-arrow"></i>
-                      </span>
-                      <p>
-                        Подробнее
-                      </p>
-                    </a>
+                <a class="catalogues__item" href="/Imperia/objects.html">
+                  <div class="catalogues__item-head">
+                    <img class="catalogues__item-img" src="./images/tmp/main/hero-2.png" alt="">
+                    <span class="catalogues__item-count">
+                      2
+                    </span>
                   </div>
-                  <div class="path__item-content">
-                    <h4 class="path__item-title">
+                  <div class="catalogues__item-body">
+                    <h5 class="catalogues__item-title">
                       Торговый комплекс под ключ для торговый сети «Магнит»
-                    </h4>
-                    <div class="projects__address">
-                      <h6 class="projects__address-title">
-                        Адрес объекта
+                    </h5>
+                    <div class="catalogues__item-wrap">
+                      <h6 class="catalogues__item-subtitle">
+                        Площадь объекта
                       </h6>
-                      <p class="projects__address-count">
+                      <p class="catalogues__item-text">
                         1068 м2
                       </p>
                     </div>
-                    <div class="projects__address">
-                      <h6 class="projects__address-title">
+                    <div class="catalogues__item-wrap">
+                      <h6 class="catalogues__item-subtitle">
                         Стоимость от
                       </h6>
-                      <p class="projects__address-count">
+                      <p class="catalogues__item-text">
                         15 000 000 ₽
                       </p>
                     </div>
+                    <span class="link">
+                      <i class="icon-chevron-down"></i>
+                      Подробнее
+                    </span>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="swiper-slide">
-                <div class="path__item">
-                  <div class="path__item-img">
-                    <img src="./images/tmp/main/path-1.png" alt="">
-                    <a class="projects__btn btn-box btn-box--red" href="/Imperia/objects.html">
-                      <span>
-                        <i class="icon-arrow"></i>
-                      </span>
-                      <p>
-                        Подробнее
-                      </p>
-                    </a>
+                <a class="catalogues__item" href="/Imperia/objects.html">
+                  <div class="catalogues__item-head">
+                    <img class="catalogues__item-img" src="./images/tmp/main/hero-2.png" alt="">
+                    <span class="catalogues__item-count">
+                      3
+                    </span>
                   </div>
-                  <div class="path__item-content">
-                    <h4 class="path__item-title">
+                  <div class="catalogues__item-body">
+                    <h5 class="catalogues__item-title">
                       Торговый комплекс под ключ для торговый сети «Магнит»
-                    </h4>
-                    <div class="projects__address">
-                      <h6 class="projects__address-title">
-                        Адрес объекта
+                    </h5>
+                    <div class="catalogues__item-wrap">
+                      <h6 class="catalogues__item-subtitle">
+                        Площадь объекта
                       </h6>
-                      <p class="projects__address-count">
+                      <p class="catalogues__item-text">
                         1068 м2
                       </p>
                     </div>
-                    <div class="projects__address">
-                      <h6 class="projects__address-title">
+                    <div class="catalogues__item-wrap">
+                      <h6 class="catalogues__item-subtitle">
                         Стоимость от
                       </h6>
-                      <p class="projects__address-count">
+                      <p class="catalogues__item-text">
                         15 000 000 ₽
                       </p>
                     </div>
+                    <span class="link">
+                      <i class="icon-chevron-down"></i>
+                      Подробнее
+                    </span>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="swiper-slide">
-                <div class="path__item">
-                  <div class="path__item-img">
-                    <img src="./images/tmp/main/path-1.png" alt="">
-                    <a class="projects__btn btn-box btn-box--red" href="/Imperia/objects.html">
-                      <span>
-                        <i class="icon-arrow"></i>
-                      </span>
-                      <p>
-                        Подробнее
-                      </p>
-                    </a>
+                <a class="catalogues__item" href="/Imperia/objects.html">
+                  <div class="catalogues__item-head">
+                    <img class="catalogues__item-img" src="./images/tmp/main/hero-2.png" alt="">
+                    <span class="catalogues__item-count">
+                      4
+                    </span>
                   </div>
-                  <div class="path__item-content">
-                    <h4 class="path__item-title">
+                  <div class="catalogues__item-body">
+                    <h5 class="catalogues__item-title">
                       Торговый комплекс под ключ для торговый сети «Магнит»
-                    </h4>
-                    <div class="projects__address">
-                      <h6 class="projects__address-title">
-                        Адрес объекта
+                    </h5>
+                    <div class="catalogues__item-wrap">
+                      <h6 class="catalogues__item-subtitle">
+                        Площадь объекта
                       </h6>
-                      <p class="projects__address-count">
+                      <p class="catalogues__item-text">
                         1068 м2
                       </p>
                     </div>
-                    <div class="projects__address">
-                      <h6 class="projects__address-title">
+                    <div class="catalogues__item-wrap">
+                      <h6 class="catalogues__item-subtitle">
                         Стоимость от
                       </h6>
-                      <p class="projects__address-count">
+                      <p class="catalogues__item-text">
                         15 000 000 ₽
                       </p>
                     </div>
+                    <span class="link">
+                      <i class="icon-chevron-down"></i>
+                      Подробнее
+                    </span>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="swiper-slide">
-                <div class="path__item">
-                  <div class="path__item-img">
-                    <img src="./images/tmp/main/path-1.png" alt="">
-                    <a class="projects__btn btn-box btn-box--red" href="/Imperia/objects.html">
-                      <span>
-                        <i class="icon-arrow"></i>
-                      </span>
-                      <p>
-                        Подробнее
-                      </p>
-                    </a>
+                <a class="catalogues__item" href="/Imperia/objects.html">
+                  <div class="catalogues__item-head">
+                    <img class="catalogues__item-img" src="./images/tmp/main/hero-2.png" alt="">
+                    <span class="catalogues__item-count">
+                      5
+                    </span>
                   </div>
-                  <div class="path__item-content">
-                    <h4 class="path__item-title">
+                  <div class="catalogues__item-body">
+                    <h5 class="catalogues__item-title">
                       Торговый комплекс под ключ для торговый сети «Магнит»
-                    </h4>
-                    <div class="projects__address">
-                      <h6 class="projects__address-title">
-                        Адрес объекта
+                    </h5>
+                    <div class="catalogues__item-wrap">
+                      <h6 class="catalogues__item-subtitle">
+                        Площадь объекта
                       </h6>
-                      <p class="projects__address-count">
+                      <p class="catalogues__item-text">
                         1068 м2
                       </p>
                     </div>
-                    <div class="projects__address">
-                      <h6 class="projects__address-title">
+                    <div class="catalogues__item-wrap">
+                      <h6 class="catalogues__item-subtitle">
                         Стоимость от
                       </h6>
-                      <p class="projects__address-count">
+                      <p class="catalogues__item-text">
                         15 000 000 ₽
                       </p>
                     </div>
+                    <span class="link">
+                      <i class="icon-chevron-down"></i>
+                      Подробнее
+                    </span>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="swiper-slide">
-                <div class="path__item">
-                  <div class="path__item-img">
-                    <img src="./images/tmp/main/path-1.png" alt="">
-                    <a class="projects__btn btn-box btn-box--red" href="/Imperia/objects.html">
-                      <span>
-                        <i class="icon-arrow"></i>
-                      </span>
-                      <p>
-                        Подробнее
-                      </p>
-                    </a>
+                <a class="catalogues__item" href="/Imperia/objects.html">
+                  <div class="catalogues__item-head">
+                    <img class="catalogues__item-img" src="./images/tmp/main/hero-2.png" alt="">
+                    <span class="catalogues__item-count">
+                      6
+                    </span>
                   </div>
-                  <div class="path__item-content">
-                    <h4 class="path__item-title">
+                  <div class="catalogues__item-body">
+                    <h5 class="catalogues__item-title">
                       Торговый комплекс под ключ для торговый сети «Магнит»
-                    </h4>
-                    <div class="projects__address">
-                      <h6 class="projects__address-title">
-                        Адрес объекта
+                    </h5>
+                    <div class="catalogues__item-wrap">
+                      <h6 class="catalogues__item-subtitle">
+                        Площадь объекта
                       </h6>
-                      <p class="projects__address-count">
+                      <p class="catalogues__item-text">
                         1068 м2
                       </p>
                     </div>
-                    <div class="projects__address">
-                      <h6 class="projects__address-title">
+                    <div class="catalogues__item-wrap">
+                      <h6 class="catalogues__item-subtitle">
                         Стоимость от
                       </h6>
-                      <p class="projects__address-count">
+                      <p class="catalogues__item-text">
                         15 000 000 ₽
                       </p>
                     </div>
+                    <span class="link">
+                      <i class="icon-chevron-down"></i>
+                      Подробнее
+                    </span>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -1284,7 +1278,8 @@
     <div class="container">
       <div class="geo__inner">
         <h2 class="geo__title block-title">
-          География <span>деятельности</span>
+          <span>наши объекты</span><br>
+          на карте росии
         </h2>
         <div class="geo__content">
 
@@ -1427,7 +1422,7 @@
               <div class="form__group">
                 <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта" minlength="2"
                   maxlength="40">
-                <i class="icon-mail"></i>
+                <i class="icon-mail-form"></i>
                 <span class="error">
                   Произошла ошибка! Поле заполнено неверно
                 </span>
@@ -1450,254 +1445,397 @@
       </div>
     </div>
   </section>
-  <!-- Арендаторы -->
-  <section class="tenants">
+  <!-- Отзывы -->
+  <section class="path projects">
     <div class="container">
-      <div class="tenants__inner">
-        <div class="tenants__head">
-          <h2 class="block-title">
-            ключевые <span>арендаторы</span>
+      <div class="path__inner">
+        <div class="path__head">
+          <h2 class="projects__title path__head-title block-title">
+            <!-- Проекты <span>для инвестиций</span> -->
+            Партнеры о нас
           </h2>
+        </div>
+        <div class="projects__wrap">
+          <a class="projects__wrap-btn btn btn-outline" href="/Imperia/review.html">
+            Все отзывы
+          </a>
           <div class="slider__btns">
-            <div class="tenants__slider-prev swiper-button-prev icon-chevron-right"></div>
-            <div class="tenants__slider-next swiper-button-next icon-chevron-right"></div>
+            <div class="review__slider-prev swiper-button-prev icon-chevron-right"></div>
+            <div class="review__slider-next swiper-button-next icon-chevron-right"></div>
           </div>
         </div>
-        <div class="tenants__body">
-          <div class="tenants__slider tenants__slider-init">
+        <div class="path__body">
+          <div class="review__slider review__slider-init">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="tenants__item">
-                  <div class="tenants__item-head">
-                    <img class="tenants__item-logo" src="./images/tmp/main/tenants-1.svg" alt="Примус">
+                <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                  data-caption="Навзание лицензии">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
+                  <div class="review__item-wrap">
+                    <h3 class="review__item-title">
+                      Название компании
+                    </h3>
+                    <p class="review__item-text">
+                      Задача организации, в особенности же начало повседневной работы по формированию позиции
+                      обеспечивает
+                      широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                    </p>
+                    <span class="review__item-link link" href="/">
+                      <i class="icon-chevron-down"></i>
+                      Читать весь отзыв
+                    </span>
                   </div>
-                  <div class="tenants__content">
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>сотрудничество</p>
-                        <span>7 лет</span>
+                  <div class="review__item-wrap">
+                    <div class="review__item-author">
+                      <span class="review__item-name">
+                        Василий Петров
+                      </span>
+                      <span class="review__item-post">
+                        Директор компании
+                      </span>
+                    </div>
+                    <div class="tenants__content">
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>сотрудничество</p>
+                          <span>7 лет</span>
+                        </div>
+                      </div>
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>объектов</p>
+                          <span>325</span>
+                        </div>
                       </div>
                     </div>
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>объектов</p>
-                        <span>325</span>
-                      </div>
-                    </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="swiper-slide">
-                <div class="tenants__item">
-                  <div class="tenants__item-head">
-                    <img class="tenants__item-logo" src="./images/tmp/main/tenants-2.svg" alt="Магнит">
+                <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                  data-caption="Навзание лицензии">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
+                  <div class="review__item-wrap">
+                    <h3 class="review__item-title">
+                      Название компании
+                    </h3>
+                    <p class="review__item-text">
+                      Задача организации, в особенности же начало повседневной работы по формированию позиции
+                      обеспечивает
+                      широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                    </p>
+                    <span class="review__item-link link" href="/">
+                      <i class="icon-chevron-down"></i>
+                      Читать весь отзыв
+                    </span>
                   </div>
-                  <div class="tenants__content">
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>сотрудничество</p>
-                        <span>7 лет</span>
+                  <div class="review__item-wrap">
+                    <div class="review__item-author">
+                      <span class="review__item-name">
+                        Василий Петров
+                      </span>
+                      <span class="review__item-post">
+                        Директор компании
+                      </span>
+                    </div>
+                    <div class="tenants__content">
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>сотрудничество</p>
+                          <span>7 лет</span>
+                        </div>
+                      </div>
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>объектов</p>
+                          <span>325</span>
+                        </div>
                       </div>
                     </div>
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>объектов</p>
-                        <span>325</span>
-                      </div>
-                    </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="swiper-slide">
-                <div class="tenants__item">
-                  <div class="tenants__item-head">
-                    <img class="tenants__item-logo" src="./images/tmp/main/tenants-3.svg" alt="Ozon">
+                <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                  data-caption="Навзание лицензии">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
+                  <div class="review__item-wrap">
+                    <h3 class="review__item-title">
+                      Название компании
+                    </h3>
+                    <p class="review__item-text">
+                      Задача организации, в особенности же начало повседневной работы по формированию позиции
+                      обеспечивает
+                      широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                    </p>
+                    <span class="review__item-link link" href="/">
+                      <i class="icon-chevron-down"></i>
+                      Читать весь отзыв
+                    </span>
                   </div>
-                  <div class="tenants__content">
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>сотрудничество</p>
-                        <span>7 лет</span>
+                  <div class="review__item-wrap">
+                    <div class="review__item-author">
+                      <span class="review__item-name">
+                        Василий Петров
+                      </span>
+                      <span class="review__item-post">
+                        Директор компании
+                      </span>
+                    </div>
+                    <div class="tenants__content">
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>сотрудничество</p>
+                          <span>7 лет</span>
+                        </div>
+                      </div>
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>объектов</p>
+                          <span>325</span>
+                        </div>
                       </div>
                     </div>
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>объектов</p>
-                        <span>325</span>
-                      </div>
-                    </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="swiper-slide">
-                <div class="tenants__item">
-                  <div class="tenants__item-head">
-                    <img class="tenants__item-logo" src="./images/tmp/main/tenants-4.svg" alt="Фармокопейка">
+                <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                  data-caption="Навзание лицензии">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
+                  <div class="review__item-wrap">
+                    <h3 class="review__item-title">
+                      Название компании
+                    </h3>
+                    <p class="review__item-text">
+                      Задача организации, в особенности же начало повседневной работы по формированию позиции
+                      обеспечивает
+                      широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                    </p>
+                    <span class="review__item-link link" href="/">
+                      <i class="icon-chevron-down"></i>
+                      Читать весь отзыв
+                    </span>
                   </div>
-                  <div class="tenants__content">
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>сотрудничество</p>
-                        <span>7 лет</span>
+                  <div class="review__item-wrap">
+                    <div class="review__item-author">
+                      <span class="review__item-name">
+                        Василий Петров
+                      </span>
+                      <span class="review__item-post">
+                        Директор компании
+                      </span>
+                    </div>
+                    <div class="tenants__content">
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>сотрудничество</p>
+                          <span>7 лет</span>
+                        </div>
+                      </div>
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>объектов</p>
+                          <span>325</span>
+                        </div>
                       </div>
                     </div>
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>объектов</p>
-                        <span>325</span>
-                      </div>
-                    </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="swiper-slide">
-                <div class="tenants__item">
-                  <div class="tenants__item-head">
-                    <img class="tenants__item-logo" src="./images/tmp/main/tenants-5.svg" alt="Стрижи">
+                <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                  data-caption="Навзание лицензии">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
+                  <div class="review__item-wrap">
+                    <h3 class="review__item-title">
+                      Название компании
+                    </h3>
+                    <p class="review__item-text">
+                      Задача организации, в особенности же начало повседневной работы по формированию позиции
+                      обеспечивает
+                      широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                    </p>
+                    <span class="review__item-link link" href="/">
+                      <i class="icon-chevron-down"></i>
+                      Читать весь отзыв
+                    </span>
                   </div>
-                  <div class="tenants__content">
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>сотрудничество</p>
-                        <span>7 лет</span>
+                  <div class="review__item-wrap">
+                    <div class="review__item-author">
+                      <span class="review__item-name">
+                        Василий Петров
+                      </span>
+                      <span class="review__item-post">
+                        Директор компании
+                      </span>
+                    </div>
+                    <div class="tenants__content">
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>сотрудничество</p>
+                          <span>7 лет</span>
+                        </div>
+                      </div>
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>объектов</p>
+                          <span>325</span>
+                        </div>
                       </div>
                     </div>
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>объектов</p>
-                        <span>325</span>
-                      </div>
-                    </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="swiper-slide">
-                <div class="tenants__item">
-                  <div class="tenants__item-head">
-                    <img class="tenants__item-logo" src="./images/tmp/main/tenants-1.svg" alt="Примус">
+                <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                  data-caption="Навзание лицензии">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
+                  <div class="review__item-wrap">
+                    <h3 class="review__item-title">
+                      Название компании
+                    </h3>
+                    <p class="review__item-text">
+                      Задача организации, в особенности же начало повседневной работы по формированию позиции
+                      обеспечивает
+                      широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                    </p>
+                    <span class="review__item-link link" href="/">
+                      <i class="icon-chevron-down"></i>
+                      Читать весь отзыв
+                    </span>
                   </div>
-                  <div class="tenants__content">
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>сотрудничество</p>
-                        <span>7 лет</span>
+                  <div class="review__item-wrap">
+                    <div class="review__item-author">
+                      <span class="review__item-name">
+                        Василий Петров
+                      </span>
+                      <span class="review__item-post">
+                        Директор компании
+                      </span>
+                    </div>
+                    <div class="tenants__content">
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>сотрудничество</p>
+                          <span>7 лет</span>
+                        </div>
+                      </div>
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>объектов</p>
+                          <span>325</span>
+                        </div>
                       </div>
                     </div>
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>объектов</p>
-                        <span>325</span>
-                      </div>
-                    </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="swiper-slide">
-                <div class="tenants__item">
-                  <div class="tenants__item-head">
-                    <img class="tenants__item-logo" src="./images/tmp/main/tenants-2.svg" alt="Магнит">
+                <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                  data-caption="Навзание лицензии">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
+                  <div class="review__item-wrap">
+                    <h3 class="review__item-title">
+                      Название компании
+                    </h3>
+                    <p class="review__item-text">
+                      Задача организации, в особенности же начало повседневной работы по формированию позиции
+                      обеспечивает
+                      широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                    </p>
+                    <span class="review__item-link link" href="/">
+                      <i class="icon-chevron-down"></i>
+                      Читать весь отзыв
+                    </span>
                   </div>
-                  <div class="tenants__content">
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>сотрудничество</p>
-                        <span>7 лет</span>
+                  <div class="review__item-wrap">
+                    <div class="review__item-author">
+                      <span class="review__item-name">
+                        Василий Петров
+                      </span>
+                      <span class="review__item-post">
+                        Директор компании
+                      </span>
+                    </div>
+                    <div class="tenants__content">
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>сотрудничество</p>
+                          <span>7 лет</span>
+                        </div>
+                      </div>
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>объектов</p>
+                          <span>325</span>
+                        </div>
                       </div>
                     </div>
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>объектов</p>
-                        <span>325</span>
-                      </div>
-                    </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="swiper-slide">
-                <div class="tenants__item">
-                  <div class="tenants__item-head">
-                    <img class="tenants__item-logo" src="./images/tmp/main/tenants-3.svg" alt="Ozon">
+                <a class="review__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
+                  data-caption="Навзание лицензии">
+                  <img class="review__item-img" src="./images/tmp/main/tenants-2.svg" alt="">
+                  <div class="review__item-wrap">
+                    <h3 class="review__item-title">
+                      Название компании
+                    </h3>
+                    <p class="review__item-text">
+                      Задача организации, в особенности же начало повседневной работы по формированию позиции
+                      обеспечивает
+                      широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                    </p>
+                    <span class="review__item-link link" href="/">
+                      <i class="icon-chevron-down"></i>
+                      Читать весь отзыв
+                    </span>
                   </div>
-                  <div class="tenants__content">
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>сотрудничество</p>
-                        <span>7 лет</span>
-                      </div>
+                  <div class="review__item-wrap">
+                    <div class="review__item-author">
+                      <span class="review__item-name">
+                        Василий Петров
+                      </span>
+                      <span class="review__item-post">
+                        Директор компании
+                      </span>
                     </div>
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>объектов</p>
-                        <span>325</span>
+                    <div class="tenants__content">
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>сотрудничество</p>
+                          <span>7 лет</span>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="tenants__item">
-                  <div class="tenants__item-head">
-                    <img class="tenants__item-logo" src="./images/tmp/main/tenants-4.svg" alt="Фармокопейка">
-                  </div>
-                  <div class="tenants__content">
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>сотрудничество</p>
-                        <span>7 лет</span>
-                      </div>
-                    </div>
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>объектов</p>
-                        <span>325</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="tenants__item">
-                  <div class="tenants__item-head">
-                    <img class="tenants__item-logo" src="./images/tmp/main/tenants-5.svg" alt="Стрижи">
-                  </div>
-                  <div class="tenants__content">
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-1.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>сотрудничество</p>
-                        <span>7 лет</span>
-                      </div>
-                    </div>
-                    <div class="tenants__content-item">
-                      <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
-                      <div class="tenants__content-wrap">
-                        <p>объектов</p>
-                        <span>325</span>
+                      <div class="tenants__content-item">
+                        <img class="tenants__content-img" src="./images/tmp/main/tenants-icon-2.svg" alt="">
+                        <div class="tenants__content-wrap">
+                          <p>объектов</p>
+                          <span>325</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>

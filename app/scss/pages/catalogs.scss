@@ -191,7 +191,8 @@
     }
 
     &__title {
-      z-index: 2;
+      height: fit-content;
+      z-index: 6;
 
       span {
         color: var(--primary-black);

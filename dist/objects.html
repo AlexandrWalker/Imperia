@@ -24,6 +24,8 @@
   <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/icomoon-style.css">
   <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="./libs/splitting/splitting.css">
+  <link rel="stylesheet" href="./libs/splitting/splitting-cells.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -318,14 +320,12 @@
               Главная
             </a>
           </li>
-          <li class="slash">/</li>
           <li>
             <a href="/Imperia/catalogs.html">
               <i class="icon-home"></i>
               Наши объекты
             </a>
           </li>
-          <li class="slash">/</li>
           <li>
             Торговый комплекс под ключ для торговый сети «Магнит»
           </li>
@@ -523,9 +523,6 @@
   <section class="request">
     <div class="container">
       <div class="request__inner">
-        <h2 class="request__title form-title">
-          Оставьте заявку и получите консультацию
-        </h2>
         <form class="request__form form" action="#">
           <div class="request__form-wrap">
             <div class="form__group">
@@ -538,7 +535,7 @@
             </div>
             <div class="form__group">
               <input class="form-input request__input" type="email" placeholder="Эл. почта">
-              <i class="icon-mail"></i>
+              <i class="icon-mail-form"></i>
             </div>
           </div>
           <textarea class="form-textarea request__textarea" placeholder="Комментарий "></textarea>
@@ -744,10 +741,9 @@
         <div class="contact-us__body">
           <div class="contact-us__content">
             <h2 class="contact-us__title title">
-              <span>у вас остались вопросы?</span>
+              <span>хотите инвестировать в подобный объект?</span>
               <br>
-              свяжитесь
-              с нами
+              свяжитесь с нами
             </h2>
             <p class="contact-us__text">
               Если у вас есть какие то интересные предложения, обращайтесь! Наша компания всегда готова решить любую
@@ -772,7 +768,7 @@
               <div class="form__group">
                 <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта" minlength="2"
                   maxlength="40">
-                <i class="icon-mail"></i>
+                <i class="icon-mail-form"></i>
                 <span class="error">
                   Произошла ошибка! Поле заполнено неверно
                 </span>
@@ -1162,7 +1158,7 @@
             <div class="form__group">
               <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта" minlength="2"
                 maxlength="40">
-              <i class="icon-mail"></i>
+              <i class="icon-mail-form"></i>
               <span class="error">
                 Произошла ошибка! Поле заполнено неверно
               </span>
@@ -1254,15 +1250,18 @@
   </section>
   <!-- scipts -->
   <script src="./libs/lenis/lenis.min.js"></script>
-  <script src="./libs/gsap/gsap.min.js" defer></script>
-  <script src="./libs/gsap/ScrollSmoother.min.js" defer></script>
-  <script src="./libs/gsap/ScrollTrigger.min.js" defer></script>
-  <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
-  <script src="./libs/mixitup/mixitup.min.js" defer></script>
-  <script src="./libs/jquery/jquery.min.js" defer></script>
-  <script src="./libs/fancybox/jquery.fancybox.min.js" defer></script>
+  <script src="./libs/gsap/gsap.min.js"></script>
+  <script src="./libs/gsap/ScrollSmoother.min.js"></script>
+  <script src="./libs/gsap/ScrollTrigger.min.js"></script>
+  <script src="./libs/gsap/tweenmax.min.js"></script>
+  <script src="./libs/swiper/swiper-bundle.min.js"></script>
+  <script src="./libs/mixitup/mixitup.min.js"></script>
+  <script src="./libs/jquery/jquery.min.js"></script>
+  <script src="./libs/fancybox/jquery.fancybox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/transfer-elements@1.0.7/dist/transfer-elements.min.js"></script>
-  <script src="./js/main.js" defer></script>
+  <script src="./libs/splitting/splitting.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,27 @@
 <!--=include header.html-->
 <!-- Содержимое сайта -->
 <main class="main catalogs">
+  <!-- Хлебные крошки -->
+  <section class="breadcrumbs">
+    <div class="container">
+      <div class="breadcrumbs__inner">
+        <ul>
+          <li>
+            <a href="/Imperia">
+              <i class="icon-home"></i>
+              Главная
+            </a>
+          </li>
+          <li>
+            Наши объекты
+          </li>
+          <li>
+            Объекты и география присутствия
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <!-- Главный блок -->
   <section class="sample">
     <div class="container sample__container">
@@ -38,7 +59,6 @@
             </p>
           </div>
         </div>
-        <!-- <img class="sample__img" src="./images/tmp/sample/catalog-hero.svg" alt=""> -->
         <div class="sample__img">
           <img src="./images/tmp/sample/map-without-points.svg" alt="">
           <ul class="catalogs__list">
@@ -96,6 +116,9 @@
             Наши объекты
           </h2>
           <div class="catalogues__filter">
+            <button class="catalogues__filter-btn btn btn-red">
+              Все объекты
+            </button>
             <div class="dropdown">
               <button class="dropdown__button" data-value="Тип">
                 <span class="dropdown__button-text">Тип</span>
@@ -150,15 +173,12 @@
               </ul>
               <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
             </div>
-            <a class="catalogues__filter-btn btn btn-red" href="/Imperia/catalogs.html">
-              Все объекты
-            </a>
           </div>
         </div>
         <div class="catalogues__items">
           <a class="catalogues__item" href="/Imperia/objects.html">
             <div class="catalogues__item-head">
-              <img class="catalogues__item-img" src="./images/tmp/main/case-1.png" alt="">
+              <img class="catalogues__item-img" src="./images/tmp/catalogs/cover.png" alt="">
               <span class="catalogues__item-count">
                 1
               </span>
@@ -183,7 +203,7 @@
           </a>
           <a class="catalogues__item" href="/Imperia/objects.html">
             <div class="catalogues__item-head">
-              <img class="catalogues__item-img" src="./images/tmp/main/path-3.png" alt="">
+              <img class="catalogues__item-img" src="./images/tmp/catalogs/cover.png" alt="">
               <span class="catalogues__item-count">
                 2
               </span>
@@ -208,7 +228,7 @@
           </a>
           <a class="catalogues__item" href="/Imperia/objects.html">
             <div class="catalogues__item-head">
-              <img class="catalogues__item-img" src="./images/tmp/main/path-1.png" alt="">
+              <img class="catalogues__item-img" src="./images/tmp/catalogs/cover.png" alt="">
               <span class="catalogues__item-count">
                 3
               </span>
@@ -233,7 +253,7 @@
           </a>
           <a class="catalogues__item" href="/Imperia/objects.html">
             <div class="catalogues__item-head">
-              <img class="catalogues__item-img" src="./images/tmp/main/case-1.png" alt="">
+              <img class="catalogues__item-img" src="./images/tmp/catalogs/cover.png" alt="">
               <span class="catalogues__item-count">
                 4
               </span>
@@ -258,7 +278,7 @@
           </a>
           <a class="catalogues__item" href="/Imperia/objects.html">
             <div class="catalogues__item-head">
-              <img class="catalogues__item-img" src="./images/tmp/main/path-3.png" alt="">
+              <img class="catalogues__item-img" src="./images/tmp/catalogs/cover.png" alt="">
               <span class="catalogues__item-count">
                 5
               </span>
@@ -283,7 +303,7 @@
           </a>
           <a class="catalogues__item" href="/Imperia/objects.html">
             <div class="catalogues__item-head">
-              <img class="catalogues__item-img" src="./images/tmp/main/path-1.png" alt="">
+              <img class="catalogues__item-img" src="./images/tmp/catalogs/cover.png" alt="">
               <span class="catalogues__item-count">
                 6
               </span>
@@ -308,7 +328,7 @@
           </a>
           <a class="catalogues__item" href="/Imperia/objects.html">
             <div class="catalogues__item-head">
-              <img class="catalogues__item-img" src="./images/tmp/main/case-1.png" alt="">
+              <img class="catalogues__item-img" src="./images/tmp/catalogs/cover.png" alt="">
               <span class="catalogues__item-count">
                 7
               </span>
@@ -333,7 +353,7 @@
           </a>
           <a class="catalogues__item" href="/Imperia/objects.html">
             <div class="catalogues__item-head">
-              <img class="catalogues__item-img" src="./images/tmp/main/path-3.png" alt="">
+              <img class="catalogues__item-img" src="./images/tmp/catalogs/cover.png" alt="">
               <span class="catalogues__item-count">
                 8
               </span>
@@ -358,7 +378,7 @@
           </a>
           <a class="catalogues__item" href="/Imperia/objects.html">
             <div class="catalogues__item-head">
-              <img class="catalogues__item-img" src="./images/tmp/main/path-1.png" alt="">
+              <img class="catalogues__item-img" src="./images/tmp/catalogs/cover.png" alt="">
               <span class="catalogues__item-count">
                 9
               </span>
@@ -393,8 +413,8 @@
           <div class="contact-us__content">
             <h2 class="contact-us__title title">
               <span>у вас остались вопросы?</span>
-              свяжитесь
-              с нами
+              <br>
+              свяжитесь с нами
             </h2>
             <p class="contact-us__text">
               Если у вас есть какие то интересные предложения, обращайтесь! Наша компания всегда готова решить любую
@@ -419,7 +439,7 @@
               <div class="form__group">
                 <input class="form-input" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Эл. почта" minlength="2"
                   maxlength="40">
-                <i class="icon-mail"></i>
+                <i class="icon-mail-form"></i>
                 <span class="error">
                   Произошла ошибка! Поле заполнено неверно
                 </span>

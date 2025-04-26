@@ -74,25 +74,52 @@
     }
 
     &-solutions {
-      font-weight: 400;
-      font-size: 1.2rem;
-      line-height: 1.25;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
 
-      span {
+      p {
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.25;
         color: var(--primary-accent);
       }
+
+      span {
+        font-weight: 600;
+        font-size: 1.6rem;
+        color: var(--primary-black);
+      }
+    }
+
+    .projects__address-title {
+      font-size: 1.2rem;
+    }
+
+    .projects__address-text {
+      font-size: 1rem;
+    }
+
+    .tenants__content {
+      flex-direction: row;
+      gap: 2.6rem;
+    }
+
+    .tenants__content-img {
+      width: 3.3rem;
+    }
+
+    .tenants__content-wrap p {
+      font-size: 1.2rem;
+    }
+
+    .tenants__content-wrap span {
+      font-size: 2rem;
     }
   }
 
-  .projects__address-title {
-    font-size: 1.2rem;
-  }
-
-  .projects__address-text {
-    font-size: 1rem;
-  }
-
-  .tenants__item {
-    width: calc(25% - 1.5rem);
+  &__btn {
+    display: none;
+    width: 100%;
   }
 }

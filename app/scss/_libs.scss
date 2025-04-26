@@ -35,8 +35,7 @@
 
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
+.swiper-pagination-custom {
   top: unset;
   bottom: unset;
   right: unset;
@@ -94,6 +93,19 @@
   opacity: 1;
 }
 
+.swiper-pagination-fraction {
+  font-family: 'Winter Sans Trial';
+  font-weight: 800;
+  font-size: 13rem;
+  line-height: 105%;
+  letter-spacing: -1.6rem;
+  color: var(--white);
+  text-transform: uppercase;
+  width: fit-content;
+  bottom: 23.4rem;
+  z-index: 1;
+}
+
 @keyframes timeline {
   from {
     width: 0%;
@@ -102,6 +114,10 @@
   to {
     width: 100%;
   }
+}
+
+.word {
+  white-space: nowrap;
 }
 
 // #smooth-content {
