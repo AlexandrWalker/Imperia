@@ -2216,7 +2216,7 @@
     height: 71.2rem;
   }
 
-  .geo__block{
+  .geo__block {
     width: 100%;
     height: fit-content;
     position: fixed;
@@ -2885,8 +2885,19 @@
     padding: 9rem 0 12.4rem;
   }
 
+  .plate {
+    min-height: 5.4rem;
+  }
+
   .plate__btns {
-    flex-direction: column;
+    // flex-direction: column;
+  }
+
+  .plate__btn {
+    --button-padding-y: 1rem;
+    --button-padding-x: 1rem;
+    --button-font-size: 1.2rem;
+    height: 4rem;
   }
 
   .burger {

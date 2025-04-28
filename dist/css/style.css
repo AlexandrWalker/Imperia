@@ -7418,8 +7418,14 @@ a {
   .wrapper {
     padding: 9rem 0 12.4rem;
   }
-  .plate__btns {
-    flex-direction: column;
+  .plate {
+    min-height: 5.4rem;
+  }
+  .plate__btn {
+    --button-padding-y: 1rem;
+    --button-padding-x: 1rem;
+    --button-font-size: 1.2rem;
+    height: 4rem;
   }
   .burger {
     gap: 0;
