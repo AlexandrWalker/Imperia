@@ -679,14 +679,18 @@
           }
           this.classList.toggle('geo__active');
           geoBlock.classList.add('show');
-          // document.body.classList.add('no-scroll');
-          lenis.stop();
+
+          if (window.innerWidth < 601) {
+            lenis.stop();
+          }
 
           let geo__close = document.querySelector('.geo__block-close');
           geo__close.addEventListener('click', function () {
             geoBlock.classList.remove('show');
-            // document.body.classList.remove('no-scroll');
-            lenis.start();
+
+            if (window.innerWidth < 601) {
+              lenis.start();
+            }
 
             if (geoActive.length > 0 && geoActive[0] !== this) {
               geoActive[0].classList.remove('geo__active');
@@ -702,6 +706,18 @@
         });
       });
     }
+
+    $(document).on('mouseup', function (e) { // При нажатии на документ
+      let s = $('.geo__block.show'); // берём .geo__block.show
+      if (!s.is(e.target) && s.has(e.target).length === 0) {
+        // Если нажат не он и не его дочернии И сам он существует
+        s.removeClass('show'); // То удаляем у него класс .show
+        
+        if (window.innerWidth < 601) {
+          lenis.start();
+        }
+      }
+    });
 
 
 

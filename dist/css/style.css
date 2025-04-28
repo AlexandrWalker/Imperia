@@ -6100,10 +6100,15 @@ a {
   }
   .footer__bottom-inner {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     height: fit-content;
     padding: 1rem 0;
-    flex-wrap: wrap;
     gap: 0.5rem;
+  }
+  .footer__bottom-text:last-child {
+    text-align: left;
+    margin: 0;
   }
   /* service */
   .service {
@@ -7416,7 +7421,7 @@ a {
 }
 @media (max-width: 380px) {
   .wrapper {
-    padding: 9rem 0 12.4rem;
+    padding: 9rem 0 5.4rem;
   }
   .plate {
     min-height: 5.4rem;

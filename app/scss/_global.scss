@@ -105,7 +105,8 @@ section {
 }
 
 .word {
-  white-space: unset;
+  // white-space: normal;
+  // word-break: break-all;
 }
 
 p {
