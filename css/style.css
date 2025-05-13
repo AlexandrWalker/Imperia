@@ -2270,19 +2270,11 @@ a {
 .case .swiper-slide .case__body-item {
   transition: transform 1s ease;
 }
-.case .swiper-slide-prev .case__body-video {
-  transform: translateX(-200%);
-}
 .case .swiper-slide-prev .case__body-item {
-  transform: translateX(-200%);
   transition-delay: 0.5s;
 }
 .case .swiper-slide-prev .case__body-item + .case__body-item {
   transition-delay: 0;
-}
-.case .swiper-slide-next .case__body-video,
-.case .swiper-slide-next .case__body-item {
-  transform: translateX(200%);
 }
 .case .swiper-slide-next .case__body-video + .case__body-item,
 .case .swiper-slide-next .case__body-item + .case__body-item {
@@ -2298,14 +2290,6 @@ a {
 .case .swiper-slide-active .case__body-items {
   transition-delay: 0.2s;
   opacity: 1;
-}
-.case .swiper-slide-active .case__body-video,
-.case .swiper-slide-active .case__body-item {
-  transform: translateX(0);
-}
-.case .swiper-slide-active + .swiper-slide .case__body-video,
-.case .swiper-slide-active + .swiper-slide .case__body-item {
-  transform: translateX(200%);
 }
 .case .swiper-slide .case__body-img {
   transition: all 0.6s ease;
@@ -2358,10 +2342,10 @@ a {
   position: relative;
 }
 .case__body {
-  width: calc(100% - 56.6rem + 14rem);
-  padding: 0 14rem 14rem 14rem;
+  width: calc(100% - 56.6rem + 12rem);
+  padding: 0 12rem 14rem 14rem;
   background-color: var(--primary-yellow);
-  margin-right: -14rem;
+  margin-right: -12rem;
   position: relative;
 }
 .case__body::before {
@@ -2393,6 +2377,7 @@ a {
   width: fit-content;
   opacity: 0;
   transition: all 0.5s ease;
+  overflow: hidden;
 }
 .case__body-item {
   display: flex;
@@ -2556,13 +2541,14 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 22.2rem;
+  height: auto;
+  aspect-ratio: 345/222;
   background-color: var(--primary-black-10);
 }
 .tenants__item-logo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: auto;
+  height: 5.4rem;
+  object-fit: contain;
   flex-shrink: 0;
 }
 .tenants__content {
@@ -2745,8 +2731,8 @@ a {
   -webkit-text-stroke: 0.1rem var(--primary-accent);
   color: var(--primary-accent);
 }
-.path .swiper-slide:nth-last-child(3) .path__item-img::before,
-.path .swiper-slide:nth-last-child(3) .path__item-img::after {
+.path .swiper-slide:last-child .path__item-img::before,
+.path .swiper-slide:last-child .path__item-img::after {
   display: none;
 }
 .stage .component {
@@ -2868,6 +2854,9 @@ a {
   grid-row: 11/18;
 }
 
+.geo {
+  overflow: hidden;
+}
 .geo__title {
   margin-bottom: 4rem;
 }
@@ -3279,6 +3268,7 @@ a {
 .advan__head-title {
   font-weight: 600;
   font-size: 2.4rem;
+  line-height: 1.2;
   margin-bottom: 3rem;
 }
 .advan__head-icon {
@@ -3399,10 +3389,35 @@ a {
   overflow: hidden;
   transition: all 0.5s ease;
 }
-.advan__thumbs-text {
+.advan__thumbs p {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 120%;
+}
+.advan__thumbs ul {
+  padding: 2rem 0 0;
+}
+.advan__thumbs li {
+  display: flex;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 120%;
+  position: relative;
+  padding: 0 0 0 2.8rem;
+}
+.advan__thumbs li::before {
+  content: "";
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: var(--primary-accent);
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  flex-shrink: 0;
+}
+.advan__thumbs li:not(:last-child) {
+  margin-bottom: 2rem;
 }
 .advan__thumbs .swiper-wrapper {
   flex-direction: column;
@@ -5786,7 +5801,11 @@ a {
   .advan__thumbs-title {
     font-size: 1.6rem;
   }
-  .advan__thumbs-text {
+  .advan__thumbs li::before {
+    top: 0.4rem;
+  }
+  .advan__thumbs p,
+  .advan__thumbs li {
     font-size: 1.4rem;
   }
   .advan .active .advan__thumbs-content {
@@ -5836,6 +5855,9 @@ a {
     font-size: 1.6rem;
     width: 230px;
   }
+  .path__slider .swiper-slide:last-child .path__item-title {
+    width: 100%;
+  }
   .projects .path__item-text {
     display: none;
   }
@@ -5872,9 +5894,6 @@ a {
   }
   .tenants .swiper-slide {
     width: 33.4rem;
-  }
-  .tenants__item-head {
-    min-height: auto;
   }
   .tenants__content {
     gap: 1.5rem;
@@ -6398,7 +6417,7 @@ a {
     max-width: 30rem;
   }
   .link i::before {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
   /* sample */
   .sample {
@@ -6415,6 +6434,12 @@ a {
     background-size: 86.4rem 20.2rem;
     background-position-x: 21.9rem;
     background-position-y: 23.8rem;
+  }
+  .construction .catalogues__item-wrap {
+    gap: 0.5rem;
+  }
+  .construction .catalogues__item-text {
+    font-size: 2rem;
   }
   .control .sample {
     height: auto;
@@ -6995,12 +7020,21 @@ a {
   .sample-page .advan__title {
     font-size: 2.4rem;
   }
-  .advan__thumbs-text {
+  .advan__thumbs li::before {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+  .advan__thumbs p,
+  .advan__thumbs li {
     font-size: 1.2rem;
+  }
+  .advan__thumbs li {
+    padding: 0 0 0 1.6rem;
   }
   .tenants .swiper-pagination {
     right: unset;
     bottom: unset;
+    margin: 2rem 0 0 0;
   }
   .tenants .swiper-slide {
     width: 28.4rem;
@@ -7008,15 +7042,18 @@ a {
   .advan__head-content {
     padding: 2rem 2rem 29.6rem;
   }
-  .investments .advan__head-content {
+  .sample-page .advan__head-content {
     padding: 2rem 2rem 8rem;
   }
-  .investments .advan__head-content::before {
+  .sample-page .advan__head-content::before {
     display: none;
   }
   .advan__head-content::before {
     width: 5rem;
     height: 5rem;
+  }
+  .advan__head-title {
+    max-width: 26.2rem;
   }
   .advan__head-text {
     max-width: 26.2rem;
@@ -7044,9 +7081,6 @@ a {
     height: 6rem;
   }
   .projects__btn p {
-    display: none;
-  }
-  .path__slider .swiper-slide:last-child {
     display: none;
   }
   .component {
@@ -7259,6 +7293,9 @@ a {
     background-position-x: 20.6rem;
     background-position-y: 24.3rem;
   }
+  .construction .catalogues__item-body {
+    padding: 0 1rem 1rem 1rem;
+  }
   .control .sample {
     background-size: 43.2rem 10.1rem;
     background-position-x: 20.6rem;
@@ -7284,9 +7321,6 @@ a {
   .catalogues__filter-btn {
     width: 100%;
     min-width: unset;
-  }
-  .menu {
-    height: calc(var(--vh, 1vh) * 100);
   }
   .menu__list-item:not(:last-child) {
     margin-bottom: 2rem;
