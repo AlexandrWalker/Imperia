@@ -3459,6 +3459,10 @@ a {
 .catalogues__filter-btn {
   min-width: 21.2rem;
 }
+.catalogues__filter-input {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
 .catalogues__items {
   display: flex;
   justify-content: space-between;
