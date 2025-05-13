@@ -2072,6 +2072,8 @@ a {
   font-size: 2.4rem;
   line-height: 120%;
   color: var(--primary-black-70);
+  word-break: break-word;
+  width: fit-content;
 }
 
 .about {
@@ -3456,6 +3458,10 @@ a {
 }
 .catalogues__filter-btn {
   min-width: 21.2rem;
+}
+.catalogues__filter-input {
+  font-weight: 600;
+  font-size: 1.4rem;
 }
 .catalogues__items {
   display: flex;

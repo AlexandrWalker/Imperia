@@ -117,9 +117,23 @@
         }
       },
       on: {
-        reachEnd: function () {
-          this.snapGrid = [...this.slidesGrid];
-        },
+        
+        transitionEnd:function(swiper){
+          
+          const slides = swiper.slides;
+
+          if (swiper.isEnd) {
+            
+            const lastSlide = slides[slides.length - 1];
+            lastSlide.classList.add('swiper-slide-active');
+           
+            if(slides.length > 1) {
+              const preLasSlide = slides[slides.length - 2];
+              preLasSlide.classList.remove('swiper-slide-active');
+            }
+
+          }
+        }
       }
     });
 
