@@ -94,9 +94,11 @@
 
     var path__slider = new Swiper(".path__slider-init", {
       slidesPerView: 'auto',
+      slidesPerGroup: 1,
       spaceBetween: 108,
       speed: 600,
-      grabCursor: true,
+      // grabCursor: true,
+      touchEventsTarget: true,
       mousewheel: {
         forceToAxis: true,
       },
@@ -114,10 +116,16 @@
           spaceBetween: 233,
         }
       },
+      on: {
+        reachEnd: function () {
+          this.snapGrid = [...this.slidesGrid];
+        },
+      }
     });
 
     var review__slider = new Swiper(".review__slider-init", {
       slidesPerView: 1,
+      slidesPerGroup: 1,
       spaceBetween: 10,
       speed: 600,
       grabCursor: true,
@@ -151,9 +159,11 @@
 
     var projects__slider = new Swiper(".projects__slider-init", {
       slidesPerView: 2,
+      slidesPerGroup: 1,
       spaceBetween: 10,
       speed: 600,
-      grabCursor: true,
+      // grabCursor: true,
+      touchEventsTarget: true,
       loop: true,
       mousewheel: {
         forceToAxis: true,
@@ -712,7 +722,7 @@
       if (!s.is(e.target) && s.has(e.target).length === 0) {
         // Если нажат не он и не его дочернии И сам он существует
         s.removeClass('show'); // То удаляем у него класс .show
-        
+
         if (window.innerWidth < 601) {
           lenis.start();
         }
@@ -1049,8 +1059,8 @@
     // We listen to the resize event
     // window.addEventListener('resize', () => {
     // We execute the same script as before
-    let vh = window.innerHeight * 0.001;
-    document.documentElement.style.setProperty('--vh', `${vh}rem`);
+    // let vh = window.innerHeight * 0.001;
+    // document.documentElement.style.setProperty('--vh', `${vh}rem`);
     // });
 
 

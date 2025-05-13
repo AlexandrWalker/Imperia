@@ -805,7 +805,14 @@
     font-size: 1.6rem;
   }
 
-  .advan__thumbs-text {
+  .advan__thumbs ul {}
+
+  .advan__thumbs li::before {
+    top: 0.4rem;
+  }
+
+  .advan__thumbs p,
+  .advan__thumbs li {
     font-size: 1.4rem;
   }
 
@@ -869,6 +876,10 @@
     width: 230px;
   }
 
+  .path__slider .swiper-slide:last-child .path__item-title {
+    width: 100%;
+  }
+
   .projects .path__item-text {
     display: none;
   }
@@ -916,9 +927,7 @@
     width: 33.4rem;
   }
 
-  .tenants__item-head {
-    min-height: auto;
-  }
+  .tenants__item-head {}
 
   .tenants__content {
     gap: 1.5rem;
@@ -1587,7 +1596,8 @@
   }
 
   .link i::before {
-    font-size: 0.5rem;
+    // font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 
   /* sample */
@@ -1607,6 +1617,14 @@
     background-size: 86.4rem 20.2rem;
     background-position-x: 21.9rem;
     background-position-y: 23.8rem;
+  }
+
+  .construction .catalogues__item-wrap {
+    gap: 0.5rem;
+  }
+
+  .construction .catalogues__item-text {
+    font-size: 2rem;
   }
 
   .control .sample {
@@ -2337,13 +2355,24 @@
     font-size: 2.4rem;
   }
 
-  .advan__thumbs-text {
+  .advan__thumbs li::before {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+
+  .advan__thumbs p,
+  .advan__thumbs li {
     font-size: 1.2rem;
+  }
+
+  .advan__thumbs li {
+    padding: 0 0 0 1.6rem;
   }
 
   .tenants .swiper-pagination {
     right: unset;
     bottom: unset;
+    margin: 2rem 0 0 0;
   }
 
   .tenants .swiper-slide {
@@ -2354,17 +2383,21 @@
     padding: 2rem 2rem 29.6rem;
   }
 
-  .investments .advan__head-content {
+  .sample-page .advan__head-content {
     padding: 2rem 2rem 8rem;
   }
 
-  .investments .advan__head-content::before {
+  .sample-page .advan__head-content::before {
     display: none;
   }
 
   .advan__head-content::before {
     width: 5rem;
     height: 5rem;
+  }
+
+  .advan__head-title {
+    max-width: 26.2rem;
   }
 
   .advan__head-text {
@@ -2403,9 +2436,9 @@
     display: none;
   }
 
-  .path__slider .swiper-slide:last-child {
-    display: none;
-  }
+  // .path__slider .swiper-slide:last-child {
+  //   display: none;
+  // }
 
   .component {
     height: 13.6rem;
@@ -2675,6 +2708,10 @@
     background-position-y: 24.3rem;
   }
 
+  .construction .catalogues__item-body {
+    padding: 0 1rem 1rem 1rem;
+  }
+
   .control .sample {
     background-size: 43.2rem 10.1rem;
     background-position-x: 20.6rem;
@@ -2709,7 +2746,7 @@
   }
 
   .menu {
-    height: calc(var(--vh, 1vh) * 100);
+    // height: calc(var(--vh, 1vh) * 100);
   }
 
   .menu__list-item:not(:last-child) {
