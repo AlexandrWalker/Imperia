@@ -451,7 +451,7 @@
     &-content {
       display: flex;
       flex-direction: column;
-      gap: 3rem;
+      gap: 1.5rem;
     }
 
     &-title {
@@ -464,6 +464,11 @@
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 1.1875;
+
+      -webkit-line-clamp: 3;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     &-items {
