@@ -1868,7 +1868,7 @@ a {
   color: var(--primary-black);
   cursor: pointer;
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   text-align: left;
   position: relative;
 }
@@ -3465,7 +3465,7 @@ a {
 }
 .catalogues__filter-input {
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 .catalogues__items {
   display: flex;
@@ -3574,6 +3574,9 @@ a {
 }
 .catalogues__filter-item:active, .catalogues__filter-item:focus, .catalogues__filter-item:hover {
   border-color: var(--primary-accent);
+}
+.catalogues__filter-btn {
+  --button-font-size: 1.6rem;
 }
 .catalogues__filter-input {
   background: transparent;

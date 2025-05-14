@@ -23,7 +23,7 @@
 
     &-input {
       font-weight: 600;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
   }
 
@@ -153,6 +153,10 @@
       &:hover {
         border-color: var(--primary-accent);
       }
+    }
+
+    &-btn {
+      --button-font-size: 1.6rem;
     }
 
     &-input {
