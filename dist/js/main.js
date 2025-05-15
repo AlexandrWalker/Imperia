@@ -117,18 +117,18 @@
         }
       },
       on: {
-        
-        transitionEnd:function(swiper){
-          
+
+        transitionEnd: function (swiper) {
+
           const slides = swiper.slides;
 
           if (swiper.isEnd) {
-            
-            const lastSlide = slides[slides.length - 1];
+
+            const lastSlide = slides[slides.length - 3];
             lastSlide.classList.add('swiper-slide-active');
-           
-            if(slides.length > 1) {
-              const preLasSlide = slides[slides.length - 2];
+
+            if (slides.length > 1) {
+              const preLasSlide = slides[slides.length - 4];
               preLasSlide.classList.remove('swiper-slide-active');
             }
 
@@ -367,8 +367,6 @@
         });
       });
     }
-
-
 
     /**
      * Управляет переключением кнопки Подробнее.
@@ -875,8 +873,8 @@
     });
 
     const fadeInItems = document.querySelectorAll('[data-animation="fadeIn"]');
-    fadeInItems.forEach(fadeUpItem => {
-      const chars = fadeUpItem.querySelectorAll("div.char");
+    fadeInItems.forEach(fadeInItem => {
+      const chars = fadeInItem.querySelectorAll("div.char");
       const tl = gsap.timeline({
         paused: true
       });
@@ -888,7 +886,7 @@
           amount: .8
         }
       });
-      scrollTriggerPlayer(fadeUpItem, tl)
+      scrollTriggerPlayer(fadeInItem, tl)
     });
 
     const revealItems = document.querySelectorAll('[data-animation="reveal"]');
@@ -995,22 +993,6 @@
       scrollTriggerPlayer(cropDownItem, tl, "top 60%")
     });
 
-    function scrollTriggerPlayer(triggerElement, timeline, onEnterStart = "top 85%") {
-      ScrollTrigger.create({
-        trigger: triggerElement,
-        start: "top bottom",
-        onLeaveBack: () => {
-          timeline.progress(0);
-          timeline.pause()
-        }
-      });
-      ScrollTrigger.create({
-        trigger: triggerElement,
-        start: onEnterStart,
-        onEnter: () => timeline.play()
-      })
-    }
-
     const advanItems = document.querySelectorAll('.advan__thumbs-item');
     advanItems.forEach(advanItem => {
       const tl = gsap.timeline({
@@ -1064,6 +1046,21 @@
       scrollTriggerPlayer(serviceYellowItemInner, tl)
     });
 
+    function scrollTriggerPlayer(triggerElement, timeline, onEnterStart = "top 85%") {
+      ScrollTrigger.create({
+        trigger: triggerElement,
+        start: "top bottom",
+        onLeaveBack: () => {
+          timeline.progress(1);
+          timeline.pause()
+        }
+      });
+      ScrollTrigger.create({
+        trigger: triggerElement,
+        start: onEnterStart,
+        onEnter: () => timeline.play()
+      })
+    }
 
 
 

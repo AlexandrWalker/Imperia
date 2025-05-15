@@ -437,12 +437,17 @@
     }
   }
 
+  &__wrap {
+    position: relative;
+  }
+
   &__head {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     width: 54.6rem;
     padding: 6rem 0 0;
+    position: relative;
 
     &-wrap {
       width: 100%;
@@ -468,7 +473,20 @@
       -webkit-line-clamp: 3;
       display: -webkit-box;
       -webkit-box-orient: vertical;
+      text-overflow: clip;
       overflow: hidden;
+    }
+
+    .link-more {
+      color: var(--primary-accent);
+      text-decoration: none;
+      font-weight: 700;
+      position: absolute;
+      bottom: 0.2rem;
+      right: 0;
+      padding-left: 0.5rem;
+      padding-right: 2.8rem;
+      background-color: var(--white);
     }
 
     &-items {
@@ -953,7 +971,7 @@
 
   .swiper-slide {
 
-    &:last-child {
+    &:nth-last-child(3) {
 
       .path__item-img::before,
       .path__item-img::after {

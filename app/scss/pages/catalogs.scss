@@ -23,7 +23,7 @@
 
     &-input {
       font-weight: 600;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
   }
 
@@ -155,12 +155,13 @@
       }
     }
 
-    &-btn {
-      --button-font-size: 1.6rem;
-    }
-
     &-input {
       background: transparent;
+      font-size: 1.6rem;
+
+      &::placeholder {
+        font-size: 1.4rem;
+      }
 
       &::placeholder {
         color: var(--primary-black);

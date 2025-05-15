@@ -876,8 +876,8 @@
     width: 230px;
   }
 
-  .path__slider .swiper-slide:last-child .path__item-title {
-    width: 100%;
+  .path__slider .swiper-slide:last-child {
+    display: none;
   }
 
   .projects .path__item-text {
@@ -2420,6 +2420,10 @@
     gap: 1rem;
   }
 
+  .path__slider .swiper-slide:nth-last-child(3) .path__item-title {
+    width: 100%;
+  }
+
   .projects .path__item-img,
   .path__item-img {
     aspect-ratio: 1/1;
@@ -2919,6 +2923,10 @@
 
   .tenants .swiper-pagination-bullet-active {
     width: 3rem;
+  }
+
+  .path__slider .swiper-slide:nth-last-child(2) {
+    display: none;
   }
 }
 
