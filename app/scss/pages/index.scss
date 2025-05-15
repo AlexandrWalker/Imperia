@@ -117,6 +117,12 @@
       &:nth-child(even) {
         border-right: 0;
       }
+
+      &:hover {
+        .hero__feat-img {
+          transform: scale(1.2);
+        }
+      }
     }
 
     &-img {
@@ -124,6 +130,7 @@
       height: 8rem;
       object-fit: cover;
       flex-shrink: 0;
+      transition: all 2s linear;
     }
 
     &-text {
@@ -873,6 +880,7 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    padding-right: 23.3rem;
 
     &-num {
       font-family: 'Winter Sans Trial';
@@ -906,7 +914,7 @@
         top: 50%;
         transform: translate(50%, -50%);
 
-        right: calc((233px/2) * -1);
+        right: calc((23.3rem/2) * -1);
 
         display: block;
         width: 2.4rem;
@@ -924,7 +932,7 @@
         left: 100%;
 
         display: block;
-        width: 233px;
+        width: 23.3rem;
         height: 0.3rem;
         background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0wIDJoMTkzMCIgc3Ryb2tlPSIjMzEyRDJEIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWRhc2hhcnJheT0iMTAgMTQiLz48L3N2Zz4=);
         background-repeat: repeat;
@@ -1812,7 +1820,8 @@
     }
   }
 
-  .active {
+  // .active {
+  .swiper-slide-active {
 
     .advan__thumbs-icon {
       background-color: var(--primary-accent);

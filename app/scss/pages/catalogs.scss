@@ -41,14 +41,22 @@
     width: 40.5rem;
     color: inherit;
     background-color: var(--white);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     border: 0;
 
     &:hover {
-      color: var(--white);
+      // color: var(--white);
       background-color: var(--primary-accent);
 
+      .catalogues__item-title {
+        color: var(--white);
+      }
+
       .catalogues__item-subtitle {
+        color: var(--white);
+      }
+
+      .catalogues__item-text {
         color: var(--white);
       }
 
@@ -108,6 +116,7 @@
       font-weight: 600;
       font-size: 2.4rem;
       line-height: 110%;
+      color: inherit;
       transition: color 0.3s ease;
     }
 
@@ -127,6 +136,7 @@
     &-text {
       font-size: 1.2rem;
       line-height: 120%;
+      transition: color 0.3s ease;
     }
   }
 
@@ -266,7 +276,7 @@
       flex-direction: row;
       align-items: center;
       gap: 2rem;
-      cursor: pointer;
+      cursor: default;
 
       &:hover {
         .catalogs__list-count {

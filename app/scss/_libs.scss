@@ -125,12 +125,12 @@
 //   border-bottom: 1px solid transparent;
 // }
 
-// .thumbs-slide.swiper-slide-active {
-//   .advan__thumbs-body {
-//     grid-template-rows: 1fr;
-//   }
+.thumbs-slide.swiper-slide-active {
+  .advan__thumbs-body {
+    grid-template-rows: 1fr;
+  }
 
-//   .advan__thumbs-content {
-//     padding: 2rem 0 0 14rem;
-//   }
-// }
+  .advan__thumbs-content {
+    padding: 2rem 0 0 14rem;
+  }
+}

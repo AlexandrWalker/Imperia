@@ -1,7 +1,7 @@
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
 
-    var hero__slider = new Swiper(".hero__slider-init", {
+    const hero__slider = new Swiper(".hero__slider-init", {
       spaceBetween: 30,
       slidesPerView: 1,
       centeredSlides: true,
@@ -29,7 +29,7 @@
       },
     });
 
-    var feat__slider = new Swiper(".feat__slider-init", {
+    const feat__slider = new Swiper(".feat__slider-init", {
       slidesPerView: "auto",
       slidesPerGroup: 1,
       spaceBetween: 10,
@@ -58,7 +58,7 @@
       },
     });
 
-    var tenants__slider = new Swiper(".tenants__slider-init", {
+    const tenants__slider = new Swiper(".tenants__slider-init", {
       spaceBetween: 10,
       slidesPerView: "auto",
       slidesPerGroup: 1,
@@ -92,13 +92,10 @@
       },
     });
 
-    var path__slider = new Swiper(".path__slider-init", {
+    const path__slider = new Swiper(".path__slider-init", {
       slidesPerView: 'auto',
       slidesPerGroup: 1,
-      spaceBetween: 108,
       speed: 600,
-      // centeredSlides: true,
-      // grabCursor: true,
       touchEventsTarget: true,
       mousewheel: {
         forceToAxis: true,
@@ -110,11 +107,9 @@
       breakpoints: {
         769: {
           slidesPerView: 3,
-          spaceBetween: 108,
         },
         1201: {
           slidesPerView: 3,
-          spaceBetween: 233,
         }
       },
       on: {
@@ -138,7 +133,7 @@
       }
     });
 
-    var review__slider = new Swiper(".review__slider-init", {
+    const review__slider = new Swiper(".review__slider-init", {
       slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 10,
@@ -172,7 +167,7 @@
       },
     });
 
-    var projects__slider = new Swiper(".projects__slider-init", {
+    const projects__slider = new Swiper(".projects__slider-init", {
       slidesPerView: 2,
       slidesPerGroup: 1,
       spaceBetween: 10,
@@ -203,7 +198,7 @@
       },
     });
 
-    var case__head = new Swiper(".case__head-slider", {
+    const case__head = new Swiper(".case__head-slider", {
       spaceBetween: 200,
       slidesPerView: 1,
       grabCursor: true,
@@ -214,7 +209,7 @@
       },
     });
 
-    var case__body = new Swiper(".case__body-slider", {
+    const case__body = new Swiper(".case__body-slider", {
       slidesPerView: 1,
       grabCursor: true,
       speed: 1200,
@@ -233,7 +228,7 @@
       },
     });
 
-    var case__foot = new Swiper(".case__foot-slider", {
+    const case__foot = new Swiper(".case__foot-slider", {
       spaceBetween: 500,
       slidesPerView: 1,
       grabCursor: false,
@@ -253,7 +248,7 @@
       watchSlidesProgress: true,
     });
 
-    var advan__slider = new Swiper(".advan__slider-init", {
+    const advan__slider = new Swiper(".advan__slider-init", {
       grabCursor: false,
       mousewheel: false,
       speed: 600,
@@ -272,7 +267,7 @@
       },
     });
 
-    var create_f__slider = new Swiper(".create_f__slider-init", {
+    const create_f__slider = new Swiper(".create_f__slider-init", {
       slidesPerView: "auto",
       spaceBetween: 20,
       speed: 600,
@@ -296,7 +291,7 @@
       },
     });
 
-    var objects__slider = new Swiper(".objects__slider-init", {
+    const objects__slider = new Swiper(".objects__slider-init", {
       slidesPerView: 1,
       spaceBetween: 10,
       speed: 600,
@@ -324,7 +319,7 @@
       },
     });
 
-    var objects_s__slider = new Swiper(".objects-s__slider", {
+    const objects_s__slider = new Swiper(".objects-s__slider", {
       slidesPerView: 1,
       grabCursor: true,
       speed: 600,
