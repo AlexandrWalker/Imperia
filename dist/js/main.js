@@ -97,6 +97,7 @@
       slidesPerGroup: 1,
       spaceBetween: 108,
       speed: 600,
+      // centeredSlides: true,
       // grabCursor: true,
       touchEventsTarget: true,
       mousewheel: {
