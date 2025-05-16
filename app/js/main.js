@@ -599,16 +599,69 @@
     /**
      * Присвоение fixed класса шапке при скролле
      */
-    addEventListener('scroll', function () {
-      const scrollPosition = window.scrollY;
-      const head = this.document.querySelector('.head');
+    // addEventListener('scroll', function () {
+    //   const scrollPosition = window.scrollY;
+    //   const head = this.document.querySelector('.head');
 
-      if (scrollPosition > 1 && scrollPosition !== 1) {
-        head.classList.add('fixed');
-      } else {
-        head.classList.remove('fixed');
-      }
-    });
+    //   // if (scrollPosition > 1 && scrollPosition !== 1) {
+    //   if (scrollPosition > 230 && scrollPosition !== 230) {
+    //     head.classList.add('fixed');
+    //   } else {
+    //     head.classList.remove('fixed');
+    //   }
+    // });
+
+
+
+
+
+
+
+    /**
+     * Скрытие шапки при скролле вниз и появление при скролле вверх.
+     * Добавление класса out для смены стиля шапки при скролле.
+     */
+    function headerFunc() {
+      let lastScroll = 0;
+      const defaultOffset = 0;
+      const header = document.querySelector('.head');
+      const hero = document.getElementById('first-section');
+
+      const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+
+
+      window.addEventListener('scroll', () => {
+        if (hero) {
+          if (scrollPosition() > hero.offsetHeight) {
+            header.classList.add('out');
+          }
+          else {
+            header.classList.remove('out');
+          }
+
+          if (scrollPosition() > 230) {
+            header.classList.add('change');
+          } else {
+            header.classList.remove('change');
+          }
+        } else {
+          if (scrollPosition() > 0) {
+            header.classList.add('out');
+          }
+          else {
+            header.classList.remove('out');
+          }
+        }
+      })
+    }
+
+    headerFunc();
+
+
+
+
+
+
 
 
 
