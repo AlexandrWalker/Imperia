@@ -622,35 +622,23 @@
      * Добавление класса out для смены стиля шапки при скролле.
      */
     function headerFunc() {
-      let lastScroll = 0;
-      const defaultOffset = 0;
       const header = document.querySelector('.head');
-      const hero = document.getElementById('first-section');
 
       const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 
 
       window.addEventListener('scroll', () => {
-        if (hero) {
-          if (scrollPosition() > hero.offsetHeight) {
-            header.classList.add('out');
-          }
-          else {
-            header.classList.remove('out');
-          }
+        if (scrollPosition() > 200) {
+          header.classList.add('out');
+        }
+        else {
+          header.classList.remove('out');
+        }
 
-          if (scrollPosition() > 230) {
-            header.classList.add('change');
-          } else {
-            header.classList.remove('change');
-          }
+        if (scrollPosition() > 300) {
+          header.classList.add('change');
         } else {
-          if (scrollPosition() > 0) {
-            header.classList.add('out');
-          }
-          else {
-            header.classList.remove('out');
-          }
+          header.classList.remove('change');
         }
       })
     }

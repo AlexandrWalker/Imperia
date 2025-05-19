@@ -58,9 +58,14 @@
     max-width: 100%;
   }
 
-  .titles__title {
-    display: flex;
-    flex-direction: column;
+  .thumbs-slide.active {
+    .advan__thumbs-body {
+      grid-template-rows: 1fr;
+    }
+
+    .advan__thumbs-content {
+      padding: 2rem 0 0 14rem;
+    }
   }
 }
 

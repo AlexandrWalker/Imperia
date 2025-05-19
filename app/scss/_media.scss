@@ -319,6 +319,10 @@
 
   .wrapper {
     // padding: 8rem 0 6.4rem;
+    padding: 11rem 0 6.4rem;
+  }
+
+  .main__page .wrapper {
     padding: 8rem 0 6.4rem;
   }
 
@@ -337,7 +341,7 @@
     padding: 1.6rem 0;
   }
 
-  .head.fixed .header__inner {
+  .head.change .header__inner {
     padding: 1.6rem 0;
   }
 
@@ -347,6 +351,10 @@
 
   .header__contact {
     display: none;
+  }
+
+  .head.out {
+    transform: unset;
   }
 
   .burger {
@@ -776,7 +784,7 @@
   }
 
   .advan__slider-img {
-    width: auto;
+    // width: auto;
   }
 
   .advan__body {
@@ -1914,6 +1922,10 @@
   .review__item .tenants__content-item {
     gap: 0.5rem;
   }
+
+  .breadcrumbs {
+    transform: translateY(8rem);
+  }
 }
 
 @media (max-width: 660px) {
@@ -2200,12 +2212,14 @@
   }
 
   .head {
-    height: 9rem;
+    // height: 9rem;
   }
 
-  .wrapper {
+  .wrapper {}
+
+  .main__page .wrapper {
     // padding: 8rem 0 6.4rem;
-    padding: 9rem 0 6.4rem;
+    padding: 8rem 0 6.4rem;
   }
 
   .header__logo {
@@ -2963,6 +2977,10 @@
 @media (max-width: 380px) {
   .wrapper {
     // padding: 8rem 0 12.4rem;
+    padding: 11rem 0 5.4rem;
+  }
+
+  .main__page .wrapper {
     padding: 9rem 0 5.4rem;
   }
 
