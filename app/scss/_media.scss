@@ -33,7 +33,8 @@
   }
 
   .head.change .header__logo {
-    display: none;
+    // display: none;
+    transform: translateY(-150%);
   }
 }
 

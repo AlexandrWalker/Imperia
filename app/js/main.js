@@ -628,7 +628,7 @@
 
 
       window.addEventListener('scroll', () => {
-        if (scrollPosition() > 200) {
+        if (scrollPosition() > 300) {
           header.classList.add('out');
         }
         else {
