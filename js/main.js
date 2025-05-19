@@ -642,7 +642,7 @@
           header.classList.remove('out');
         }
 
-        if (scrollPosition() > 300) {
+        if (scrollPosition() > 400) {
           header.classList.add('change');
         } else {
           header.classList.remove('change');
