@@ -668,7 +668,7 @@
         animation: {
           duration: 600,
           effects: 'stagger(3ms) fade scale(0.4)',
-          easing: 'ease'
+          easing: 'linear'
         },
         load: {
           filter: '.mix-1'
@@ -682,7 +682,7 @@
         animation: {
           duration: 600,
           effects: 'stagger(3ms) fade scale(0.4)',
-          easing: 'ease'
+          easing: 'linear'
         },
         load: {
           filter: 'all'

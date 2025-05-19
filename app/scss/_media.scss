@@ -105,19 +105,19 @@
 
 @media (max-width: 1200px) {
   .path__item {
-    padding-right: 10.8rem;
+    // margin-right: 10.8rem;
   }
 
   .path__item-img {
-    max-width: unset;
+    // max-width: unset;
   }
 
   .path__item-img::before {
-    right: calc((10.8rem / 2) * -1);
+    // right: calc((10.8rem / 2) * -1);
   }
 
   .path__item-img::after {
-    width: 10.8rem;
+    // width: 10.8rem;
   }
 }
 
@@ -729,6 +729,7 @@
     width: 100%;
   }
 
+  .objects .advan__head,
   .control .advan__head {
     position: static;
   }
@@ -757,8 +758,21 @@
     font-size: 1.6rem;
   }
 
+  .investments .projects .path__inner {
+    overflow: hidden;
+  }
+
   .investments .advan__head-link {
     // display: flex;
+  }
+
+  .investments .advan__title {
+    width: 80%;
+    font-weight: 800;
+  }
+
+  .investments .advan__title span {
+    font-weight: 400;
   }
 
   .investments.sample-page .about .component::before {
@@ -769,13 +783,18 @@
     left: unset;
   }
 
+  .investments .advan__slider-wrap {
+    width: 100%;
+    height: auto;
+  }
+
   .advan__slider-wrap {
     margin-top: -26.5rem;
     max-width: 51.1rem;
     width: 100%;
     max-height: 33.3rem;
     height: 100%;
-    min-height: 30.6rem;
+    // min-height: 30.6rem;
   }
 
   .advan__slider {}
@@ -833,10 +852,12 @@
     font-size: 1.4rem;
   }
 
+  .objects .thumbs-slide.active .advan__thumbs-content,
   .advan .swiper-slide-active .advan__thumbs-content {
     padding: 1rem 0 0 5rem;
   }
 
+  .objects .advan__thumbs-content,
   .advan__thumbs-content {
     padding: 0 0 0 5rem;
   }
@@ -1004,6 +1025,15 @@
   .projects .path__item,
   .path__item {
     gap: 2rem;
+    margin-right: 10.8rem;
+  }
+
+  .path__item-img::before {
+    right: calc((10.8rem / 2) * -1);
+  }
+
+  .path__item-img::after {
+    width: 10.8rem;
   }
 
   .path__item-num {
@@ -1021,12 +1051,12 @@
     margin-top: -4.6rem;
   }
 
-  .investments .path__item {
-    padding: 0;
+  .investments .projects .path__item {
+    margin: 0;
   }
 
-  .investments .path__item-img::before,
-  .investments .path__item-img::after {
+  .investments .projects .path__item-img::before,
+  .investments .projects .path__item-img::after {
     display: none;
   }
 
@@ -1724,6 +1754,12 @@
     width: 50%;
   }
 
+  .projects .projects__wrap {
+    justify-content: space-between;
+    order: 3;
+    width: 100%;
+  }
+
   .projects__title {
     display: flex;
     flex-direction: column;
@@ -2000,7 +2036,7 @@
   // }
 
   .objects .advan__slider-wrap {
-  //   max-width: calc(100% - 4rem);
+    //   max-width: calc(100% - 4rem);
     width: 100%;
     margin: -11.7rem 0 0;
     height: auto;
@@ -2104,6 +2140,14 @@
 
   .create-page .projects__wrap {
     width: 100%;
+  }
+
+  .projects__wrap {
+    gap: 1rem;
+  }
+
+  .objects .projects__wrap-btn {
+    --button-padding-x: 1.5rem;
   }
 }
 
@@ -2973,9 +3017,7 @@
 }
 
 @media (max-width: 520px) {
-  .advan__head-content {
-
-  }
+  .advan__head-content {}
 }
 
 @media (max-width: 480px) {

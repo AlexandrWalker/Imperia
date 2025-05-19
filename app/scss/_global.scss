@@ -4,6 +4,7 @@ html {
   overflow-x: hidden;
   --refRes: 1920;
   font-size: calc(100vw / var(--refRes) * 10);
+  will-change: font-size;
 
   @media (max-width: 768px) {
     font-size: 62.5%;

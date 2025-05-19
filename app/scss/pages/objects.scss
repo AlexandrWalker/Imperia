@@ -22,9 +22,23 @@
     -webkit-line-clamp: none;
   }
 
-  // .advan__title {
-  //   width: auto;
-  // }
+  .advan {
+    overflow: visible;
+  }
+
+  .advan__title {
+    width: auto;
+  }
+
+  .advan__head {
+    position: sticky;
+    top: 0;
+    height: fit-content;
+  }
+
+  .projects__title {
+    display: block;
+  }
 
   // .advan__head-content {
   //   padding: 7rem;
