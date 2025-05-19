@@ -7,7 +7,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 0.5rem;
-    min-width: 21.2rem;
+    width: 21.2rem;
     height: 5rem;
     padding: 1.3rem;
     background: transparent;
@@ -20,6 +20,9 @@
     position: relative;
 
     &-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       z-index: -1;
     }
 
@@ -36,14 +39,14 @@
         border-radius: 50%;
         background-color: var(--primary-accent);
         overflow: hidden;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         line-height: 1;
         color: var(--white);
         transition: all 0.3s ease;
       }
     }
 
-    &--active {
+    &:hover {
 
       i {
         transform: scale(-1, -1);

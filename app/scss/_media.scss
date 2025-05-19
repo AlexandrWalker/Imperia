@@ -33,8 +33,8 @@
   }
 
   .head.change .header__logo {
-    // display: none;
-    transform: translateY(-150%);
+    display: none;
+    // transform: translateY(-150%);
   }
 }
 
@@ -530,21 +530,21 @@
     -webkit-line-clamp: none;
   }
 
-  .objects .advan__slider-wrap {
-    margin: -21.6rem 0 0;
-    width: 100%;
-    height: auto;
-  }
+  // .objects .advan__slider-wrap {
+  //   margin: -21.6rem 0 0;
+  //   width: 100%;
+  //   height: auto;
+  // }
 
-  .objects .advan__head-content {
-    height: 24.6rem;
-    padding: 3rem 9rem 0 9rem;
-  }
+  // .objects .advan__head-content {
+  //   height: 24.6rem;
+  //   padding: 3rem 9rem 0 9rem;
+  // }
 
-  .objects .advan__head-content::before {
-    width: 8rem;
-    height: 8rem;
-  }
+  // .objects .advan__head-content::before {
+  //   width: 8rem;
+  //   height: 8rem;
+  // }
 
   .rent .advan__title {
     width: 100%;
@@ -1019,6 +1019,15 @@
   .path__item-img {
     max-height: 24.6rem;
     margin-top: -4.6rem;
+  }
+
+  .investments .path__item {
+    padding: 0;
+  }
+
+  .investments .path__item-img::before,
+  .investments .path__item-img::after {
+    display: none;
   }
 
   .geo__content {
@@ -1978,16 +1987,20 @@
   }
 
   .objects .advan__head-content {
-    padding: 2rem 2rem 0;
-    height: 13.7rem;
+    padding: 2rem 2rem 15rem;
   }
 
-  .objects .advan__head-content::before {
-    display: none;
-  }
+  // .objects .advan__head-content {
+  //   padding: 2rem 2rem 0;
+  //   height: 13.7rem;
+  // }
+
+  // .objects .advan__head-content::before {
+  //   display: none;
+  // }
 
   .objects .advan__slider-wrap {
-    max-width: calc(100% - 4rem);
+  //   max-width: calc(100% - 4rem);
     width: 100%;
     margin: -11.7rem 0 0;
     height: auto;
@@ -2460,6 +2473,10 @@
     aspect-ratio: 1/1;
     min-height: 18.6rem;
     max-height: 18.6rem;
+  }
+
+  .investments .path__item-img {
+    max-height: unset;
   }
 
   .projects__btn {
@@ -2955,7 +2972,11 @@
   }
 }
 
-@media (max-width: 520px) {}
+@media (max-width: 520px) {
+  .advan__head-content {
+
+  }
+}
 
 @media (max-width: 480px) {
   .tenants .swiper-pagination-bullet {
@@ -3082,5 +3103,9 @@
 
   .case__body-wrap span {
     white-space: nowrap;
+  }
+
+  .investments .projects__wrap-btn {
+    --button-padding-x: 1.5rem;
   }
 }

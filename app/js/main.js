@@ -106,10 +106,10 @@
       },
       breakpoints: {
         769: {
-          slidesPerView: 3,
+          slidesPerView: 2.63,
         },
         1201: {
-          slidesPerView: 3,
+          slidesPerView: 2.63,
         }
       },
       on: {
@@ -168,7 +168,7 @@
     });
 
     const projects__slider = new Swiper(".projects__slider-init", {
-      slidesPerView: 2,
+      slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 10,
       speed: 600,
@@ -183,17 +183,23 @@
         prevEl: ".projects__slider-prev",
       },
       breakpoints: {
+        361: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
         601: {
           slidesPerView: 2,
           spaceBetween: 20,
         },
         769: {
-          slidesPerView: 3,
-          spaceBetween: 108,
+          slidesPerView: 2.63,
+          spaceBetween: 0,
+          // spaceBetween: 108,
         },
         1201: {
-          slidesPerView: 3,
-          spaceBetween: 233,
+          slidesPerView: 2.63,
+          spaceBetween: 0,
+          // spaceBetween: 233,
         }
       },
     });
@@ -512,14 +518,14 @@
       const toggleMenu = () => {
         const isOpened = burger.classList.toggle('burger--opened');
         menu.classList.toggle('mobile-menu--opened', isOpened);
-        // document.body.classList.toggle('no-scroll');
+        document.body.classList.toggle('no-scroll');
         head.classList.toggle('head--active');
 
-        if (menu.classList.contains('mobile-menu--opened')) {
-          lenis.stop();
-        } else {
-          lenis.start();
-        }
+        // if (menu.classList.contains('mobile-menu--opened')) {
+        //   lenis.stop();
+        // } else {
+        //   lenis.start();
+        // }
 
         if (burger.classList[1]) {
           burgerText.innerHTML = 'Закрыть';
@@ -536,7 +542,8 @@
         burger.classList.remove('burger--opened');
         menu.classList.remove('mobile-menu--opened');
         document.body.classList.remove('no-scroll');
-        lenis.start();
+        // lenis.start();
+        document.body.classList.remove('no-scroll');
       };
 
       // Открытие/закрытие меню по клику на бургер
