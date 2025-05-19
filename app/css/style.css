@@ -1560,7 +1560,7 @@ a {
   z-index: 101;
   background-color: var(--primary-bg);
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   transition: bottom 0.6s ease;
 }
 .menu.mobile-menu--opened {
@@ -1785,7 +1785,7 @@ a {
   transform: scale(1);
   max-height: 100%;
   height: fit-content;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .modal#modal-social .modal__box {
   padding: 3rem 2rem;

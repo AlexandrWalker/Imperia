@@ -6,7 +6,7 @@
   z-index: 101;
   background-color: var(--primary-bg);
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   transition: bottom 0.6s ease;
 
   &.mobile-menu--opened {
