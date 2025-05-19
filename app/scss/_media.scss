@@ -2334,7 +2334,7 @@
     left: 0;
     z-index: 100;
     padding: 5rem 2rem 1rem;
-    max-height: 100vh;
+    max-height: 100dvh;
     overflow-y: auto;
   }
 
@@ -2521,6 +2521,7 @@
 
   .investments .path__item-img {
     max-height: unset;
+    height: auto;
   }
 
   .projects__btn {

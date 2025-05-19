@@ -1561,8 +1561,7 @@ a {
   right: 0;
   z-index: 101;
   background-color: var(--primary-bg);
-  height: 100vh;
-  overflow-y: auto;
+  height: 100dvh;
   transition: bottom 0.6s ease;
 }
 .menu.mobile-menu--opened {
@@ -1574,6 +1573,7 @@ a {
   justify-content: space-between;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
 }
 .menu__head {
   padding: 10rem 0 4rem;
@@ -1694,7 +1694,7 @@ a {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   z-index: 110;
   background-color: rgba(0, 0, 0, 0.3);
   display: grid;
@@ -5190,9 +5190,6 @@ a {
 .construction .service__pic-btn p {
   width: 70%;
 }
-.construction .geo__img {
-  height: auto;
-}
 .construction .projects__address-title {
   color: var(--primary-black);
 }
@@ -7067,7 +7064,7 @@ a {
     left: 0;
     z-index: 100;
     padding: 5rem 2rem 1rem;
-    max-height: 100vh;
+    max-height: 100dvh;
     overflow-y: auto;
   }
   .geo__block.show {
@@ -7214,6 +7211,7 @@ a {
   }
   .investments .path__item-img {
     max-height: unset;
+    height: auto;
   }
   .projects__btn {
     width: 6rem;
