@@ -16,8 +16,6 @@
   &.out {
     transform: translateY(-100%);
 
-    .header__logo {}
-
     .nav__inner {
       // padding: 2rem 0;
       padding: 3rem 0;
@@ -34,6 +32,7 @@
   &.change {
     transform: translateY(0);
     height: 8rem;
+    position: fixed;
 
     .header {
       position: absolute;

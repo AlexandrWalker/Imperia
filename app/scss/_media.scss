@@ -221,6 +221,10 @@
     padding-top: 0;
   }
 
+  .create_f__slider {
+    overflow: visible;
+  }
+
   .create_f .swiper-slide {
     width: 33.4rem;
   }
@@ -407,6 +411,8 @@
 
   .hero__feat-text {
     font-size: 1.6rem;
+    width: min-content;
+    word-break: normal;
   }
 
   .about {

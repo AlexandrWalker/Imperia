@@ -1027,6 +1027,7 @@ a {
 .head.change {
   transform: translateY(0);
   height: 8rem;
+  position: fixed;
 }
 .head.change .header {
   position: absolute;
@@ -5437,6 +5438,9 @@ a {
   .create_f .swiper-slide:nth-child(6) {
     padding-top: 0;
   }
+  .create_f__slider {
+    overflow: visible;
+  }
   .create_f .swiper-slide {
     width: 33.4rem;
   }
@@ -5584,6 +5588,8 @@ a {
   }
   .hero__feat-text {
     font-size: 1.6rem;
+    width: min-content;
+    word-break: normal;
   }
   .about {
     margin-bottom: 7.6rem;
