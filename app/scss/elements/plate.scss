@@ -35,28 +35,53 @@
   right: 0;
   z-index: 99;
   margin: 0;
-  background-color: var(--primary-black);
-  color: var(--white);
 
   &__inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 2rem 7rem;
-    padding: 2rem 0;
+    gap: 2.4rem;
+    padding: 1.5rem 3rem;
+    background-color: var(--primary-black);
+    color: var(--white);
+    width: fit-content;
+    margin-left: auto;
   }
 
   &__text {
     font-family: 'Roboto';
-    font-weight: 400;
+    font-weight: 300;
     font-size: 2rem;
-    line-height: 115%;
+    line-height: 100%;
     color: var(--white);
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--primary-accent);
+        text-decoration: none;
+      }
+    }
   }
 
   &__btn {
-    text-transform: uppercase;
-    max-width: 52rem;
-    width: 100%;
+    --button-font-size: 2.4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0;
+    font-weight: 400;
+
+    &:hover {
+      --button-border-color: var(--primary-black);
+      --button-color: var(--primary-black);
+      background-color: var(--white);
+    }
   }
 }

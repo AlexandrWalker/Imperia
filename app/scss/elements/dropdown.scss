@@ -2,6 +2,10 @@
 .dropdown {
   position: relative;
 
+  &__block {
+    position: relative;
+  }
+
   &__button {
     display: flex;
     justify-content: flex-start;

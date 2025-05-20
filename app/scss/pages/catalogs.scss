@@ -47,6 +47,7 @@
     &:hover {
       // color: var(--white);
       background-color: var(--primary-accent);
+      transform: translateY(-0.8rem);
 
       .catalogues__item-title {
         color: var(--white);
@@ -390,5 +391,137 @@
   100% {
     transform: scale(1.2);
     opacity: 0;
+  }
+}
+
+
+
+
+
+
+.dropdown {
+  background: transparent;
+  position: relative;
+  user-select: none;
+  transition: all 0.2s ease;
+  width: 21.2rem;
+  height: 5rem;
+
+  &-form {}
+
+  &__selected {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3.4rem 1.5rem 1.3rem;
+    border: 0.1rem solid var(--primary-black);
+    z-index: 9;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    i {
+      position: absolute;
+      top: 0;
+      right: 1.3rem;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      color: var(--white);
+      transition: all 0.2s ease;
+      transform: rotateZ(0deg);
+      background-color: var(--primary-accent);
+    }
+
+    // .dropdown.is-active & {
+
+    //   i {
+    //     transform: rotateZ(180deg);
+    //     background-color: var(--primary-black);
+    //   }
+    // }
+  }
+
+  &:hover {
+
+    i {
+      transform: rotateZ(180deg);
+      background-color: var(--primary-black);
+    }
+  }
+
+  &.is-active .dropdown__selected {
+    border-bottom: 0;
+    background-color: var(--white);
+  }
+
+  &__container {
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    pointer-events: none;
+
+    .dropdown.is-active & {
+      pointer-events: all;
+    }
+  }
+
+  &__content {
+    border: 0.1rem solid var(--primary-black);
+    border-top: 0;
+    padding-bottom: 2.5rem;
+    will-change: transform;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+    background-color: var(--white);
+
+    .dropdown.is-active & {
+      transform: translateY(0);
+    }
+  }
+
+  &__option {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.14;
+
+    &:first-child {
+
+      .dropdown__label {
+        padding: 0.5rem 1.3rem 1rem 1.3rem;
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    padding: 1rem 1.3rem;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--primary-accent);
+    }
+
+    :checked+& {
+      color: var(--primary-accent);
+    }
+  }
+
+  &__radio {
+    display: none;
   }
 }

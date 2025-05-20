@@ -1,4 +1,5 @@
 <!--=include head.html-->
+
 <body>
 
   <!--=include mobile-menu.html-->
@@ -116,6 +117,9 @@
       <section class="catalogues">
         <div class="container">
           <div class="catalogues__inner">
+
+
+
             <div class="catalogues__head">
               <h2 class="catalogues__title block-title" data-splitting="chars" data-animation="fadeIn">
                 Наши объекты
@@ -124,7 +128,7 @@
                 <button class="catalogues__filter-btn btn btn-red">
                   Все объекты
                 </button>
-                <div class="dropdown">
+                <!-- <div class="dropdown">
                   <button class="dropdown__button" data-value="Тип">
                     <span class="dropdown__button-text">Тип</span>
                     <i class="icon-chevron-down"></i>
@@ -186,9 +190,108 @@
                     </li>
                   </ul>
                   <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
+                </div> -->
+
+
+
+                <div class="dropdown dropdown--js">
+                  <div class="dropdown__selected toggle--label dropdown__selected-label--js dropdown__selected--js">
+                    <span>Тип</span>
+                    <i class="icon-chevron-down"></i>
+                  </div>
+                  <div class="dropdown__container">
+                    <div class="dropdown__content toggle--panel">
+                      <label class="dropdown__option">
+                        <input class="dropdown__radio" name="type__radio" type="radio" checked />
+                        <span class="dropdown__label">Тип</span>
+                      </label>
+                      <label class="dropdown__option">
+                        <input class="dropdown__radio" name="type__radio" type="radio" value="Торговый комплекс" />
+                        <span class="dropdown__label">Торговый комплекс</span>
+                      </label>
+                      <label class="dropdown__option">
+                        <input class="dropdown__radio" name="type__radio" type="radio" value="Жилое помещение" />
+                        <span class="dropdown__label">Жилое помещение</span>
+                      </label>
+                      <label class="dropdown__option">
+                        <input class="dropdown__radio" name="type__radio" type="radio" value="Проекты для инвестиций" />
+                        <span class="dropdown__label">Проекты для инвестиций</span>
+                      </label>
+                      <label class="dropdown__option">
+                        <input class="dropdown__radio" name="type__radio" type="radio"
+                          value="Проекты со свободной арендуемой площадью" />
+                        <span class="dropdown__label">Проекты со свободной арендуемой площадью</span>
+                      </label>
+                      <label class="dropdown__option">
+                        <input class="dropdown__radio" name="type__radio" type="radio" value="Типовые проекты" />
+                        <span class="dropdown__label">Типовые проекты</span>
+                      </label>
+                    </div>
+                  </div>
+                  <input class="dropdown__value" type="hidden">
+                </div>
+                <div class="dropdown dropdown--js">
+                  <div class="dropdown__selected toggle--label dropdown__selected-label--js dropdown__selected--js">
+                    <span>Год запуска</span>
+                    <i class="icon-chevron-down"></i>
+                  </div>
+                  <div class="dropdown__container">
+                    <div class="dropdown__content toggle--panel">
+                      <label class="dropdown__option">
+                        <input class="dropdown__radio" name="type__radio" type="radio" checked />
+                        <span class="dropdown__label">Год запуска</span>
+                      </label>
+                      <label class="dropdown__option">
+                        <input class="dropdown__radio" name="type__radio" type="radio" value="2025" />
+                        <span class="dropdown__label">2025</span>
+                      </label>
+                      <label class="dropdown__option">
+                        <input class="dropdown__radio" name="type__radio" type="radio" value="2024" />
+                        <span class="dropdown__label">2024</span>
+                      </label>
+                      <label class="dropdown__option">
+                        <input class="dropdown__radio" name="type__radio" type="radio" value="2023" />
+                        <span class="dropdown__label">2023</span>
+                      </label>
+                      <label class="dropdown__option">
+                        <input class="dropdown__radio" name="type__radio" type="radio" value="2022" />
+                        <span class="dropdown__label">2022</span>
+                      </label>
+                    </div>
+                  </div>
+                  <input class="dropdown__value" type="hidden">
+                </div>
+                <div class="catalogues__filter-item">
+                  <input class="catalogues__filter-input" type="text" placeholder="Площадь от м2">
+                </div>
+                <div class="dropdown dropdown--js">
+                  <div class="dropdown__selected toggle--label dropdown__selected-label--js dropdown__selected--js">
+                    <span>Регион</span>
+                    <i class="icon-chevron-down"></i>
+                  </div>
+                  <div class="dropdown__container">
+                    <div class="dropdown__content toggle--panel">
+                      <label class="dropdown__option">
+                        <input class="dropdown__radio" name="type__radio" type="radio" checked />
+                        <span class="dropdown__label">Регион</span>
+                      </label>
+                      <label class="dropdown__option">
+                        <input class="dropdown__radio" name="type__radio" type="radio" value="Россия" />
+                        <span class="dropdown__label">Россия</span>
+                      </label>
+                      <label class="dropdown__option">
+                        <input class="dropdown__radio" name="type__radio" type="radio" value="Казахстан" />
+                        <span class="dropdown__label">Казахстан</span>
+                      </label>
+                    </div>
+                  </div>
+                  <input class="dropdown__value" type="hidden">
                 </div>
               </div>
             </div>
+
+
+
             <div class="catalogues__items">
               <a class="catalogues__item" href="/Imperia/objects.html">
                 <div class="catalogues__item-head">
