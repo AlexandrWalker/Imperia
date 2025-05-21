@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="./libs/splitting/splitting-cells.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
   <!-- Бургер меню -->
@@ -496,27 +497,34 @@
             <h1 class="licenses__title title" data-splitting="words" data-animation="reveal">
               Лицензии и сертификаты
             </h1>
-            <!-- <div class="dropdown__block">
-              <button class="dropdown__button" data-value="Строительство">
-                <span class="dropdown__button-text">Строительство</span>
-                <i class="icon-chevron-down-circle"></i>
-              </button>
-              <ul class="dropdown__list dropdown__list-border">
-                <li class="dropdown__list-item " data-value="Строительство">
-                  Строительство
-                </li>
-                <li class="dropdown__list-item" data-value="Управление">
-                  Управление
-                </li>
-                <li class="dropdown__list-item" data-value="Аренда">
-                  Аренда
-                </li>
-                <li class="dropdown__list-item" data-value="Инвестиции">
-                  Инвестиции
-                </li>
-              </ul>
-              <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
-            </div> -->
+            <div class="dropdown dropdown--js">
+              <div class="dropdown__selected toggle--label dropdown__selected-label--js dropdown__selected--js">
+                <span>Строительство</span>
+                <i class="icon-chevron-down"></i>
+              </div>
+              <div class="dropdown__container">
+                <div class="dropdown__content toggle--panel">
+                  <label class="dropdown__option">
+                    <input class="dropdown__radio" name="type__radio" type="radio" value="Строительство" checked />
+                    <span class="dropdown__label">Строительство</span>
+                  </label>
+                  <label class="dropdown__option">
+                    <input class="dropdown__radio" name="type__radio" type="radio" value="Управление" />
+                    <span class="dropdown__label">Управление</span>
+                  </label>
+                  <label class="dropdown__option">
+                    <input class="dropdown__radio" name="type__radio" type="radio" value="Аренда" />
+                    <span class="dropdown__label">Аренда</span>
+                  </label>
+                  <label class="dropdown__option">
+                    <input class="dropdown__radio" name="type__radio" type="radio" value="Инвестиции" />
+                    <span class="dropdown__label">Инвестиции</span>
+                  </label>
+                </div>
+              </div>
+              <input class="dropdown__value" type="hidden">
+            </div>
+
             <div class="licenses__items fancybox">
               <a class="licenses__item" href="http://dummyimage.com/826x1132.jpg" data-fancybox
                 data-caption="Навзание лицензии">
@@ -938,7 +946,7 @@
           <p class="warning__text">
             Этот сайт использует файлы <a href="/imperia/privacy.html">сооkіе</a>
           </p>
-          <button id="warning-btn" class="warning__btn btn btn-red">
+          <button id="warning-btn" class="warning__btn btn btn-red" onclick="checkCookies()">
             Ок
           </button>
         </div>

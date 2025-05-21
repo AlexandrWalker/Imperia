@@ -82,25 +82,9 @@
     }
   }
 
-  .dropdown__block {
+  .dropdown {
     display: none;
     width: 100%;
     margin-bottom: 1rem;
-
-    i::before {
-      width: unset;
-      height: unset;
-      border-radius: unset;
-      background-color: unset;
-      font-size: 1.5rem;
-      color: var(--primary-accent);
-    }
-  }
-
-  .dropdown__button--active {
-
-    i {
-      transform: scale(-1, -1);
-    }
   }
 }

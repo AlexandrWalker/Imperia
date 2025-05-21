@@ -652,8 +652,6 @@
 
 
 
-
-
     let dropdowns = document.querySelectorAll('.dropdown--js');
     dropdowns.forEach(dropdown => {
 
@@ -682,8 +680,8 @@
       let radios = dropdown.querySelectorAll('.dropdown__radio');
       let root = dropdown;
 
-      for (var i = 0; i < radios.length; ++i) {
-        var radio = radios[i];
+      for (let i = 0; i < radios.length; ++i) {
+        let radio = radios[i];
         radio.addEventListener('change', function () {
           updateSelected();
         });
@@ -696,14 +694,8 @@
       selectedLabel.addEventListener('click', function () {
         toggleClass(root, 'is-active');
       });
-      updateSelected();
-
+      // updateSelected();
     });
-
-
-
-
-
 
 
 
@@ -737,16 +729,25 @@
     }
 
 
+    /**
+     * Кнопка куки
+     */
 
-    document.getElementById('warning-btn').addEventListener('click', event => {
-      document.getElementById('warning-plate').style.display = 'none';
-    });
+    if (('; ' + document.cookie).split(`; COOKIE_ACCEPT=`).pop().split(';')[0] !== '1') {
+      const cookiesNotify = document.getElementById('warning-plate');
+
+      if (cookiesNotify) {
+        cookiesNotify.style.display = 'block';
+      }
+    }
+    // document.getElementById('warning-btn').addEventListener('click', event => {
+    //   document.getElementById('warning-plate').style.display = 'none';
+    // });
 
 
 
     const presentation = document.getElementById('presentation');
     const stageItems = document.querySelectorAll('.stage__item');
-
 
     window.addEventListener('resize', function () {
       if (this.window.innerWidth >= 769) {
@@ -1152,19 +1153,7 @@
       })
     }
 
-
-
-    /**
-     * Перерасчёт высоты для моб.
-     */
-    // We listen to the resize event
-    // window.addEventListener('resize', () => {
-    // We execute the same script as before
-    // let vh = window.innerHeight * 0.001;
-    // document.documentElement.style.setProperty('--vh', `${vh}rem`);
-    // });
-
-
+    
 
     /**
      * Инициализация Fancybox
@@ -1177,3 +1166,9 @@
 
   });
 })();
+
+
+function checkCookies() {
+  document.cookie = 'COOKIE_ACCEPT=1;path=\'/\';expires:' + (new Date(new Date().getTime() + 86400e3 * 365).toUTCString());
+  document.getElementById('warning-plate').remove();
+}
