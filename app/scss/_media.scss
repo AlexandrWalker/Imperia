@@ -1979,6 +1979,42 @@
   .breadcrumbs {
     transform: translateY(8rem);
   }
+
+  .main__prolog h1 {
+    font-size: 2.4rem;
+    word-break: break-word;
+  }
+
+  .main__prolog-download {
+    gap: 1rem;
+  }
+
+  .main__prolog-download i {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.8rem;
+  }
+
+  .main__prolog-download span {
+    font-size: 1.2rem;
+  }
+
+  .privacy h2,
+  .cookie .privacy h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .privacy p,
+  .privacy li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .cookie .privacy ul {
+    padding-inline-start: 2.4rem;
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 660px) {

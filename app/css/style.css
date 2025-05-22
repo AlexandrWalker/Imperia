@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   /* color */
   --primary-white: #F2F3FA;
@@ -996,6 +997,49 @@ a {
 }
 .main__page .wrapper {
   padding-top: 20rem;
+}
+
+.main__prolog {
+  margin-top: 4rem;
+}
+.main__prolog-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.main__prolog h1 {
+  font-family: "Winter Sans Trial", serif;
+  font-weight: 800;
+  font-size: 6.4rem;
+  line-height: 105%;
+  text-transform: uppercase;
+}
+.main__prolog-download {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: inherit;
+  gap: 1.5rem;
+  width: fit-content;
+}
+.main__prolog-download i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--primary-accent);
+  color: var(--white);
+  font-size: 2.4rem;
+  flex-shrink: 0;
+}
+.main__prolog-download span {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.main__prolog-download:hover {
+  color: var(--primary-accent);
 }
 
 /* component styles */
@@ -4827,6 +4871,57 @@ a {
   padding-top: 2rem;
 }
 
+.privacy__inner {
+  max-width: 125.5rem;
+  width: 100%;
+}
+.privacy h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 116%;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.privacy p,
+.privacy li {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 120%;
+  margin-bottom: 1.6rem;
+}
+.privacy p:last-child,
+.privacy li:last-child {
+  margin-bottom: 0;
+}
+.privacy a {
+  color: var(--primary-accent);
+}
+.privacy ul {
+  margin-bottom: 1rem;
+}
+.privacy li::before {
+  content: "–";
+  position: relative;
+  left: 0;
+}
+
+.cookie .main__prolog-inner {
+  max-width: 125.5rem;
+  width: 100%;
+}
+.cookie .privacy h2 {
+  margin-bottom: 2rem;
+}
+.cookie .privacy ul {
+  padding-inline-start: 3rem;
+  margin-bottom: 2rem;
+}
+.cookie .privacy li {
+  list-style-type: disc;
+}
+.cookie .privacy li::before {
+  display: none;
+}
 /* sample pages */
 .sample {
   max-width: 192rem;
@@ -6796,6 +6891,35 @@ a {
   }
   .breadcrumbs {
     transform: translateY(8rem);
+  }
+  .main__prolog h1 {
+    font-size: 2.4rem;
+    word-break: break-word;
+  }
+  .main__prolog-download {
+    gap: 1rem;
+  }
+  .main__prolog-download i {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.8rem;
+  }
+  .main__prolog-download span {
+    font-size: 1.2rem;
+  }
+  .privacy h2,
+  .cookie .privacy h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  .privacy p,
+  .privacy li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .cookie .privacy ul {
+    padding-inline-start: 2.4rem;
+    margin-bottom: 1rem;
   }
 }
 @media (max-width: 660px) {

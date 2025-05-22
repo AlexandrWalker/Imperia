@@ -791,3 +791,52 @@ a {
     padding-top: 20rem;
   }
 }
+
+.main__prolog {
+  margin-top: 4rem;
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  h1 {
+    font-family: 'Winter Sans Trial', serif;
+    font-weight: 800;
+    font-size: 6.4rem;
+    line-height: 105%;
+    text-transform: uppercase;
+  }
+
+  &-download {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: inherit;
+    gap: 1.5rem;
+    width: fit-content;
+
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 4rem;
+      height: 4rem;
+      background-color: var(--primary-accent);
+      color: var(--white);
+      font-size: 2.4rem;
+      flex-shrink: 0;
+    }
+
+    span {
+      font-size: 1.6rem;
+      font-weight: 400;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: var(--primary-accent);
+    }
+  }
+}
