@@ -838,7 +838,6 @@
      * Инициализация TransferElements
      */
     if (document.querySelector('.transfer-pos-1')) {
-
       new TransferElements(
         {
           sourceElement: document.querySelector('.transfer-elem-1'),
@@ -855,6 +854,30 @@
           breakpoints: {
             600: {
               targetElement: document.querySelector('.transfer-pos-1')
+            }
+          }
+        }
+      );
+    }
+    if (document.querySelector('.case__title')) {
+      new TransferElements(
+        {
+          sourceElement: document.querySelector('.case__title'),
+          breakpoints: {
+            600: {
+              targetElement: document.querySelector('.case__item')
+            }
+          }
+        }
+      );
+    }
+    if (document.querySelector('.objects .case')) {
+      new TransferElements(
+        {
+          sourceElement: document.querySelector('.case__body-video'),
+          breakpoints: {
+            600: {
+              targetElement: document.querySelector('.case__thumbs-item')
             }
           }
         }
@@ -1153,7 +1176,7 @@
       })
     }
 
-    
+
 
     /**
      * Инициализация Fancybox
