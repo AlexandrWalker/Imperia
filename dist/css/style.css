@@ -10902,6 +10902,10 @@ a {
     height: -moz-fit-content;
     height: fit-content;
   }
+  .construction.sample-page .case__item,
+  .control.sample-page .case__item {
+    padding-bottom: 9rem;
+  }
   /* */
   .case__foot-count {
     font-size: 2.4rem;

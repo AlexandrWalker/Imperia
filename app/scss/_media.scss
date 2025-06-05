@@ -2540,6 +2540,12 @@
   .control.sample-page .case__foot {
     height: fit-content;
   }
+
+  .construction.sample-page .case__item,
+  .control.sample-page .case__item {
+    padding-bottom: 9rem;
+  }
+
   /* */
 
   .case__foot-count {
