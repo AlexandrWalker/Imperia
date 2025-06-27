@@ -920,7 +920,7 @@
     width: 23rem;
   }
 
-  .path__slider .swiper-slide:last-child {
+  .path__slider:not(.path__slider.timeline) .swiper-slide:last-child {
     display: none;
   }
 

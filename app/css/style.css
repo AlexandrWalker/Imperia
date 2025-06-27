@@ -6073,7 +6073,7 @@ a {
     font-size: 1.6rem;
     width: 23rem;
   }
-  .path__slider .swiper-slide:last-child {
+  .path__slider:not(.path__slider.timeline) .swiper-slide:last-child {
     display: none;
   }
   .projects .path__item-text {
