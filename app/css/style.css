@@ -2781,6 +2781,15 @@ a {
 .path .swiper-slide:nth-last-child(3) .path__item-img::after {
   display: none;
 }
+.path__body.timeline-container .swiper-slide:last-child .path__item-img::before,
+.path__body.timeline-container .swiper-slide:last-child .path__item-img::after {
+  display: none;
+}
+.path__body.timeline-container .swiper-slide:nth-last-child(3) .path__item-img::before,
+.path__body.timeline-container .swiper-slide:nth-last-child(3) .path__item-img::after {
+  display: block;
+}
+
 .stage .component {
   width: 27.34375%;
   height: 21.2rem;

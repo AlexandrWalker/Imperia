@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
 
@@ -907,8 +909,6 @@
 
 
     /* Анимация */
-    gsap.registerPlugin(ScrollTrigger);
-
     const titleChars = document.querySelectorAll('[data-splitting="chars"]');
     titleChars.forEach(titleChar => {
       const char = new SplitType(titleChar, { types: 'words, chars' });
@@ -1175,6 +1175,55 @@
         onEnter: () => timeline.play()
       })
     }
+
+
+
+    const timelineWrapper = document.querySelector('.timeline-wrapper');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineWidth = timelineWrapper.scrollWidth - window.innerWidth;
+
+    // const header = document.querySelector('.header');
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".path",
+        start: `top 120px`,
+        endTrigger: ".stage",
+        end: `+=${timelineWidth}`,
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+        markers: true,
+        onUpdate: self => {
+
+          const progress = self.progress;
+          const itemIndex = Math.floor(progress * (timelineItems.length - 1));
+
+          timelineItems.forEach(item => item.classList.remove('swiper-slide-active'));
+
+          if (timelineItems[itemIndex]) {
+            timelineItems[itemIndex].classList.add('swiper-slide-active');
+          }
+        }
+      }
+    });
+
+    tl.to(timelineWrapper, {
+      x: -timelineWidth,
+      ease: "none"
+    });
+
+    document.querySelector('.button-next')?.addEventListener('click', () => {
+      const currentScroll = Math.abs(gsap.getProperty(timelineWrapper, "x"));
+      const nextScroll = Math.min(currentScroll + window.innerWidth * 0.8, timelineWidth);
+      gsap.to(timelineWrapper, { x: -nextScroll, duration: 0.5 });
+    });
+
+    document.querySelector('.button-prev')?.addEventListener('click', () => {
+      const currentScroll = Math.abs(gsap.getProperty(timelineWrapper, "x"));
+      const prevScroll = Math.max(currentScroll - window.innerWidth * 0.8, 0);
+      gsap.to(timelineWrapper, { x: -prevScroll, duration: 0.5 });
+    });
 
 
 
