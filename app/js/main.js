@@ -1193,7 +1193,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
         scrub: 1,
         pin: true,
         anticipatePin: 1,
-        markers: true,
         onUpdate: self => {
 
           const progress = self.progress;
