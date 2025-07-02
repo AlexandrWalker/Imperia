@@ -1201,9 +1201,9 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
         const tl = gsap.timeline({
           scrollTrigger: {
-            trigger: ".path",
+            trigger: ".timeline-start",
             start: `top ` + timelineTop + `px`,
-            endTrigger: ".stage",
+            endTrigger: ".timeline-end",
             end: `+=${timelineWidthUpdate}`,
             scrub: 1,
             pin: true,
