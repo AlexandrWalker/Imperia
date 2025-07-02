@@ -1042,6 +1042,12 @@ a {
   color: var(--primary-accent);
 }
 
+.timeline-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+
 /* component styles */
 .head {
   position: fixed;
@@ -2695,7 +2701,12 @@ a {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  width: fit-content;
+  min-width: 40.5rem;
   margin-right: 23.3rem;
+}
+.path__item:last-child {
+  margin-right: 0;
 }
 .path__item-num {
   font-family: "Winter Sans Trial";
@@ -2777,17 +2788,10 @@ a {
   -webkit-text-stroke: 0.1rem var(--primary-accent);
   color: var(--primary-accent);
 }
-.path .swiper-slide:nth-last-child(3) .path__item-img::before,
-.path .swiper-slide:nth-last-child(3) .path__item-img::after {
+
+.timeline-container .timeline-item:last-child .path__item-img::before,
+.timeline-container .timeline-item:last-child .path__item-img::after {
   display: none;
-}
-.path__body.timeline-container .swiper-slide:last-child .path__item-img::before,
-.path__body.timeline-container .swiper-slide:last-child .path__item-img::after {
-  display: none;
-}
-.path__body.timeline-container .swiper-slide:nth-last-child(3) .path__item-img::before,
-.path__body.timeline-container .swiper-slide:nth-last-child(3) .path__item-img::after {
-  display: block;
 }
 
 .stage .component {
@@ -6158,6 +6162,7 @@ a {
   .path__item {
     gap: 2rem;
     margin-right: 10.8rem;
+    min-width: 24.5rem;
   }
   .path__item-img::before {
     right: -5.4rem;
@@ -7448,6 +7453,11 @@ a {
   }
   .stage__item-text {
     font-size: 1.2rem;
+  }
+  .projects .path__item,
+  .path__item {
+    width: 18.5rem;
+    min-width: 18.5rem;
   }
   .projects .path__item-content {
     gap: 1rem;

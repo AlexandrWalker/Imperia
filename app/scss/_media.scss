@@ -1032,6 +1032,7 @@
   .path__item {
     gap: 2rem;
     margin-right: 10.8rem;
+    min-width: 24.5rem;
   }
 
   .path__item-img::before {
@@ -2687,6 +2688,12 @@
 
   .stage__item-text {
     font-size: 1.2rem;
+  }
+
+  .projects .path__item,
+  .path__item {
+    width: 18.5rem;
+    min-width: 18.5rem;
   }
 
   .projects .path__item-content {

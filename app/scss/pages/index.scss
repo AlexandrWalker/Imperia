@@ -892,7 +892,13 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    width: fit-content;
+    min-width: 40.5rem;
     margin-right: 23.3rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &-num {
       font-family: 'Winter Sans Trial';
@@ -988,38 +994,17 @@
     -webkit-text-stroke: 0.1rem var(--primary-accent);
     color: var(--primary-accent);
   }
-
-  .swiper-slide {
-
-    &:nth-last-child(3) {
-
-      .path__item-img::before,
-      .path__item-img::after {
-        display: none;
-      }
-    }
-  }
-
-  .swiper-slide-prev {}
 }
 
-.path__body.timeline-container {
+.timeline-container {
 
-  .swiper-slide {
+  .timeline-item {
 
     &:last-child {
 
       .path__item-img::before,
       .path__item-img::after {
         display: none;
-      }
-    }
-
-    &:nth-last-child(3) {
-
-      .path__item-img::before,
-      .path__item-img::after {
-        display: block;
       }
     }
   }
