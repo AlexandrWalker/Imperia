@@ -878,7 +878,11 @@
 }
 
 .path {
-  overflow: hidden;
+  overflow: clip;
+
+  &__inner {
+    width: 100%;
+  }
 
   &__head {
     display: flex;
@@ -893,8 +897,11 @@
     flex-direction: column;
     gap: 4rem;
     width: fit-content;
-    min-width: 40.5rem;
-    margin-right: 23.3rem;
+    // min-width: 40.5rem;
+    // margin-right: 23.3rem;
+
+    min-width: calc(40.5rem + 23.3rem);
+    padding-right: 23.3rem;
 
     &:last-child {
       margin-right: 0;
@@ -990,7 +997,7 @@
     }
   }
 
-  .swiper-slide-active .path__item-num {
+  .timeline-active .path__item-num {
     -webkit-text-stroke: 0.1rem var(--primary-accent);
     color: var(--primary-accent);
   }

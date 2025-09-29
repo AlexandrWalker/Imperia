@@ -416,7 +416,10 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
         onComplete: () => {
           console.log('scrolled to anchor')
         }
-      }
+      },
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true
     });
 
     // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
@@ -1177,68 +1180,233 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
     }
 
 
-    if (document.querySelector('.timeline')) {
+    const timelinePlaceholders = document.querySelectorAll('.timeline-placeholder');
+    if (timelinePlaceholders.length > 0) {
+      // if (document.querySelector('.timeline')) {
+      timelinePlaceholders.forEach(timelinePlaceholder => {
 
-      $(window).on('resize load', function () {
-        if (window.innerWidth > '1441') {
-          const timelineTop = 130;
-          console.log(timelineTop);
-          timelineFunc(timelineTop);
-        } else {
-          const timelineTop = 130;
-          console.log(timelineTop);
-          timelineFunc(timelineTop);
+        // const timelinePlaceholder = timelinePlaceholder.querySelector('.timeline-placeholder');
+        const timelineContainer = timelinePlaceholder.querySelector('.timeline-container');
+        const timelineWrapper = timelinePlaceholder.querySelector('.timeline-wrapper');
+        const timelineItems = timelinePlaceholder.querySelectorAll('.timeline-item');
+        const btnPrev = timelinePlaceholder.querySelector('.timeline-button-prev');
+        const btnNext = timelinePlaceholder.querySelector('.timeline-button-next');
+
+        let itemWidth = 0;
+        let containerWidth = 0;
+        let totalWidth = 0;
+        let maxScroll = 0;
+        let placeholderHeight = 0;
+        let containerHeight = 0;
+        let scrollDistance = 0;
+
+        let timelineProgress = 0;
+        let currentIndex = 0;
+        let isAnimating = false;
+        let startX = 0;
+        let startY = 0;
+        let currentX = 0;
+        let isDragging = false;
+        let startScroll = 0;
+        let xSwipe = false;
+
+        function calculatePlaceholderHeight() {
+          containerHeight = timelineContainer.offsetHeight;
+
+          itemWidth = timelineItems[0].offsetWidth;
+          containerWidth = timelineContainer.offsetWidth;
+          totalWidth = itemWidth * timelineItems.length;
+          maxScroll = Math.max(0, totalWidth - containerWidth);
+
+          const horizontalScrollSpace = (totalWidth / containerWidth) * containerHeight;
+          placeholderHeight = containerHeight + horizontalScrollSpace;
+          scrollDistance = placeholderHeight - containerHeight;
+
+          timelinePlaceholder.style.height = `${placeholderHeight}px`;
         }
-      });
 
-      function timelineFunc(timelineTop) {
-        const timelineWrapper = document.querySelector('.timeline-wrapper');
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        const timelineWidth = timelineWrapper.scrollWidth - window.innerWidth;
-        const timelineWidthUpdate = timelineWidth + timelineTop;
+        function updateButtons() {
+          btnPrev.disabled = currentIndex === 0;
+          btnNext.disabled = currentIndex === timelineItems.length - 1;
+        }
 
-        // const header = document.querySelector('.header');
+        function goToIndex(index) {
+          if (isAnimating) return;
 
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".timeline-start",
-            start: `top ` + timelineTop + `px`,
-            endTrigger: ".timeline-end",
-            end: `+=${timelineWidthUpdate}`,
-            scrub: 1,
-            pin: true,
-            anticipatePin: 1,
-            onUpdate: self => {
+          index = Math.max(0, Math.min(index, timelineItems.length - 1));
+          if (index === currentIndex) return;
 
-              const progress = self.progress;
-              const itemIndex = Math.floor(progress * (timelineItems.length - 1));
+          isAnimating = true;
 
-              timelineItems.forEach(item => item.classList.remove('swiper-slide-active'));
+          const targetProgress = index / (timelineItems.length - 1);
+          const containerTop = timelinePlaceholder.offsetTop;
+          const targetScroll = containerTop + (targetProgress * scrollDistance);
 
-              if (timelineItems[itemIndex]) {
-                timelineItems[itemIndex].classList.add('swiper-slide-active');
-              }
+          lenis.scrollTo(targetScroll, {
+            duration: 0.7,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            onComplete: () => {
+              isAnimating = false;
             }
+          });
+        }
+
+        function updateTimeline(scrollY) {
+          const containerTop = timelinePlaceholder.offsetTop;
+
+          let scrollProgress = (scrollY - containerTop) / scrollDistance;
+          scrollProgress = Math.max(0, Math.min(1, scrollProgress));
+
+          if (scrollY >= containerTop && scrollY <= containerTop + scrollDistance) {
+            timelineProgress = scrollProgress;
+
+            const translateX = -timelineProgress * maxScroll;
+            timelineWrapper.style.transform = `translateX(${translateX}px)`;
+
+            updateActiveItem(timelineProgress);
+
+          } else {
+            if (scrollY < containerTop) {
+              timelineProgress = 0;
+              timelineWrapper.style.transform = 'translateX(0px)';
+              updateActiveItem(0);
+            }
+
+            else if (scrollY > containerTop + scrollDistance) {
+              timelineProgress = 1;
+              timelineWrapper.style.transform = `translateX(${-maxScroll}px)`;
+              updateActiveItem(1);
+            }
+          }
+        }
+
+        function updateActiveItem(progress) {
+          const newIndex = Math.min(
+            timelineItems.length - 1,
+            Math.floor(progress * timelineItems.length)
+          );
+
+          if (newIndex !== currentIndex) {
+            currentIndex = newIndex;
+
+            timelineItems.forEach((item, index) => {
+              item.classList.toggle('timeline-active', index === currentIndex);
+            });
+
+            // updateButtons();
+          }
+        }
+
+        btnPrev.addEventListener('click', () => {
+          goToIndex(currentIndex - 1);
+        });
+
+        btnNext.addEventListener('click', () => {
+          goToIndex(currentIndex + 1);
+        });
+
+        function handleTouchStart(e) {
+          if (isAnimating) return;
+
+          startX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+          startY = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
+          currentX = parseInt(gsap.getProperty(timelineWrapper, 'x') || 0, 10);
+          startScroll = lenis.scroll;
+          isDragging = true;
+          xSwipe = false;
+          timelineWrapper.classList.add('grabbing');
+        }
+
+        function handleTouchMove(e) {
+          if (!isDragging) return;
+          e.preventDefault();
+
+          const x = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+          const y = e.type === 'touchmove' ? e.touches[0].clientY : e.clientY;
+
+          if (!xSwipe) {
+            const diffX = Math.abs(x - startX);
+            const diffY = Math.abs(y - startY);
+
+            if (diffY > diffX && diffY > 10) {
+              isDragging = false;
+              timelineWrapper.classList.remove('grabbing');
+              return;
+            }
+
+            if (diffX > 10) {
+              xSwipe = true;
+              e.preventDefault();
+            }
+          }
+
+          if (xSwipe) {
+            const diff = x - startX;
+
+            let newX = currentX + diff;
+
+            newX = Math.min(Math.max(newX, -maxScroll), 0);
+
+            timelineWrapper.style.transform = `translateX(${newX}px)`;
+
+            lenis.scrollTo(startScroll, { immediate: true });
+          }
+        }
+
+        function handleTouchEnd(e) {
+          if (!isDragging) return;
+          isDragging = false;
+          timelineWrapper.classList.remove('grabbing');
+
+          const x = e.type === 'touchend' ? (e.changedTouches ? e.changedTouches[0].clientX : 0) : e.clientX;
+          const diff = x - startX;
+          const velocity = diff / 100;
+
+          if (Math.abs(diff) > 50 || Math.abs(velocity) > 0.5) {
+            if (diff > 0) {
+              goToIndex(currentIndex - 1);
+            } else {
+              goToIndex(currentIndex + 1);
+            }
+          } else {
+            goToIndex(currentIndex);
+          }
+        }
+
+        timelineWrapper.addEventListener('touchstart', handleTouchStart, { passive: false });
+        timelineWrapper.addEventListener('mousedown', handleTouchStart);
+
+        timelineWrapper.addEventListener('touchmove', handleTouchMove, { passive: false });
+        timelineWrapper.addEventListener('mousemove', handleTouchMove);
+
+        timelineWrapper.addEventListener('touchend', handleTouchEnd);
+        timelineWrapper.addEventListener('mouseup', handleTouchEnd);
+        timelineWrapper.addEventListener('mouseleave', handleTouchEnd);
+
+        lenis.on('scroll', ({ scroll }) => {
+          if (!isDragging) { // Не обновляем во время свайпа
+            updateTimeline(scroll);
           }
         });
 
-        tl.to(timelineWrapper, {
-          x: -timelineWidthUpdate,
-          ease: "none"
+        window.addEventListener('resize', () => {
+          calculatePlaceholderHeight();
+          updateTimeline(lenis.scroll);
+          // updateButtons();
         });
 
-        document.querySelector('.button-next')?.addEventListener('click', () => {
-          const currentScroll = Math.abs(gsap.getProperty(timelineWrapper, "x"));
-          const nextScroll = Math.min(currentScroll + window.innerWidth * 0.8, timelineWidthUpdate);
-          gsap.to(timelineWrapper, { x: -nextScroll, duration: 0.5 });
-        });
+        calculatePlaceholderHeight();
+        // updateButtons();
 
-        document.querySelector('.button-prev')?.addEventListener('click', () => {
-          const currentScroll = Math.abs(gsap.getProperty(timelineWrapper, "x"));
-          const prevScroll = Math.max(currentScroll - window.innerWidth * 0.8, 0);
-          gsap.to(timelineWrapper, { x: -prevScroll, duration: 0.5 });
-        });
-      }
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        updateActiveItem(0);
+      });
     };
 
 

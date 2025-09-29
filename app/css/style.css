@@ -1042,10 +1042,47 @@ a {
   color: var(--primary-accent);
 }
 
+.timeline {
+  position: relative;
+  width: 100%;
+}
+.timeline-placeholder {
+  position: relative;
+  height: 0;
+}
+.timeline-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 98;
+}
 .timeline-wrapper {
   display: flex;
-  flex-direction: row;
-  width: fit-content;
+  transition: transform 0.3s linear;
+  will-change: transform;
+}
+.timeline-wrapper.grabbing {
+  cursor: grabbing;
+  transition: none;
+}
+.timeline-button-prev,
+.timeline-button-next {
+  z-index: 101;
+}
+
+.timeline-button-prev:disabled,
+.timeline-button-next:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.timeline-button-prev:disabled:hover,
+.timeline-button-next:disabled:hover {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* component styles */
@@ -2688,7 +2725,10 @@ a {
 }
 
 .path {
-  overflow: hidden;
+  overflow: clip;
+}
+.path__inner {
+  width: 100%;
 }
 .path__head {
   display: flex;
@@ -2702,8 +2742,8 @@ a {
   flex-direction: column;
   gap: 4rem;
   width: fit-content;
-  min-width: 40.5rem;
-  margin-right: 23.3rem;
+  min-width: 63.8rem;
+  padding-right: 23.3rem;
 }
 .path__item:last-child {
   margin-right: 0;
@@ -2784,7 +2824,7 @@ a {
   line-height: 120%;
   max-width: 37rem;
 }
-.path .swiper-slide-active .path__item-num {
+.path .timeline-active .path__item-num {
   -webkit-text-stroke: 0.1rem var(--primary-accent);
   color: var(--primary-accent);
 }
@@ -4655,7 +4695,6 @@ a {
   z-index: 1;
 }
 
-.create-page .path,
 .create-page .tenants,
 .create-page .contact-us,
 .create-page .advan {
@@ -6168,8 +6207,8 @@ a {
   .projects .path__item,
   .path__item {
     gap: 2rem;
-    margin-right: 10.8rem;
-    min-width: 24.5rem;
+    min-width: 35.3rem;
+    padding-right: 10.8rem;
   }
   .path__item-img::before {
     right: -5.4rem;
@@ -7463,8 +7502,8 @@ a {
   }
   .projects .path__item,
   .path__item {
-    width: 18.5rem;
-    min-width: 18.5rem;
+    width: 29.3rem;
+    min-width: 29.3rem;
   }
   .projects .path__item-content {
     gap: 1rem;
@@ -7481,6 +7520,14 @@ a {
   .investments .path__item-img {
     max-height: unset;
     height: auto;
+  }
+  .timeline-container {
+    top: 10rem;
+    height: auto;
+  }
+  .create-page .timeline-container,
+  .sample-page .timeline-container {
+    top: 13rem;
   }
   .projects__btn {
     width: 6rem;

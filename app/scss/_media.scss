@@ -1031,8 +1031,11 @@
   .projects .path__item,
   .path__item {
     gap: 2rem;
-    margin-right: 10.8rem;
-    min-width: 24.5rem;
+    // margin-right: 10.8rem;
+    // min-width: 24.5rem;
+
+    min-width: calc(24.5rem + 10.8rem);
+    padding-right: 10.8rem;
   }
 
   .path__item-img::before {
@@ -2692,8 +2695,10 @@
 
   .projects .path__item,
   .path__item {
-    width: 18.5rem;
-    min-width: 18.5rem;
+    // width: 18.5rem;
+    // min-width: 18.5rem;
+    width: calc(18.5rem + 10.8rem);
+    min-width: calc(18.5rem + 10.8rem);
   }
 
   .projects .path__item-content {
@@ -2714,6 +2719,17 @@
   .investments .path__item-img {
     max-height: unset;
     height: auto;
+  }
+
+
+  .timeline-container {
+    top: 10rem;
+    height: auto;
+  }
+
+  .create-page .timeline-container,
+  .sample-page .timeline-container {
+    top: 13rem;
   }
 
   .projects__btn {
