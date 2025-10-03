@@ -1323,7 +1323,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
         }
 
         s.containerHeight = s.timelineContainer.offsetHeight;
-        s.itemWidth = s.timelineItems[0].offsetWidth + 20;
+        s.itemWidth = s.timelineItems[0].offsetWidth;
         s.containerWidth = s.timelineContainer.offsetWidth;
         s.totalWidth = s.itemWidth * s.timelineItems.length;
         s.maxScroll = Math.max(0, s.totalWidth - s.containerWidth);
