@@ -1268,63 +1268,6 @@ a {
   color: var(--primary-accent);
 }
 
-.timeline {
-  position: relative;
-  width: 100%;
-}
-.timeline-placeholder {
-  position: relative;
-  height: 0;
-}
-.timeline-container {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 98;
-}
-.timeline-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: -webkit-transform 0.3s linear;
-  transition: -webkit-transform 0.3s linear;
-  -o-transition: transform 0.3s linear;
-  transition: transform 0.3s linear;
-  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
-  will-change: transform;
-}
-.timeline-wrapper.grabbing {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-.timeline-button-prev,
-.timeline-button-next {
-  z-index: 101;
-}
-
-.timeline-button-prev:disabled,
-.timeline-button-next:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
-
-.timeline-button-prev:disabled:hover,
-.timeline-button-next:disabled:hover {
-  background: rgba(0, 0, 0, 0.7);
-}
-
 /* component styles */
 .head {
   position: fixed;
@@ -2590,6 +2533,130 @@ a {
   --button-border-color: var(--primary-black);
   --button-color: var(--primary-black);
   background-color: var(--white);
+}
+
+/* timeline style */
+.timeline-placeholder {
+  position: relative;
+  height: 0;
+}
+
+.timeline-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Мобильная версия - убираем фиксацию */
+@media (max-width: 768px) {
+  .timeline-container {
+    position: relative;
+    height: auto;
+  }
+}
+.timeline {
+  position: relative;
+  width: 100%;
+  padding: 0 4rem;
+  margin-right: -4rem;
+  margin-left: -4rem;
+  width: calc(100% + 8rem);
+}
+
+.timeline-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 0.1s linear;
+  transition: -webkit-transform 0.1s linear;
+  -o-transition: transform 0.1s linear;
+  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+}
+
+/* На мобильных устройствах - свободный скролл */
+@media (max-width: 768px) {
+  .timeline {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  .timeline-wrapper {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    gap: 0;
+  }
+  /* Скрываем scrollbar для лучшего UX */
+  .timeline::-webkit-scrollbar {
+    display: none;
+  }
+  .timeline {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+@media (max-width: 600px) {
+  .timeline {
+    padding: 0 1rem;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    width: calc(100% + 2rem);
+  }
+  .timeline-wrapper {
+    gap: 0;
+  }
+}
+.timeline-wrapper.grabbing {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.timeline-item {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+/* Скрываем кнопки на мобильных устройствах */
+@media (max-width: 768px) {
+  .timeline-button-prev,
+  .timeline-button-next {
+    display: none;
+  }
+}
+.timeline-button-prev:disabled,
+.timeline-button-next:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  -webkit-transform: translateY(-50%) scale(1);
+      -ms-transform: translateY(-50%) scale(1);
+          transform: translateY(-50%) scale(1);
+}
+
+.timeline-button-prev:disabled:hover,
+.timeline-button-next:disabled:hover {
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transform: translateY(-50%) scale(1);
+      -ms-transform: translateY(-50%) scale(1);
+          transform: translateY(-50%) scale(1);
 }
 
 /* main page */
@@ -11117,14 +11184,6 @@ a {
   .investments .path__item-img {
     max-height: unset;
     height: auto;
-  }
-  .timeline-container {
-    top: 10rem;
-    height: auto;
-  }
-  .create-page .timeline-container,
-  .sample-page .timeline-container {
-    top: 13rem;
   }
   .projects__btn {
     width: 6rem;

@@ -1,0 +1,122 @@
+/* timeline style */
+.timeline-placeholder {
+  position: relative;
+  height: 0;
+}
+
+.timeline-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Мобильная версия - убираем фиксацию */
+@media (max-width: 768px) {
+  .timeline-container {
+    position: relative;
+    height: auto;
+    // min-height: 100vh;
+  }
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  // overflow: hidden;
+
+  padding: 0 4rem;
+  margin-right: -4rem;
+  margin-left: -4rem;
+  width: calc(100% + (4rem * 2));
+}
+
+.timeline-wrapper {
+  display: flex;
+  transition: transform 0.1s linear;
+}
+
+/* На мобильных устройствах - свободный скролл */
+@media (max-width: 768px) {
+  .timeline {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  .timeline-wrapper {
+    width: max-content;
+    transition: none;
+    gap: 0;
+  }
+
+  /* Скрываем scrollbar для лучшего UX */
+  .timeline::-webkit-scrollbar {
+    display: none;
+  }
+
+  .timeline {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    padding: 0 1rem;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    width: calc(100% + (1rem * 2));
+  }
+
+  .timeline-wrapper {
+    gap: 0;
+  }
+}
+
+.timeline-wrapper.grabbing {
+  cursor: grabbing;
+  transition: none;
+}
+
+.timeline-item {
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.timeline-item.timeline-active {}
+
+.timeline-button-prev,
+.timeline-button-next {}
+
+/* Скрываем кнопки на мобильных устройствах */
+@media (max-width: 768px) {
+
+  .timeline-button-prev,
+  .timeline-button-next {
+    display: none;
+  }
+}
+
+.timeline-button-prev:hover,
+.timeline-button-next:hover {}
+
+.timeline-button-prev {}
+
+.timeline-button-next {}
+
+.timeline-button-prev:disabled,
+.timeline-button-next:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: translateY(-50%) scale(1);
+}
+
+.timeline-button-prev:disabled:hover,
+.timeline-button-next:disabled:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1);
+}
