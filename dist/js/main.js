@@ -517,14 +517,14 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
       const toggleMenu = () => {
         const isOpened = burger.classList.toggle('burger--opened');
         menu.classList.toggle('mobile-menu--opened', isOpened);
-        document.body.classList.toggle('no-scroll');
+        // document.body.classList.toggle('no-scroll');
         head.classList.toggle('head--active');
 
-        // if (menu.classList.contains('mobile-menu--opened')) {
-        //   lenis.stop();
-        // } else {
-        //   lenis.start();
-        // }
+        if (menu.classList.contains('mobile-menu--opened')) {
+          lenis.stop();
+        } else {
+          lenis.start();
+        }
 
         if (burger.classList[1]) {
           burgerText.innerHTML = 'Закрыть';
@@ -540,9 +540,9 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
       const closeMenu = () => {
         burger.classList.remove('burger--opened');
         menu.classList.remove('mobile-menu--opened');
-        document.body.classList.remove('no-scroll');
-        // lenis.start();
-        document.body.classList.remove('no-scroll');
+        // document.body.classList.remove('no-scroll');
+        lenis.start();
+        // document.body.classList.remove('no-scroll');
       };
 
       // Открытие/закрытие меню по клику на бургер
