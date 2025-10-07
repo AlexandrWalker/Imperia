@@ -6099,7 +6099,7 @@ a {
   }
   .advan__thumbs-item {
     padding: 2rem 0;
-    min-height: unset;
+    min-height: 8rem;
   }
   .advan__thumbs-head {
     padding: 0 0 0 5rem;
