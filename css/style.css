@@ -6523,12 +6523,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 4rem;
+  gap: 2rem 23.2rem;
 }
 .catalogues__item {
   display: -webkit-box;
@@ -6539,13 +6536,13 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 3rem;
-  width: 40.5rem;
   color: inherit;
   background-color: var(--white);
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   border: 0;
+  width: calc(33.33333% - 15.4666666667rem);
 }
 .catalogues__item:hover {
   background-color: var(--primary-accent);
@@ -8601,6 +8598,7 @@ a {
 }
 .projects .path__body {
   max-width: 100%;
+  width: 100%;
 }
 .projects .path__item {
   gap: 3rem;
