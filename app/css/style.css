@@ -3618,19 +3618,18 @@ a {
 }
 .catalogues__items {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 2rem 23.2rem;
 }
 .catalogues__item {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  width: 40.5rem;
   color: inherit;
   background-color: var(--white);
   transition: all 0.4s ease;
   border: 0;
+  width: calc(33.33333% - 15.4666666667rem);
 }
 .catalogues__item:hover {
   background-color: var(--primary-accent);
@@ -5227,6 +5226,7 @@ a {
 }
 .projects .path__body {
   max-width: 100%;
+  width: 100%;
 }
 .projects .path__item {
   gap: 3rem;
