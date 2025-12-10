@@ -477,6 +477,10 @@ a {
     &:-moz-placeholder,
     &:-ms-input-placeholder {
       color: var(--white-50);
+
+      .has-error & {
+        color: var(--primary-accent);
+      }
     }
 
     &::placeholder {
@@ -491,10 +495,14 @@ a {
 
       &::placeholder {
         color: var(--white);
+
+        .has-error & {
+          color: var(--primary-accent);
+        }
       }
     }
 
-    &:invalid {
+    .has-error & {
       color: var(--primary-accent);
       border-color: var(--primary-accent);
 
@@ -545,6 +553,11 @@ a {
       &::placeholder {
         color: var(--white);
       }
+    }
+
+    .has-error & {
+      color: var(--primary-accent);
+      border-color: var(--primary-accent);
     }
   }
 

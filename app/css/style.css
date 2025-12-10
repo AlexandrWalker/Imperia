@@ -738,6 +738,9 @@ a {
 .form-input::placeholder, .form-input::-webkit-input-placeholder, .form-input::-moz-placeholder, .form-input:-moz-placeholder, .form-input:-ms-input-placeholder {
   color: var(--white-50);
 }
+.has-error .form-input::placeholder, .has-error .form-input::-webkit-input-placeholder, .has-error .form-input::-moz-placeholder, .has-error .form-input:-moz-placeholder, .has-error .form-input:-ms-input-placeholder {
+  color: var(--primary-accent);
+}
 .form-input::placeholder {
   transition: all 0.3s ease;
 }
@@ -748,11 +751,14 @@ a {
 .form-input:hover::placeholder, .form-input:focus::placeholder, .form-input:active::placeholder {
   color: var(--white);
 }
-.form-input:invalid {
+.has-error .form-input:hover::placeholder, .has-error .form-input:focus::placeholder, .has-error .form-input:active::placeholder {
+  color: var(--primary-accent);
+}
+.has-error .form-input {
   color: var(--primary-accent);
   border-color: var(--primary-accent);
 }
-.form-input:invalid ~ .error {
+.has-error .form-input ~ .error {
   display: block;
 }
 .form-title {
@@ -787,6 +793,10 @@ a {
 }
 .form-textarea:hover::placeholder, .form-textarea:focus::placeholder, .form-textarea:active::placeholder {
   color: var(--white);
+}
+.has-error .form-textarea {
+  color: var(--primary-accent);
+  border-color: var(--primary-accent);
 }
 .form-checkbox {
   width: 2.4rem;
@@ -1863,16 +1873,21 @@ a {
 .modal .form-textarea:hover::placeholder, .modal .form-textarea:focus::placeholder, .modal .form-textarea:active::placeholder, .modal .form-input:hover::placeholder, .modal .form-input:focus::placeholder, .modal .form-input:active::placeholder {
   color: var(--primary-black);
 }
-.modal .form-textarea:invalid, .modal .form-input:invalid {
-  color: var(--primary-accent);
-  border-color: var(--primary-accent);
-}
 .modal .form-checkbox {
   border-color: var(--primary-black);
   background: transparent;
 }
 .modal .form-checkbox:checked {
   background-color: var(--primary-accent);
+}
+.modal .has-error .form-textarea,
+.modal .has-error .form-input {
+  color: var(--primary-accent);
+  border-color: var(--primary-accent);
+}
+.modal .has-error .form-textarea::placeholder,
+.modal .has-error .form-input::placeholder {
+  color: var(--primary-accent);
 }
 .modal .checkbox__text {
   color: var(--primary-black-50);
@@ -1884,6 +1899,14 @@ a {
   background-color: var(--primary-black);
   border-color: var(--primary-black);
   color: var(--white);
+}
+
+.success__title {
+  width: auto;
+  color: var(--primary-accent);
+}
+.success__title * {
+  font-weight: 800;
 }
 
 .plate {

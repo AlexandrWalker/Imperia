@@ -156,11 +156,6 @@
           color: var(--primary-black);
         }
       }
-
-      &:invalid {
-        color: var(--primary-accent);
-        border-color: var(--primary-accent);
-      }
     }
 
     &-checkbox {
@@ -173,6 +168,18 @@
     }
   }
 
+  .has-error {
+
+    .form-textarea,
+    .form-input {
+      color: var(--primary-accent);
+      border-color: var(--primary-accent);
+
+      &::placeholder {
+        color: var(--primary-accent);
+      }
+    }
+  }
 
   .checkbox__text {
     color: var(--primary-black-50);
@@ -186,5 +193,14 @@
       border-color: var(--primary-black);
       color: var(--white);
     }
+  }
+}
+
+.success__title {
+  width: auto;
+  color: var(--primary-accent);
+
+  & * {
+    font-weight: 800;
   }
 }
