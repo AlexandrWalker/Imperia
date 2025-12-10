@@ -433,70 +433,78 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
      * Активация любого количества модальных окон
      */
     function modalFunc() {
-      var modal__btn = document.querySelector('.modal__btn');
+      const openButtons = document.querySelectorAll('.modal__btn');
+      const closeButtons = document.querySelectorAll('.modal__close-btn');
 
-      if (!modal__btn) {
-        return;
-      } else {
+      if (!openButtons.length) return;
 
-        var close = document.querySelectorAll('.modal__close-btn');
-        var openBtn = document.querySelectorAll('.modal__btn');
+      // Открытие
+      openButtons.forEach(btn => {
+        btn.addEventListener('click', e => {
+          const modalId = e.currentTarget.getAttribute('data-id');
+          if (!modalId) return;
 
-        Array.from(openBtn, openButton => {
-          openButton.addEventListener('click', e => {
+          const modal = document.getElementById(modalId);
+          if (!modal) return;
 
-            let open = document.getElementsByClassName('open');
+          // Закрыть открытую
+          const openModal = document.querySelector('.modal.open');
+          if (openModal) openModal.classList.remove('open');
 
-            if (open.length > 0 && open[0] !== this) {
-              open[0].classList.remove('open');
-            }
+          // Заполнить контент
+          const title = e.currentTarget.getAttribute('data-title');
+          if (title) {
+            const titleEl = modal.querySelector('#modal-title');
+            if (titleEl) titleEl.innerHTML = title;
+          }
 
-            let modalId = e.target.getAttribute('data-id');
-            console.log(modalId);
-            if (modalId) {
-              document.getElementById(modalId).classList.add('open');
-              lenis.stop();
-            } else {
-              return
-            }
+          const text = e.currentTarget.getAttribute('data-text');
+          if (text) {
+            const textEl = modal.querySelector('#modal-text');
+            if (textEl) textEl.innerHTML = text;
+          }
 
-            let modalTitle = e.target.getAttribute('data-title');
-            if (modalTitle) {
-              document.getElementById("modal-title").innerHTML = modalTitle;
-            }
-
-            let modalText = e.target.getAttribute('data-text');
-            if (modalText) {
-              document.getElementById("modal-text").innerHTML = modalText;
-            }
-
-            Array.from(close, closeButton => {
-              closeButton.addEventListener('click', e => {
-                document.getElementById(modalId).classList.remove("open");
-                lenis.start();
-              });
-
-              window.addEventListener('keydown', (e) => {
-                if (e.key === "Escape") {
-                  document.getElementById(modalId).classList.remove("open")
-                  lenis.start();
-                }
-              });
-
-              document.querySelector(".modal.open .modal__box").addEventListener('click', event => {
-                event._isClickWithInModal = true;
-              });
-
-              document.getElementById(modalId).addEventListener('click', event => {
-                if (event._isClickWithInModal) return;
-                event.currentTarget.classList.remove('open');
-                lenis.start();
-              });
-            });
-          });
+          modal.classList.add('open');
+          lenis.stop();
         });
-      }
-    };
+      });
+
+      // По кнопкам закрытия
+      closeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const openModal = document.querySelector('.modal.open');
+          if (!openModal) return;
+
+          openModal.classList.remove('open');
+          lenis.start();
+        });
+      });
+
+      // По клику вне modal__box
+      document.addEventListener('click', e => {
+        const openModal = document.querySelector('.modal.open');
+        if (!openModal) return;
+
+        const box = openModal.querySelector('.modal__box');
+        if (!box) return;
+
+        if (!box.contains(e.target) && !e.target.closest('.modal__btn')) {
+          openModal.classList.remove('open');
+          lenis.start();
+        }
+      });
+
+      // По Escape
+      window.addEventListener('keydown', e => {
+        if (e.key !== 'Escape') return;
+
+        const openModal = document.querySelector('.modal.open');
+        if (!openModal) return;
+
+        openModal.classList.remove('open');
+        lenis.start();
+      });
+    }
 
     modalFunc();
 
